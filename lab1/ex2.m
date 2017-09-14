@@ -35,7 +35,13 @@ mu =  sym('mu', [2 1], 'real');
 
 eq = n .* (xmean - mu)' * Sinv * (xmean - mu ) == T_alpha;
 
-ezplot(eq)
+scale = 0.05;
+xmin = xmean(1) - scale; xmax = xmean(1) + scale; 
+ymin = xmean(2) - scale; ymax = xmean(2) + scale;
+fig = ezplot(eq, [xmin xmax ymin ymax]);
+title('') % remove ugly title
+
+saveas(fig, 'report/confInt', 'epsc') % save figure for report
 
 %% compute the simultaneuos Tsquare interval s and the Bonferri interval 
 % for \mu_1 and \mu_2 with 95%
@@ -43,20 +49,27 @@ ezplot(eq)
 % sim. T square
 a1 = [1; 0]; a2 = [0;1];
 quotient1 = sqrt((a1'*S*a1)/n);
+disp('For a = [1 0]')
 leftbound1 = a1'* xmean - T_alpha * quotient1
 righbound1 = a1'* xmean + T_alpha * quotient1
 
+disp('For a = [0 1]')
 quotient2 = sqrt((a2'*S*a2)/n); 
 leftbound2 = a2'* xmean - T_alpha * quotient2
 righbound2 = a2'* xmean + T_alpha * quotient2
 
 % Bonferri interval 
-tvalue = tinv(1-alpha/2, n-1);
+%test = n*(xmean(1) - mu(1))*(xmean(1) - mu(1)) / S(1,1);
+c = tinv(1- alpha/4, n-1) % <- obs alpha/4, see Wikipage for Bonferri correction
 
-test = n*(xmean(1) - mu(1))*(xmean(1) - mu(1)) / inv(S(1,1))
-left_bon_1 = 1;
-right_bon_2 = 1;
+disp('Here are the two Bonferri intervals for \mu_1 and \mu_2')
+disp('For \mu_1')
+left_bon_1 = xmean(1) - S(1,1)*c/sqrt(n)
+right_bon_1 = xmean(1) + S(1,1)*c/sqrt(n)
 
+disp('For \mu_2')
+left_bon_2 = xmean(2) - S(2,2)*c/sqrt(n)
+right_bon_2 = xmean(2) + S(2,2)*c/sqrt(n)
 
 %%
 
