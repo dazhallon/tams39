@@ -1,0 +1,61 @@
+\message{ !name(examination.tex)}\documentclass[two column]{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage{amsmath,amsthm,amssymb}
+
+\usepackage{subcaption}
+\usepackage{graphicx}
+
+\usepackage{diagbox}
+
+\graphicspath{{./images/}}
+
+\usepackage{listings}
+
+
+\usepackage{color}
+
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{orange}{rgb}{0.8,0,0}
+
+\lstdefinestyle{matlab}{
+  belowcaptionskip=1\baselineskip,
+  breaklines=true,
+  frame=L,
+  xleftmargin=\parindent,
+  language=octave,
+  showstringspaces=false,
+  basicstyle=\footnotesize\ttfamily,
+  keywordstyle=\bfseries\color{green},
+  commentstyle=\color{gray},
+  identifierstyle=\color{blue},
+  stringstyle=\color{orange},
+}
+
+\def\listingsfont{\ttfamily} 
+\def\listingsfontinline{\ttfamily}
+
+\title{TAMS39 - Examination exercises}
+\author{Anton Karlsson\\antka388\\931217-7117}
+\date{}
+\begin{document}
+
+\message{ !name(ex1.tex) !offset(-16) }
+\begin{equation*}
+  \left(
+    a \pm T_{1-\alpha} \sqrt{\frac{a_i^T S a_1i^T}{n}}
+  \right), \quad i = 1,2,
+\end{equation*}
+with $T_{1-\alpha} = \frac{n-p}{p(n-1)}F_{1-\alpha}(p, n-p)$. Thus we
+get the confidence intervals
+\begin{align*}
+  (184.7356&,\ 195.2644),\quad i = 1, \\
+  (268.0801&,\ 281.9199),\quad i = 2.
+\end{align*}
+\message{ !name(examination.tex) !offset(-11) }
+
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
