@@ -1,4 +1,4 @@
-\documentclass[two column]{article}
+\documentclass[two column]{report}
 \usepackage[utf8]{inputenc}
 
 \usepackage{amsmath,amsthm,amssymb}
@@ -7,6 +7,10 @@
 \usepackage{graphicx}
 
 \usepackage{diagbox}
+
+\usepackage{biblatex}
+
+\bibliography{ref}
 
 \graphicspath{{./images/}}
 
@@ -31,6 +35,19 @@
   identifierstyle=\color{blue},
   stringstyle=\color{orange},
 }
+\lstdefinestyle{R}{
+  belowcaptionskip=1\baselineskip,
+  breaklines=true,
+  frame=L,
+  xleftmargin=\parindent,
+  language=R,
+  showstringspaces=false,
+  basicstyle=\footnotesize\ttfamily,
+  keywordstyle=\bfseries\color{green},
+  commentstyle=\color{gray},
+  identifierstyle=\color{blue},
+  stringstyle=\color{orange},
+}
 
 \def\listingsfont{\ttfamily} 
 \def\listingsfontinline{\ttfamily}
@@ -41,7 +58,10 @@
 \begin{document}
 \maketitle
 
-\input{ex1}
+\include{ex1}
+\include{ex2}
+
+\printbibliography
 
 \end{document}
 %%% Local Variables:

@@ -1,4 +1,4 @@
-\message{ !name(examination.tex)}\documentclass[two column]{article}
+\message{ !name(examination.tex)}\documentclass[two column]{report}
 \usepackage[utf8]{inputenc}
 
 \usepackage{amsmath,amsthm,amssymb}
@@ -7,6 +7,10 @@
 \usepackage{graphicx}
 
 \usepackage{diagbox}
+
+\usepackage{biblatex}
+
+\bibliography{ref}
 
 \graphicspath{{./images/}}
 
@@ -31,6 +35,19 @@
   identifierstyle=\color{blue},
   stringstyle=\color{orange},
 }
+\lstdefinestyle{R}{
+  belowcaptionskip=1\baselineskip,
+  breaklines=true,
+  frame=L,
+  xleftmargin=\parindent,
+  language=R,
+  showstringspaces=false,
+  basicstyle=\footnotesize\ttfamily,
+  keywordstyle=\bfseries\color{green},
+  commentstyle=\color{gray},
+  identifierstyle=\color{blue},
+  stringstyle=\color{orange},
+}
 
 \def\listingsfont{\ttfamily} 
 \def\listingsfontinline{\ttfamily}
@@ -40,19 +57,13 @@
 \date{}
 \begin{document}
 
-\message{ !name(ex1.tex) !offset(-16) }
-\begin{equation*}
-  \left(
-    a \pm T_{1-\alpha} \sqrt{\frac{a_i^T S a_1i^T}{n}}
-  \right), \quad i = 1,2,
-\end{equation*}
-with $T_{1-\alpha} = \frac{n-p}{p(n-1)}F_{1-\alpha}(p, n-p)$. Thus we
-get the confidence intervals
-\begin{align*}
-  (184.7356&,\ 195.2644),\quad i = 1, \\
-  (268.0801&,\ 281.9199),\quad i = 2.
-\end{align*}
-\message{ !name(examination.tex) !offset(-11) }
+\message{ !name(ex2.tex) !offset(8) }
+
+Further, to find the confidence intervals for the the different
+components, we use the vectors $a_1 = (1,0)^T$ and $a_2 = (0,1)^T$, to
+create each of the component wise intervals, respectively. 
+
+\message{ !name(examination.tex) !offset(-2) }
 
 \end{document}
 %%% Local Variables:

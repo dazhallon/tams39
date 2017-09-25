@@ -2,14 +2,15 @@
  "examination"
  (lambda ()
    (TeX-add-to-alist 'LaTeX-provided-class-options
-                     '(("article" "twocolumn")))
+                     '(("report" "twocolumn")))
    (TeX-add-to-alist 'LaTeX-provided-package-options
                      '(("inputenc" "utf8")))
    (TeX-run-style-hooks
     "latex2e"
     "ex1"
-    "article"
-    "art10"
+    "ex2"
+    "report"
+    "rep10"
     "inputenc"
     "amsmath"
     "amsthm"
@@ -17,9 +18,12 @@
     "subcaption"
     "graphicx"
     "diagbox"
+    "biblatex"
     "listings"
     "color")
    (TeX-add-symbols
     "listingsfont"
-    "listingsfontinline")))
+    "listingsfontinline")
+   (LaTeX-add-bibliographies
+    "ref")))
 
