@@ -69,7 +69,23 @@ exercise, and $\delta = \bar{x}_{\rm male}  - \bar{x}_{\rm
 \end{align*}
 Further, to find the confidence intervals for the the different
 components, we use the vectors $a_1 = (1,0)^T$ and $a_2 = (0,1)^T$, to
-create each of the component wise intervals, respectively. 
+create each of the component wise intervals, respectively. The
+intervals, for each $a$, is given by 
+\begin{equation*}
+  n_f n_m \delta^T S_p^{-1} \delta / (n_f + n_m) , 
+\end{equation*}
+we get the intervals
+\begin{align*}
+  (-170.698117786475&; 157.771855160212), \quad \text{for } a = (1,0)
+  \\
+  (-149.071120157853&;151.424655511388), \quad \text{for } a = (0,1)
+\end{align*}
+
+\subsection*{(f)}
+\label{sec:f}
+
+From the interval we find the Exercise (e), we see that there are no
+genrall difference for the lengths between the female and the male birds.
 \subsection*{\texttt{R} code}
 \label{sec:textttr-code}
 

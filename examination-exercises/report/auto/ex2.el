@@ -11,5 +11,6 @@
     "sec:d"
     "sec:e"
     "eq:ex2-conf-region"
+    "sec:f"
     "sec:textttr-code")))
 

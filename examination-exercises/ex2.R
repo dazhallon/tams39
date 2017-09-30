@@ -62,7 +62,8 @@ S_p = ((n_m-1)*S_m + (n_f-1)*S_f)/(n-2)
 
 delta = male_mean - female_mean
 test = n_f*n_m*t(delta)%*%solve(S_p)%*%delta/
-  (n_f+n_m)
+    (n_f+n_m)
+print('The test variable is equal to')
 print(test)
 f = n - 2
 c = f*p*qf(1-0.05, p, f-p+1)/(f-p+1)
@@ -73,26 +74,34 @@ if (test < c){
   print('reject H')
 }
 
-# (e) 
-# determine the 95 % confidence region 
+## (e) 
+## determine the 95 % confidence region
+## see report
 
-# determine the compentwise conf. intervals
-a = c(1,0)
-delta = as.vector(delta)
+## determine the compentwise conf. intervals
+aArrays  = as.matrix(cbind(c(1,0), c(0,1)))
+print('The confidence intervals for the mean difference:')
+for(i in c(1,2)){
+    a = aArrays[i,]
+    delta = as.vector(delta)
+    
+    center = a %*% delta
+    length = test* (a %*% S_p %*% a) / sqrt(n)
+    
+    LHS = center - length;
+    RHS = center + length;
+    
+    ## print the intervals
+    print('The interval for a = ')
+    print(a)
+    print(c('(',LHS, RHS, ')'))
+}
 
-center = a %*% delta
-length = test* (a %*% S_p %*% a) / sqrt(n)
+## create intervals for the components of the differnece
 
-LHS = center - length;
-RHS = center + length;
-
-# print the intervals
-print(c('(',LHS, RHS, ')'))
-
-# something seems a  bit of...
-# should review this entire exercise (perhaps
-# even re do them i matlab 
-# (since some code as already been done
-# there))
-
+## something seems a  bit of...
+## should review this entire exercise (perhaps
+## even re do them i matlab 
+## (since some code as already been done
+## there))
 
