@@ -3,5 +3,7 @@
  (lambda ()
    (LaTeX-add-labels
     "sec:exercise-4"
-    "sec:a-3")))
+    "sec:a-3"
+    "sec:b-3"
+    "sec:code")))
 

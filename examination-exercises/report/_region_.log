@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=prv_examination 2017.9.29)  29 SEP 2017 19:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=prv_examination 2017.10.3)  3 OCT 2017 14:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -194,24 +194,73 @@ Package biblatex Info: Reference section=0 on input line 58.
 Package biblatex Info: Reference segment=0 on input line 58.
 \c@lstlisting=\count317
 
- !name(ex4.tex) !offset(-52) 
+ !name(ex4.tex) !offset(-33) 
 ! Preview: Snippet 1 started.
 <-><->
       
-l.61 \begin{equation*}
-                      
+l.61 \begin{align*}
+                   
 Not a real error.
 
 Preview: Tightpage -32891 -32891 32891 32891
-! Preview: Snippet 1 ended.(1922910+0x11347382).
+! Preview: Snippet 1 ended.(2988128+0x17519590).
 <-><->
       
-l.64 \end{equation*}
-                    
+l.65 \end{align*}
+                 
 Not a real error.
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
- !name(examination.tex) !offset(1) 
+! Preview: Snippet 2 started.
+<-><->
+      
+l.66 In which we can conclude that $
+                                    {\bf x_0}$ belongs to  $\pi_i$ if ${\bf
+Not a real error.
+
+! Preview: Snippet 2 ended.(291271+98303x727447).
+<-><->
+      
+l.66 In which we can conclude that ${\bf x_0}$
+                                               belongs to  $\pi_i$ if ${\bf
+Not a real error.
+
+[2]
+! Preview: Snippet 3 started.
+<-><->
+      
+l.66 ...an conclude that ${\bf x_0}$ belongs to  $
+                                                  \pi_i$ if ${\bf
+Not a real error.
+
+! Preview: Snippet 3 ended.(282168+98303x591761).
+<-><->
+      
+l.66 ...clude that ${\bf x_0}$ belongs to  $\pi_i$
+                                                   if ${\bf
+Not a real error.
+
+[3]
+! Preview: Snippet 4 started.
+<-><->
+      
+l.66 ... that ${\bf x_0}$ belongs to  $\pi_i$ if $
+                                                  {\bf
+Not a real error.
+
+! Preview: Snippet 4 ended.(557059+229380x8454578).
+<-><->
+      
+l.67 ...ax_i \left( {\bf  l_i^T x_0 + c_i}\right)$
+                                                  
+Not a real error.
+
+[4] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+) (./../ex4.m
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <8> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 85.
+)  !name(examination.tex) !offset(-8) 
 
 LaTeX Warning: There were undefined references.
 
@@ -225,23 +274,25 @@ Package logreq Info: Writing requests to '_region_.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 822 strings out of 483508
- 11528 string characters out of 5992604
- 433787 words of memory out of 5000000
- 14810 multiletter control sequences out of 15000+600000
- 7422 words of font info for 29 fonts, out of 8000000 for 9000
+ 1744 strings out of 483508
+ 21009 string characters out of 5992604
+ 894787 words of memory out of 5000000
+ 15720 multiletter control sequences out of 15000+600000
+ 8209 words of font info for 32 fonts, out of 8000000 for 9000
  350 hyphenation exceptions out of 8191
- 33i,3n,25p,212b,125s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on _region_.pdf (1 page, 48424 bytes).
+ 33i,11n,50p,212b,2245s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmsy10.pfb>
+Output written on _region_.pdf (4 pages, 66438 bytes).
 PDF statistics:
- 32 PDF objects out of 1000 (max. 8388607)
- 22 compressed objects within 1 object stream
+ 49 PDF objects out of 1000 (max. 8388607)
+ 34 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

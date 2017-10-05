@@ -10,10 +10,36 @@ We can check if the matrices can be pooled by using the test variable
   \lambda^* = \frac{\Pi \det(V_i ^{f_i/2})}{\det(V^{f/2})}
   \frac{f^{pf/2}}{\Pi f_i ^{pfi/2}}
 \end{equation*}
-and using the Box correction
+and using the Box correction, we get
 \begin{equation*}
-  -2 * \frac{m}{f} \ln \lambda^*.
+  -2  \frac{m}{f} \ln \lambda^* = 49.2750,
 \end{equation*}
+which we comapre against the critical value
+\begin{equation*}
+  c = \chi^2_{0.95}(f) = 58.1240,
+\end{equation*}
+hence the covariance matrices can be pooled into one matrix.
+
+\subsection*{(b)}
+\label{sec:b-3}
+
+We could calculate the linear seprators, $ l_i^T x_0 + c_i$, where
+we obtain
+\begin{align*}
+l_1^T x_0 + c_1 &= (-0.57, 1.80, 1.01, 6.33, 18.94, 0.33)x_0 + -703.95 \\ 
+l_2^T x_0 + c_2 &= (-0.14, 1.31, 1.48, 5.15, 18.31, 0.04)x_0 + -554.06 \\ 
+l_3^T x_0 + c_3 &= (-1.08, 1.89, 3.03, 5.69, 15.11, 0.51)x_0 + -618.43,
+\end{align*}
+In which we can conclude that ${\bf x_0}$ belongs to  $\pi_i$ if $
+  l_i^T x_0 + c_i = \max_i \left(   l_i^T x_0 + c_i\right)
+$
+
+
+
+\subsection*{Code}
+\label{sec:code}
+
+
 
 \lstinputlisting[style=matlab]{./../ex4.m}
 %%% Local Variables:

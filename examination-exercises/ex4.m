@@ -120,7 +120,7 @@ alpha = 0;
 for i = 1:k
   alpha = alpha + f/fs(i );
 end
-alpha  = alpha -1;
+alpha  = alpha - 1;
 alpha = alpha * (2*p^2 + 3*p - 1)/(12*(p+1)*(k-1));
 m = f- 2*alpha;
 
@@ -143,10 +143,14 @@ disp('(b) Derive the classification rule for these data')
 ls = zeros(k, p);
 invSp = inv(Sp);
 
+fprintf('The linear separation obatined\n')
 for i = 1:k
   ls(i,:) = means(:,i)' * invSp;
   c(i) = -0.5*means(:,i)'*invSp*means(:,i);
+  fprintf('l_%d^T x_0 + c_%d = (%.2f, %.2f, %.2f, %.2f, %.2f, %.2f)x_0 + %.2f \\\\ \n', ...
+    i,i,ls(i,:)', c(i))
 end
+
 
 x0 = zeros(p,1);
 
@@ -161,12 +165,33 @@ for i = 2:k
     class = i;
   end
 end
-
+disp(['example: x0 = ', num2str(x0')])
 disp(['We can classify x0 as pi_', num2str(i)]);
 
 disp('(c) Estimate the errors of misclassification of... ')
 
-% how to estimate the errors whem we have three classes.instead
-% of just 2?
-% Assume that the third class is not there, and carry on with the
-% calculations a sif there was just two classes?
+delta = means(:,1) - means(:,2);
+
+% should we use the pooled matrix for pi1 and pi2, or the collective for
+% all?
+pooled12 = ((ns(1)-1)*cov(data{1}) + (ns(2)-1)*cov(data{2}))...
+  /(ns(1) + ns(2) - 2);
+%K = 0.5*delta'*inv(pooled12)*(means(:,1) + means(:,2));
+Delta = sqrt(delta'*inv(pooled12)*delta);
+%Delta = sqrt(delta'*inv(Sp)*delta);
+% Get different result using the spooled matrix from earlier. 
+% However, the difference between e1 and e2 is virtually 0.
+
+a1 = normpdf(Delta)*(Delta^2 + 12*(p-1)) / (16*Delta);
+a2 = normpdf(Delta)*(Delta^2 - 4*(p-1)) / (16*Delta);
+
+disp('Misscalsifaction into pi1')
+e1 = normpdf(-0.5*Delta) + a1/ns(1) + a2/ns(2)
+
+disp('Misscalsifcation into pi2')
+e2 = normpdf(-0.5*Delta) + a2/ns(1) + a1/ns(2)
+
+% comment: Delta gets very large and so nompdf(Delta) becomes so small that
+% a1 and a2 are virtualy 0, implying e1 and e2 is virtually the same, 
+% which might not be wrong by any stretch.
+
