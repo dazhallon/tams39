@@ -78,5 +78,8 @@
     <requires type="dynamic">
       <file>_region_.bcf</file>
     </requires>
+    <requires type="editable">
+      <file>ref.bib</file>
+    </requires>
   </external>
 </requests>

@@ -34,8 +34,24 @@ In which we can conclude that ${\bf x_0}$ belongs to  $\pi_i$ if $
   l_i^T x_0 + c_i = \max_i \left(   l_i^T x_0 + c_i\right)
 $
 
+\subsection*{(C)}
+\label{sec:c-3}
 
-
+Since we have unkwn mean and variance, we use the approximation 
+\begin{align*}
+  e_1 &= \phi(\Delta) \frac{\Delta^2 + 12(p-1)}{16\Delta} \\
+  e_2 &=  \phi(\Delta)\frac{\Delta^2 - 4(p-1)}{16\Delta},
+\end{align*}
+where $\Delta$,  $a_1$ and $a_2$  are defined as in the lectures.
+Using the pooled matrix $S_p$ for all three populations, we got the
+probablity of classifying wrongly into $\pi_1$ to be
+\begin{equation*}
+  e_1 \approx 0.0019
+\end{equation*},
+and for $\pi_2$ to be
+\begin{equation*}
+  e_2  \approx 0.0019.
+\end{equation*}
 \subsection*{Code}
 \label{sec:code}
 

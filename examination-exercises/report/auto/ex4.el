@@ -5,5 +5,6 @@
     "sec:exercise-4"
     "sec:a-3"
     "sec:b-3"
+    "sec:c-3"
     "sec:code")))
 

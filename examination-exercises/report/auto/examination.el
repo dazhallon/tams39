@@ -11,6 +11,7 @@
     "ex2"
     "ex3"
     "ex4"
+    "ex5"
     "report"
     "rep10"
     "inputenc"
