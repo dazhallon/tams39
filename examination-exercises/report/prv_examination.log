@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  3 OCT 2017 14:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  10 OCT 2017 16:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -846,9 +846,9 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 58.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) )
 Beginning to dump on file prv_examination.fmt
- (preloaded format=prv_examination 2017.10.3)
-16492 strings of total length 257396
-432346 memory locations dumped; current usage is 491&390528
+ (preloaded format=prv_examination 2017.10.10)
+16492 strings of total length 257397
+432361 memory locations dumped; current usage is 491&390543
 14037 multiletter control sequences
 \font\nullfont=nullfont
 \font\OMX/cmex/m/n/10=cmex10

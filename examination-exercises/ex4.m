@@ -177,7 +177,7 @@ delta = means(:,1) - means(:,2);
 pooled12 = ((ns(1)-1)*cov(data{1}) + (ns(2)-1)*cov(data{2}))...
   /(ns(1) + ns(2) - 2);
 %K = 0.5*delta'*inv(pooled12)*(means(:,1) + means(:,2));
-Delta = sqrt(delta'*inv(pooled12)*delta);
+Delta = (f - p -1)*sqrt(delta'*inv(Sp)*delta)/f;
 %Delta = sqrt(delta'*inv(Sp)*delta);
 % Get different result using the spooled matrix from earlier. 
 % However, the difference between e1 and e2 is virtually 0.

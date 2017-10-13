@@ -35,9 +35,47 @@ Y = [y1, y2, y3, y4, y5];
 X = [ones(n,1), x1, x2];
 disp('(a)')
 C = [ones(n,1) X];
-B = X \ Y;
+B = X \ Y
+[p q] = size(B)
 
 disp('(b) ')
-R  =  Y*(eye(5) - B'*inv(B*B')*B)
+% calculate the sample correlation matrix
+R = corr([y1 y2 y3 y4 y5 x1 x2])
 
+
+disp('some intresting properties is that x1 correlates alot with the y-values')
+disp('compared to x2 which correlates very porly. ')
+disp('We can also note that we have a strong correlation on the subdiag.')
+disp('which indicates that there is som ecorrelation in time.')
+disp('We can also note that correlation decreases the futher away the y values ')
+disp('are to each other.')
+R(1:5 ,end-1:end)
+
+disp('c')
+
+% create the test by creating a matrix C such that the we only look at
+% the variables in B concerning x2, i.e B(end, :).
+
+C = zeros(q,p); C(end,end) = 1;
+m = size(C,1);
+
+V = Y'*(eye(n) - X*inv(X'*X)*X')*Y
+W = B'*C'*pinv(C*inv(X'*X)*C')*C*B % note that we use the penrose psuedo inverse
+
+logLAMBDA = log(det(V)) - log(det(V + W))
+f = p*m;
+gamma = f * (p^2 + m^2 - 5)/48;
+nu = n - (p-m+1)/(2);
+z = -(n-1- 0.5*(p-m+1))*logLAMBDA
+
+p = chi2cdf(z, f, 'upper') + (gamma/nu^2)*(chi2cdf(z, f+4, 'upper') - ...
+  chi2cdf(z, f, 'upper'))
+
+if (p < 0.05)
+  disp('The average weight does not effect the deathrate')
+else
+  disp('The average weight  does  effect the deathrate')
+end
+
+% I think that the avg- weight might effect in an non-linear way.
 

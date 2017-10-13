@@ -1,5 +1,5 @@
 % exercise 7
-close all;
+close all; clear
 X1 = [191 223 242 248 266 274 272 279 286 287 286;
   64  72  81  66  92 114 126 123 134 148 140;
   206 172 214 239 265 265 262 274 258 288 289;
@@ -50,28 +50,113 @@ X4 = [201 202 229 232 224 237 217 268 244 275 246;
   246 257 269 280 289 291 306 301 295 312 311];
 
 disp('(a)');
-% % without any structure for the mean, can an intraclass corealtio model be
+% without any structure for the mean, can an intraclass corealtio model be
 % assumed between the ten days? Test at level 5%
 
 % plot all data points
 data = {X1, X2, X3, X4};
 hold on
+colors = {'b', 'r', 'g', 'm'};
 for i = 1:4
-  plot(0:size(X1,2)-1,mean(data{i},1));
+  plot(0:size(X1,2)-1,mean(data{i},1), colors{i});
 end
 legend('Control','25-50r', '75-100r', '125-150r', 'Location','southeast')
 xlabel Days
 ylabel Score
 
 
-% calculate the correlation matrix in the columnn direcetion 
-% (i.e. over time)
-ngroups = 4;
-timeCorr = cell(4,1);
-for i = 1:ngroups
-  timeCorr{i} = corr(data{i}');
-  timeCorr{i}
+% set up a test for an intraclass matrix
+X = cat(1, data{1});
+p = size(X1,2)
+S = cell(4,1);
+Sp = zeros(p);
+for i = 1:4
+  S{i} = cov(data{i});
+  Sp = Sp +  (size(data{i},1)-1)*S{i};
 end
-% the correlation are quite high, which suggest intraclass correlation over
-% time
+n = size(X,1);
+Sp = Sp/(n-4);
 
+% fix correct coeff correctly later
+% sigmahat = sqrt(trace(Sp)/(p*(n-1)*n))
+% rhohat = (sum(Sp(:) - trace(Sp)))/((p-1)*n*trace(Sp))
+Ssum = sum(Sp(:));
+logLAMBDA = log(det(Sp)) - log(Ssum/p) ...
+ - (p-1)*log((p*trace(Sp) - Ssum)/(p*(p-1)))
+
+u = n  - 1 - p*(p+1)^2*(2*p-3)/(6*(p-1)*(p^2+p-4));
+Q = -u*logLAMBDA
+
+g  = 0.5*p*(p+1) -2;
+
+c = chi2inv(0.95, g)
+
+if (Q < c)
+  disp('There is an intraclass matrix')
+else
+  disp('There is not an intraclass matrix')
+end
+
+disp('(b)')
+logLAMBDA = (n/2)*log(det(Sp)) - (n/2)*sum(log(diag(Sp)));
+
+% use the corection suggested in exercise 8.9 form book
+u = 2*(1 - (2*p + 11)/(6*n));
+
+Q = - u * logLAMBDA
+c = chi2inv(0.05, p*(p-1)/2)
+
+% reject H0: that Sij = 0 if Q is small
+if (Q < c)
+  disp('The times steps are not independent')
+else
+  disp('The times steps are not independent')
+end
+
+disp('(c)')
+
+t = 0:10;
+B = [ ones(p,1),  t'];
+X = cat(1, data{:});
+
+% use the MLE instead from book
+BETA = zeros(2, 4);
+for i = 1:4
+  BETA(:,i) = inv(B'*inv(Sp)*B)*B'*inv(Sp)'*mean(data{i},1)';
+  %plot(t, BETA(1,i) + BETA(2,i)*t, colors{i})
+end
+BETA
+ 
+ 
+%as done in lectures
+A = B;
+[n p] = size(X)
+C = zeros(4,n);
+niprev = 1;
+ni = 0;
+for i = 1:4
+  ni = ni + size(data{i},1);
+  C(i,niprev:ni) = ones(1, size(data{i},1));
+  niprev = ni+1;
+end
+Pc = C'*inv(C*C')*C;
+V = X' * (eye(n) - Pc) * X;
+BETA = inv(A' *inv(V)*A) * A'*inv(V)*X'*C'*inv(C*C')
+for i = 1:4
+  plot(t, BETA(1,i) + BETA(2,i)*t, colors{i})
+end
+fig2 = figure(2);
+hold on
+for i = 1:4
+  plot(t, BETA(1,i) + BETA(2,i)*t, colors{i})
+end
+legend('Control','25-50r', '75-100r', '125-150r', 'Location','southeast')
+
+BETA(:,1) - BETA(:, 2:4)
+%{ 
+By observing BETA(:,1) - BETA(:, 2:4)
+, we might want to suggest that there infact a difference between the
+the tratment groups and the control group. Except for the second treatment
+group that hada radiation of 25-50r, which has similar parameters and can
+be observed in the plots as well.
+%}

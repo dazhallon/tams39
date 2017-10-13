@@ -61,18 +61,24 @@ n = n_m+n_f
 S_p = ((n_m-1)*S_m + (n_f-1)*S_f)/(n-2)
 
 delta = male_mean - female_mean
-test = n_f*n_m*t(delta)%*%solve(S_p)%*%delta/
-    (n_f+n_m)
+test = n*t(delta)%*%solve(S_p)%*%delta/n
+
 print('The test variable is equal to')
 print(test)
-f = n - 2
-c = f*p*qf(1-0.05, p, f-p+1)/(f-p+1)
+f = n - 1
+print('The critical point is')
+c = (n-1)*p*qf(1-0.05, p, n- p)/(n-p)
 print(c)
 if (test < c){
-  print('cannot reject H')
+  print('cannot reject H, the tail length and the wing legth are equal among the genders')
 }else{
-  print('reject H')
+  print('reject H, the tail and/or wing length differ among the genders')
 }
+
+# (d) find the linear combination that combinations of mean compoents
+# most responsible for rejecting H above
+
+
 
 ## (e) 
 ## determine the 95 % confidence region
@@ -85,7 +91,7 @@ for(i in c(1,2)){
     a = aArrays[i,]
     delta = as.vector(delta)
     
-    center = a %*% delta
+    center = a %*% delta 
     length = test* (a %*% S_p %*% a) / sqrt(n)
     
     LHS = center - length;

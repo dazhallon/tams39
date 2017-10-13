@@ -22,6 +22,9 @@
    (TeX-add-symbols
     "listingsfont"
     "listingsfontinline")
+   (LaTeX-add-labels
+    "sec:e"
+    "eq:ex2-conf-region")
    (LaTeX-add-bibliographies
     "ref")))
 

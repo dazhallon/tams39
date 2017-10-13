@@ -51,10 +51,10 @@ happen.
 \subsection*{(e)}
 \label{sec:e}
 
-The confidence region if given by the equation
+The confidence region if given by the equation, for $\mu = (\mu_1, \mu_2).$
 \begin{equation}
   \label{eq:ex2-conf-region}
- \{\mu:.\ n (\delta - \mu)^T S_p^{-1} (\delta-\mu)\leq \frac{(n-1)p}{n-p}F_{1-\alpha}(p,n-p)\},
+ \{\mu:\ n (\delta - \mu)^T S_p^{-1} (\delta-\mu)\leq \frac{(n-1)p}{n-p}F_{1-\alpha}(p,n-p)\},
 \end{equation}
 where $\alpha = 0.05$, $S_p$ is the pooled matrix from the previous
 exercise, and $\delta = \bar{x}_{\rm male}  - \bar{x}_{\rm
@@ -62,8 +62,8 @@ exercise, and $\delta = \bar{x}_{\rm male}  - \bar{x}_{\rm
 \begin{align*}
   89
   \big(
-    &206.7294 ( - 6.463131 -\mu)^2 + 189.1233(1.176768 -\mu)^2 \\
-    &+ 202.2905(- 6.463131 - \mu)(1.176768- \mu)
+    &206.7294 ( - 6.463131 -\mu_1)^2 + 189.1233(1.176768 -\mu_2)^2 \\
+    &+ 202.2905(- 6.463131 - \mu_1)(1.176768- \mu_2)
   \big)\\
   &\leq \frac{88\cdot 2}{87}3.103839
 \end{align*}
@@ -74,6 +74,7 @@ intervals, for each $a$, is given by
 \begin{equation*}
   n_f n_m \delta^T S_p^{-1} \delta / (n_f + n_m) , 
 \end{equation*}
+where.
 we get the intervals
 \begin{align*}
   (-170.698117786475&; 157.771855160212), \quad \text{for } a = (1,0)
