@@ -56,14 +56,13 @@ disp('(a)');
 % plot all data points
 data = {X1, X2, X3, X4};
 hold on
-colors = {'b', 'r', 'g', 'm'};
+colors = {'b', 'r', 'c', 'k'};
 for i = 1:4
   plot(0:size(X1,2)-1,mean(data{i},1), colors{i});
 end
 legend('Control','25-50r', '75-100r', '125-150r', 'Location','southeast')
 xlabel Days
 ylabel Score
-
 
 % set up a test for an intraclass matrix
 X = cat(1, data{1});
@@ -152,7 +151,38 @@ for i = 1:4
 end
 legend('Control','25-50r', '75-100r', '125-150r', 'Location','southeast')
 
-BETA(:,1) - BETA(:, 2:4)
+
+disp('(d)')
+%  test can be found on 39/47
+% design a test to test the difference between both parameter pairwise
+G = eye(2);
+[r, q] = size(G);
+H = [1 0 0 0]';
+[k, t] = size(H);
+B = BETA;
+for i = 2:4
+    i
+    H(i) = -1;
+    %V = X'*(eye(n) - A'*inv(A*A')*A)*X;
+    % we can simplyfy W since C is just eye(2);
+    R = inv(C*C') + inv(C*C')*C*X*(inv(V) - ...
+        inv(V)*A*inv(A'*inv(V)*A)*A'*inv(V))*X'*C'*inv(C*C');
+    logLAMBDA = log(det(G*inv(A'*inv(V)*A)*G')) - ...
+        log(det(G*inv(A'*inv(V)*A)*G' + G*B*H*inv(H'*R*H)*H'*B'*G'));
+    u = n - k + q - p -0.5*(r - t + 1);
+    Q = -u*logLAMBDA
+    c = chi2inv(0.05, r*t)
+    if(Q < c)
+        fprintf('Group %d does not have any significant difference compared to the control group.f', i)
+    else
+        fprintf('Group %d does have any significant difference compared to the control group.f', i)
+    end
+end
+
+
+
+
+
 %{ 
 By observing BETA(:,1) - BETA(:, 2:4)
 , we might want to suggest that there infact a difference between the
