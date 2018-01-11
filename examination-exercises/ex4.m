@@ -153,9 +153,7 @@ end
 
 
 x0 = zeros(p,1);
-
 class = 1;
-
 L = @(x, l, c) l * x + c;
 max = L(x0, ls(1), c(1));
 for i = 2:k
@@ -172,7 +170,7 @@ disp('(c) Estimate the errors of misclassification of... ')
 
 delta = means(:,1) - means(:,2);
 
-% should we use the pooled matrix for pi1 and pi2, or the collective for
+% % should we use the pooled matrix for pi1 and pi2, or the collective for
 % all?
 pooled12 = ((ns(1)-1)*cov(data{1}) + (ns(2)-1)*cov(data{2}))...
   /(ns(1) + ns(2) - 2);

@@ -87,9 +87,11 @@ s = SSE/df;
 
 q = [1 10 80];
 ymean = q * betas
-
-LHS = ymean - sqrt(s)*tinv(0.975, df)*sqrt(q*inv(x'*x)*q');
-RHS = ymean + sqrt(s)*tinv(0.975, df)*sqrt(q*inv(x'*x)*q');
+k = size(betas, 17);
+df = n - k -1;
+LHS = ymean - sqrt(s)*tinv(0.975, df)*sqrt(1+q*inv(x'*x)*q');
+RHS = ymean + sqrt(s)*tinv(0.975, df)*sqrt(1+q*inv(x'*x)*q');
+disp('95 % prediction interval')
 fprintf('(%.2f, %.2f)\n', LHS, RHS);
 
 
@@ -110,7 +112,7 @@ ymean = q*B;
 
 
 mu =  sym('mu', [2 1], 'real'); 
-eq = df.*  (ymean' - mu)' * inv(SIGMAMLE) * (ymean' - mu ) == tinv(0.95, n-2);
+eq = (n-2).*  (ymean' - mu)' * inv(SIGMAMLE) * (ymean' - mu ) == sqrt(1+q*inv(x'*x)*q')*finv(0.95,1,  n-2);
 
 scale = sqrt(det(S))*0.01;
 xmin = ymean(1) - scale; xmax = ymean(1) + scale; 

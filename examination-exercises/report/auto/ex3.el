@@ -7,6 +7,5 @@
     "fig:ex3-profiles"
     "sec:b-2"
     "sec:c-2"
-    "sec:d-1"
-    "sec:textttmatlab-code")))
+    "sec:d-1")))
 

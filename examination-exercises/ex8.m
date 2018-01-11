@@ -29,9 +29,9 @@ R = R + R' - eye(p);
 disp('(a)')
 [V, D] = eig(R);
 coverage = diag(D);
-coverage = coverage/ (sum(coverage(coverage > 0)));
+%coverage = coverage/ 21;
 coverage(coverage < 0) = 0;
-
+coverage = coverage/sum(coverage);
 mainComponents = find(cumsum(coverage, 'reverse')<0.87)
 % note that we 87 % to cover the main compoents that covers at least 85 %
 
@@ -73,10 +73,10 @@ end
 disp('(d)')
 rho = zeros(p);
 
-% se Results 8.3 in Chapter 8 
+% see Results 8.3 in Chapter 8 
 for i = 1:p
   if (d(i) >= 0)
-    rho(i,:) = V(:,i)*d(i);
+    rho(:,i) = V(:,i)*sqrt(d(i));
   end
 end
 

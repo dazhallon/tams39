@@ -41,7 +41,7 @@ and PCA on R, we find that we need alot oc PC's to explained most of the
 variance. We find that we need the 10 first PC's to cover 85%.
 %}
 % let go with k = 10
-k = 9;
+k = 3;
 
 [Lambda,Psi,T] = factoran(R,k,'xtype','cov')
 SIGMA = Lambda*Lambda' + diag(Psi);

@@ -47,13 +47,35 @@ B = inv(S2)*S21*inv(S1)*S12;
 [Va, da] = eig(A, 'vector');
 [Vb, db] = eig(B, 'vector');
 
-alpha1 = Va(:,max(da) == da)
-beta1 = Vb(:,max(db) == db)
-rho1 = sqrt(max(da))
+R1 = R(b1,b1); R2 = R(b2,b2);
+R12 = R(b1, b2); R21 = R(b2, b1);
+tmp = inv(sqrtm(R1))*R12*inv(R2)*R21*inv(sqrtm(R1));
+[V, d] = eig(tmp, 'vector')
+alpha = inv(sqrtm(R1))*V
+f = inv(sqrtm(R2))*R21*inv(sqrtm(R1))*V;
+b = sqrtm(inv(R2))*f;
+for i = 1:size(b,2)
+  b(:,i) = b(:,i)/norm(sqrtm(R2)*b(:,i));
+end
+b
+return
+% 
+% alpha1 = Va(:,max(da) == da)
+% beta1 = Vb(:,max(db) == db)
+% rho1 = sqrt(max(da))
+% 
+% alpha2 = Va(:,min(da) == da)
+% beta2= Vb(:,min(db) == db)
+% rho2 = sqrt(min(da))
+% 
+% % compute the covariances between the sampe daata an the canonical
+% % correlations.
+% disp('alpha1*S1')
+% printMatrix(alpha1'*S1)
+% disp('beta*S2')
+% printMatrix(beta1'*S2)
+% 
 
-alpha2 = Va(:,min(da) == da)
-beta2= Vb(:,min(db) == db)
-rho2 = sqrt(min(da))
 
 %{
 Comment on result here.
@@ -69,9 +91,9 @@ rsqrd= eig(A*A') % alpha
 for k = 0:2
     logLAMBDA =  sum(log(1 - rsqrd(k+1:end)));
     u = n - k* 0.5*(p + q  + 3) - sum(rsqrd(1:k));
-    Q = - u * logLAMBDA
-    c = chi2inv(0.95, (p-k)*(q-k))
-    if (Q < c)
+    Q(k+1) = - u * logLAMBDA
+    c(k+1) = chi2inv(0.95, (p-k)*(q-k))
+    if (Q(k+1) < c(k+1))
         fprintf('For k = %d, we can not reject H, rho_%d to rho_%d are zeros\n',...
             k, k+1, p)
     else
@@ -79,7 +101,6 @@ for k = 0:2
             k , k+1, p)
     end
 end
-
 
 disp('All exercises are redone but with normalized samples')
 Z = zeros(size(X));
@@ -131,9 +152,9 @@ logLAMBDA = sum(log(1 - rsqrd(k+1:end)));
 % using corretion by (Fujikoshi, 1977)
 for k = 0:2
     u = n - k* 0.5*(p + q  + 3) - sum(rsqrd(1:k));
-    Q = - u * logLAMBDA
-    c = chi2inv(0.95, (p-k)*(q-k))
-    if (Q < c)
+    Q(k+1) = - u * logLAMBDA
+    c(k+1) = chi2inv(0.95, (p-k)*(q-k))
+    if (Q(k+1) < c(k+1))
         fprintf('For k = %d, we can not reject H, rho_%d to rho_%d are zeros\n',...
             k, k+1, p)
     else

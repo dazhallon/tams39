@@ -22,4 +22,17 @@ alpha2 = Va(:,min(da) == da)
 beta2= Vb(:,min(db) == db)
 rho2 = sqrt(min(da))
 
+
+R1 = R(b1,b1); R2 = R(b2,b2);
+R12 = R(b1, b2); R21 = R(b2, b1);
+tmp = inv(sqrtm(R1))*R12*inv(R2)*R21*inv(sqrtm(R1));
+[V, d] = eig(tmp, 'vector')
+alpha = inv(sqrtm(R1))*V
+f = inv(sqrtm(R2))*R21*inv(sqrtm(R1))*V;
+beta = sqrtm(inv(R2))*f;
+for i = 1:size(beta,2)
+  beta(:,i) = beta(:,i)/norm(sqrtm(R2)*beta(:,i));
+end
+
 disp('(b)')
+u = symb(2)

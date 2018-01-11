@@ -53,7 +53,7 @@ X4 = ...
 
 disp('(a) plot the profiles')
 
-%plots = false;
+plots = false;
 
 data = {X1, X2, X3, X4};
 mus = zeros(4,3);
@@ -91,6 +91,8 @@ A = blkdiag(ones(ns(1),1), ones(ns(2),1), ones(ns(3),1), ones(ns(4),1));
 
 % create one giant X matrix of all data points
 X = cat(1, data{:});
+[n,p] = size(X)
+k = length(data)
 
 % create the outer matrix
 V = X'*(eye(n) - A*inv(A'*A)*A')*X;
@@ -105,29 +107,38 @@ C = [ones(2,1), -eye(2,2)];
 H = Y*CYinv*Y';
 
 loglambdaH1 = log(det(C*V*C')) - log(det(C*V*C' + C*H*C'));
-u = -(n - 0.5*(4 + 3 + 1));
-test = u*loglambdaH1 % test is chi squared with p-1 times k-1
-c = chi2inv(.95, 2*3)
+loglambdaH1 = - loglambdaH1;
+u = (n - 0.5*(k + p + 1));
+% v = n*p + 0.5*p*(p+1)
+% v1 = length(data{1})*p + k-1 + p*(p+1)/2
+% u = v - v1;
+% test = loglambdaH1
+% alpha = 0.05;
+% c = chi2inv(1-alpha, u);
+
+%u = p - k + 1;
+test = -u*loglambdaH1 % test is chi squared with p-1 times k-1
+c = chi2inv(.95, (p-1)*(k-1))
 
 if test < c
   disp('The profiles are parellel')
 else
   disp('The profiles are not parallel')
 end
-
+keyboard
 
 disp('(c) If the profiles are parallel, test if they are at the same level')
 lambda2 = det(C*V*C' + C*H*C')/det(C*V*C') * det(V)/det(V+H);
-F = (1 - lambda2)/lambda2;
-test = (n - 4  - 3 + 1)/(4 - 1) * F % is Fdist with k-1 and n- k - p +1
-c = finv(0.95, 4-1, n- 4 - 3 +1)
+F = -(1 - lambda2)/lambda2;
+test = (n - k - p + 1)/(k - 1) * F % is Fdist with k-1 and n- k - p +1
+c = finv(0.95, 4-1, n- k- p +1)
 
 if test < c
   disp('The profiles are on the same level')
 else
   disp('The profiles are not on the same level')
 end
-
+keyboard
 disp('(d) if the profiles are parallel, test if they are flat')
 
 muhat = mean(mus,1)';

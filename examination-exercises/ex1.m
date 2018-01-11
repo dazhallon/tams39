@@ -26,13 +26,15 @@ else
   disp('Reject H0: mu_female = mu_male')
 end
 
+
 %% (b)
 % find the elcispse for 95 % confidence interval
 mu =  sym('mu', [2 1], 'real'); 
 
-T_alpha = d2/(d1*(n-1)) *c;
+c2 = (p*(n-1)) * finv(1-alpha, d1, d2)/ (n-p);
+T_alpha = c2;
 
-eq = n .* (mean_male - mu)' * Sinv * (mean_male - mu ) == T_alpha;
+eq = n .* (mean_male - mu)' * Sinv * (mean_male - mu ) == c2;
 
 scale = sqrt(det(S))*0.1;
 xmin = mean_male(1) - scale; xmax = mean_male(1) + scale; 
@@ -43,19 +45,23 @@ saveas(fig, 'report/images/ellipse-ex1', 'epsc')
 
 %% (c)
 % construct the sim. conf. int.
+T_alpha = finv(1 -alpha, d1, d2);
 for a = [[1;0], [0;1]];
   a
-  int_length = T_alpha*sqrt((a'*S*a)/n);
-  lhs = a'*mean_male - int_length
-  rhs = a'*mean_male + int_length
+  c = sqrt(p*(n-1)*T_alpha/(n-p));
+  int_length = c*sqrt((a'*S*a)/n);
+  lhs = a'*mean_male - int_length;
+  rhs = a'*mean_male + int_length;
+  printMatrix([lhs,rhs])
 end
 
 % Bonferri intervals
-c = tinv(1- alpha/4, n-1) % <- obs alpha/4, see Wikipage for Bonferri correction
+c = tinv(1 - alpha/(2*p), n-1) % <- obs alpha/4, see Wikipage for Bonferri correction
 
 disp('Here are the two Bonferri intervals for \mu_1 and \mu_2')
 for i = [1,2]
   fprintf('For mu_%d\n', i)
-  lhs = mean_male(i) - S(i,i)*c/sqrt(n)
-  rhs = mean_male(i) + S(i,i)*c/sqrt(n)
+  lhs = mean_male(i) - c*sqrt(S(i,i)/n);
+  rhs = mean_male(i) + c*sqrt(S(i,i)/n);
+  printMatrix([lhs, rhs])
 end

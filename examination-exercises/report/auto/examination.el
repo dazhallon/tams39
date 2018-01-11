@@ -12,6 +12,12 @@
     "ex3"
     "ex4"
     "ex5"
+    "ex6"
+    "ex7"
+    "ex8"
+    "ex9"
+    "ex10"
+    "ex11"
     "report"
     "rep10"
     "inputenc"
@@ -20,11 +26,15 @@
     "amssymb"
     "subcaption"
     "graphicx"
+    "bm"
     "diagbox"
     "biblatex"
     "listings"
     "color")
    (TeX-add-symbols
+    '("corr" 2)
+    '("cov" 2)
+    "tr"
     "listingsfont"
     "listingsfontinline")
    (LaTeX-add-bibliographies

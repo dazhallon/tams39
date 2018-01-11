@@ -31,11 +31,13 @@ M = f* log(det(S_p)) -
   (f_m*log(det(S_m)) + f_f*log(det(S_f)) ) ;
 
 test = (1-u)*M
+print('The test variable Q')
 print(test)
 df = 0.5* p* (p + 1)
 
 # C is chi squared with df degrees of freedom
 c = qchisq(0.05, df)
+print('c = ')
 print(c)
 
 if(test<=c){

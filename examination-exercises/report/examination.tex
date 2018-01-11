@@ -6,10 +6,14 @@
 \usepackage{subcaption}
 \usepackage{graphicx}
 
+\usepackage{bm}
+\renewcommand{\b}[1]{\bm{#1}}
+\newcommand{\tr}{\text{ tr }}
+\newcommand{\cov}[2]{\text{cov}(#1,#2)}
+\newcommand{\corr}[2]{\text{corr}(#1,#2)}
 \usepackage{diagbox}
 
 \usepackage{biblatex}
-
 \bibliography{ref}
 
 \graphicspath{{./images/}}
@@ -44,6 +48,7 @@
   showstringspaces=false,
   basicstyle=\footnotesize\ttfamily,
   keywordstyle=\bfseries\color{green},
+
   commentstyle=\color{gray},
   identifierstyle=\color{blue},
   stringstyle=\color{orange},
@@ -63,9 +68,13 @@
 \include{ex3}
 \include{ex4}
 \include{ex5}
-
+\include{ex6}
+\include{ex7}
+\include{ex8}
+\include{ex9}
+\include{ex10}
+\include{ex11}
 \printbibliography
-
 \end{document}
 %%% Local Variables:
 %%% mode: latex

@@ -1,0 +1,89 @@
+
+\subsection*{Exercise 7}
+\label{sec:exercise-7}
+
+We can test for an intraclass matrix by considering the test
+\begin{equation*}
+  \ln \Lambda = \ln\b S_p - \ln\b{1^T S_p 1} - (p-1)\ln (p \tr \b S_p),
+\end{equation*}
+where $\b S_p$ is the pooled matrix for all the samples. Using the
+correction suggested,
+$$u = n  - 1 - \frac{p(p+1)^2 (2p-3)}{6(p-1)(p^2+p-4)},$$
+we get the test size
+\begin{equation*}
+  Q = -u \ln \Lambda  \approx  7.1035 < c = 83.6753 = \chi^2_{0.95}(g),
+\end{equation*}
+where
+\begin{equation*}
+  g = \frac 12p(p+1) -2.
+\end{equation*}
+Thus we can not reject that there is an intraclass correlation model.
+
+\subsection*{(b)}
+\label{sec:b-6}
+
+Further, we which to test if the correlation matrix is zero on all the
+subdiagonals. We use the test that can be found on Exercise 8.9 in
+Chapter .. in \cite{book}. Set 
+\begin{equation*}
+  \ln \Lambda = \frac n2 \ln (|\b S_p |) - \frac n2 \sum \ln\b (S_{p_{ii}}),
+\end{equation*}
+and 
+\begin{equation*}
+  u = 2(1 - \frac{2p + 11}{6n}).
+\end{equation*}
+We find that that the test size
+\begin{equation*}
+  -u \ln \Lambda = 14.5914 < 38.9580 = c = \chi^2_{0.05}(p(p-1)/2),
+\end{equation*}
+thus we find that ...
+
+\subsection*{(c)}
+\label{sec:c-6}
+
+We consider the growth curve model 
+\begin{equation*}
+  \b X = \b{B\beta},
+\end{equation*}
+where $\b B$ is the design matrix given as
+\begin{equation*}
+  \b B = (\b 1\ \b t), 
+\end{equation*}
+where $\b t = (0, 1, 2, \dots, 10)^T$. and $\b \beta :(2,4)$ is the
+parameter matrix. We can estimate $\b \beta$ by using the MLE that is
+according to \cite[p.330]{book}:
+\begin{equation*}
+  \b \beta_l = (B^TS_p^{-1}B)^{-1}B^TSp^{-T}\overline{\b{X}_{l}}^T,\quad
+l = 1,\dots, 4,
+\end{equation*}
+which gives us the full $\b \beta$ matrix as
+\begin{equation*}
+  \b \beta =
+  \begin{pmatrix}
+    117.39 &96.64 &121.25 &150.95 \\ 
+    7.38 &5.43 &5.11 &5.34
+  \end{pmatrix}
+\end{equation*}
+
+\subsection*{(d)}
+\label{sec:d-2}
+
+To compare the parameters we consider three different tests,
+\begin{equation*}
+  H_i: \b \beta^{(1)} - \b \beta^{(i)} = \b 0,\quad i = 2,3,4,
+\end{equation*}
+where $\b \beta^{(i)}$ denotes column $i$ of $\b \beta$.
+can can test all of these hypothesis by considering
+\begin{equation*}
+  H_i: \b{G \beta H_i} = \b 0, 
+\end{equation*}
+where $\b H_i$ as its first element equal to 1 and its $i$th element
+equal to $-1$. $\b G$ is just the identity matrix of dimension 2. The
+details of the test can be found on page 39 of Lecture 9. We find that
+all groups has a significant difference  compared to the control group (on
+level $5\%$).
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "examination"
+%%% End:

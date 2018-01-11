@@ -1,0 +1,34 @@
+
+\subsection*{Exercise 9}
+\label{sec:exercise-9}
+
+We consider the the following model for $k$ factors
+\begin{equation*}
+  \b X = \b \mu  + \b{LF} + \b \epsilon,
+\end{equation*}
+where $\b L: (p\times k)$ are the unknown factors.
+
+\subsection*{(b)}
+\label{sec:b-8}
+
+According to the upper limit given in Lecture 10, we should let $k$ be
+at most equal 10.
+
+\subsection*{(c)}
+\label{sec:c-8}
+
+$k = 10$ is to high as we shall see. We set up the test
+\begin{align*}
+  \ln \Lambda &= \ln(\det(\b R)) - \ln(\det(\b \Sigma)) \\
+  u &=  n - (2p+4k+11)/6 \\
+  g &= \frac 12 ((p-k)^2 - (p+k)) \\
+  Q &= -u \ln \Lambda =   0.0539\\
+  c &= 0 = \chi^2_{0.95}(g),
+\end{align*}
+where $\b \Sigma = \b{LL^T} + \b \Psi$. Since $Q > c$ we reject the
+hypothesis. However, if we were to choose $k=9$, we get $Q = 0.7723$
+and $c =  12.5916$, thus we conclude that we can choose $k = 9$.
+%%% Local Variables
+%%% mode: latex
+%%% TeX-master: "examination"
+%%% End:

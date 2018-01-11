@@ -38,6 +38,8 @@ C = [ones(n,1) X];
 B = X \ Y
 [p q] = size(B)
 
+sigmahat2 = n^-1*(Y - X*B)'*(Y - X*B)
+
 disp('(b) ')
 % calculate the sample correlation matrix
 R = corr([y1 y2 y3 y4 y5 x1 x2])
@@ -72,10 +74,10 @@ p = chi2cdf(z, f, 'upper') + (gamma/nu^2)*(chi2cdf(z, f+4, 'upper') - ...
   chi2cdf(z, f, 'upper'))
 
 if (p < 0.05)
-  disp('The average weight does not effect the deathrate')
+  disp('The average weight does not affect the deathrate')
 else
-  disp('The average weight  does  effect the deathrate')
+  disp('The average weight  does  affect the deathrate')
 end
 
-% I think that the avg- weight might effect in an non-linear way.
+% I think that the avg- weight might affect in an non-linear way.
 

@@ -103,7 +103,7 @@ logLAMBDA = (n/2)*log(det(Sp)) - (n/2)*sum(log(diag(Sp)));
 u = 2*(1 - (2*p + 11)/(6*n));
 
 Q = - u * logLAMBDA
-c = chi2inv(0.05, p*(p-1)/2)
+c = chi2inv(0.95, p*(p-1)/2)
 
 % reject H0: that Sij = 0 if Q is small
 if (Q < c)
@@ -171,7 +171,7 @@ for i = 2:4
         log(det(G*inv(A'*inv(V)*A)*G' + G*B*H*inv(H'*R*H)*H'*B'*G'));
     u = n - k + q - p -0.5*(r - t + 1);
     Q = -u*logLAMBDA
-    c = chi2inv(0.05, r*t)
+    c = chi2inv(0.95, r*t)
     if(Q < c)
         fprintf('Group %d does not have any significant difference compared to the control group.f', i)
     else

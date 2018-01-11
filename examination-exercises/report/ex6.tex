@@ -1,0 +1,78 @@
+
+\section*{Exercise 6}
+\label{sec:exercise-6}
+
+\subsection*{(a)}
+\label{sec:a-5}
+
+
+The foll wing linear model was designed
+\begin{equation*}
+  \b Y = \b{XB},
+\end{equation*}
+where $\b Y$ is the out parameters and $\b X$ is the design matrix
+\begin{equation*}
+  \b X = (\b 1_n, \b x_1, \b x_2),
+\end{equation*}
+and $\b B:(3 \times 4) $ contained the unknown parameter values, which
+was estimated using linear regression as
+\begin{equation*}
+  \b B =
+  \begin{pmatrix}
+    -94.60 &-228.67 &-258.80 &-246.05 &-232.96 \\ 
+    19.27 &43.65 &48.99 &47.33 &45.10 \\ 
+    -24.68 &-20.59 &3.32 &5.22 &8.24 
+  \end{pmatrix}.
+\end{equation*}
+
+\subsection*{(b)}
+The sample correlation matrix was 
+\begin{equation*}
+  \b R =
+  \begin{pmatrix}
+    1.00 &0.86 &0.71 &0.64 &0.65 &0.81 &-0.09 \\ 
+    0.86 &1.00 &0.91 &0.89 &0.90 &0.95 &0.10 \\ 
+    0.71 &0.91 &1.00 &0.98 &0.98 &0.92 &0.22 \\ 
+    0.64 &0.89 &0.98 &1.00 &1.00 &0.90 &0.22 \\ 
+    0.65 &0.90 &0.98 &1.00 &1.00 &0.90 &0.24 \\ 
+    0.81 &0.95 &0.92 &0.90 &0.90 &1.00 &0.22 \\ 
+    -0.09 &0.10 &0.22 &0.22 &0.24 &0.22 &1.00  
+  \end{pmatrix}.
+\end{equation*}
+was is interesting is that the time steps that are close to each other
+correlates more than those times further apart. We can even note that
+the first and last time steps have negative correlation an is almost 0.
+
+\subsection*{(c)}
+\label{sec:c-5}
+
+We can the test if the \textit{average weight} affect the causation of
+death by considering the test where each element of the bottom row of $\b
+B$ should be equal to zero. We get the hypothesis
+\begin{equation*}
+  H_0:\ \b{CB} = \b 0,
+\end{equation*}
+where 
+\begin{equation*}
+  C = 
+  \begin{pmatrix}
+    0 &0 &0 \\ 
+    0 &0 &0 \\ 
+    0 &0 &0 \\ 
+    0 &0 &0 \\ 
+    0 &0 &1   
+  \end{pmatrix},
+\end{equation*}
+form which could use the test described on page 11 of Lecture 9, and use
+the corresponding asymptotic expansion found on page 12 of Lecture 9 to
+test on a significance level of 5 \%. We find that 
+\begin{align*}
+  p &= P(\chi^2 \geq z) + (\gamma/\nu^2)P(\chi^2 \geq z) -  P(\chi^2
+      \geq z )\\
+    &\approx 0.7931 > 0.05,
+\end{align*}
+hence we reject $H_0$.
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "examination"
+%%% End:

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=prv_examination 2017.10.10)  10 OCT 2017 16:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=prv_examination 2017.10.15)  15 OCT 2017 18:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -34,6 +34,7 @@ graphics.cfg    2010/04/23 v1.9 graphics configuration of TeX Live
   pdftex.def    2011/05/27 v0.06d Graphics/color for pdfTeX
 infwarerr.sty    2010/04/08 v1.3 Providing info/warning/error messages (HO)
  ltxcmds.sty    2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+      bm.sty    2014/10/28 v1.1c Bold Symbol Support (DPC/FMi)
  diagbox.sty    2016/02/24 v2.1 Making table heads with diagonal lines
   pict2e.sty    2016/02/05 v0.3b Improved picture commands (HjG,RN,JT)
   pict2e.cfg    2016/02/05 v0.1u pict2e configuration for teTeX/TeXLive
@@ -81,18 +82,18 @@ listings.cfg    2015/06/04 1.6 listings configuration
     umsb.fd    2013/01/14 v3.01 AMS symbols B
         .
 No file _region_.aux.
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
 (/usr/share/texmf/tex/latex/preview/preview.sty
 Package: preview 2010/02/14 11.88 (AUCTeX/preview-latex)
 
@@ -134,7 +135,7 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.58 \begin{document}
+l.63 \begin{document}
                      
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -190,44 +191,240 @@ e
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-Package biblatex Info: Reference section=0 on input line 58.
-Package biblatex Info: Reference segment=0 on input line 58.
+Package biblatex Info: Reference section=0 on input line 63.
+Package biblatex Info: Reference segment=0 on input line 63.
 \c@lstlisting=\count317
 
- !name(ex2.tex) !offset(-10) 
+ !name(ex10.tex) !offset(-65) 
 ! Preview: Snippet 1 started.
 <-><->
       
-l.64 ...nce region if given by the equation, for $
-                                                  \mu = (\mu_1, \mu_2).$
+l.67 \section
+             *{Exercise 10}
 Not a real error.
 
 Preview: Tightpage -32891 -32891 32891 32891
-! Preview: Snippet 1 ended.(491520+163840x3629510).
+! Preview: Snippet 1 ended.(655359+0x22609920).
 <-><->
       
-l.64 ... the equation, for $\mu = (\mu_1, \mu_2).$
-                                                  
+l.67 \section*{Exercise 10}
+                           
 Not a real error.
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 ! Preview: Snippet 2 started.
 <-><->
       
-l.65 \begin{equation}
-                     
+l.70 \subsection
+                *{(a)}
 Not a real error.
 
-! Preview: Snippet 2 ended.(1511852+0x22609920).
+! Preview: Snippet 2 ended.(589824+196608x22609920).
 <-><->
       
-l.68 \end{equation}
+l.70 \subsection*{(a)}
+                      
+Not a real error.
+
+[2]
+! Preview: Snippet 3 started.
+<-><->
+      
+l.73 The sample canonical correlations is $
+                                           \b\alpha_1  = (0.93, -0.37  )^T$,
+Not a real error.
+
+! Preview: Snippet 3 ended.(551306+163840x5720056).
+<-><->
+      
+l.73 ...tions is $\b\alpha_1  = (0.93, -0.37  )^T$
+                                                  ,
+Not a real error.
+
+[3]
+! Preview: Snippet 4 started.
+<-><->
+      
+l.74 $
+      \b \beta_2 = (-0.54, -0.84 )^T$, $\b \alpha_2 = (-0.28,  0.96 )^T$ and...
+
+Not a real error.
+
+! Preview: Snippet 4 ended.(551306+163840x6163639).
+<-><->
+      
+l.74 $\b \beta_2 = (-0.54, -0.84 )^T$
+                                     , $\b \alpha_2 = (-0.28,  0.96 )^T$ and...
+
+Not a real error.
+
+[4]
+! Preview: Snippet 5 started.
+<-><->
+      
+l.74 $\b \beta_2 = (-0.54, -0.84 )^T$, $
+                                        \b \alpha_2 = (-0.28,  0.96 )^T$ and...
+
+Not a real error.
+
+! Preview: Snippet 5 ended.(551306+163840x5720056).
+<-><->
+      
+l.74 ...84 )^T$, $\b \alpha_2 = (-0.28,  0.96 )^T$
+                                                   and $\b
+Not a real error.
+
+[5]
+! Preview: Snippet 6 started.
+<-><->
+      
+l.74 ...$, $\b \alpha_2 = (-0.28,  0.96 )^T$ and $
+                                                  \b
+Not a real error.
+
+! Preview: Snippet 6 ended.(551306+163840x5653913).
+<-><->
+      
+l.75 \beta_2 = (-0.91,0.40)^T$
+                              . where $\b \alpha_1$ and $\b \alpha_2$ are the
+Not a real error.
+
+[6]
+! Preview: Snippet 7 started.
+<-><->
+      
+l.75 \beta_2 = (-0.91,0.40)^T$. where $
+                                       \b \alpha_1$ and $\b \alpha_2$ are the
+Not a real error.
+
+! Preview: Snippet 7 ended.(291271+98303x792499).
+<-><->
+      
+l.75 ...a_2 = (-0.91,0.40)^T$. where $\b \alpha_1$
+                                                   and $\b \alpha_2$ are the
+Not a real error.
+
+[7]
+! Preview: Snippet 8 started.
+<-><->
+      
+l.75 ...(-0.91,0.40)^T$. where $\b \alpha_1$ and $
+                                                  \b \alpha_2$ are the
+Not a real error.
+
+! Preview: Snippet 8 ended.(291271+98303x792499).
+<-><->
+      
+l.75 ...^T$. where $\b \alpha_1$ and $\b \alpha_2$
+                                                   are the
+Not a real error.
+
+[8]
+! Preview: Snippet 9 started.
+<-><->
+      
+l.77 \begin{equation*}
+                      
+Not a real error.
+
+! Preview: Snippet 9 ended.(791524+0x13904367).
+<-><->
+      
+l.79 \end{equation*}
+                    
+Not a real error.
+
+[9]
+! Preview: Snippet 10 started.
+<-><->
+      
+l.80 and $
+          \b \beta_2$ and $\b \beta_2$ are  the ordered eigenvectors of
+Not a real error.
+
+! Preview: Snippet 10 ended.(455111+127431x726356).
+<-><->
+      
+l.80 and $\b \beta_2$
+                      and $\b \beta_2$ are  the ordered eigenvectors of
+Not a real error.
+
+[10]
+! Preview: Snippet 11 started.
+<-><->
+      
+l.80 and $\b \beta_2$ and $
+                           \b \beta_2$ are  the ordered eigenvectors of
+Not a real error.
+
+! Preview: Snippet 11 ended.(455111+127431x726356).
+<-><->
+      
+l.80 and $\b \beta_2$ and $\b \beta_2$
+                                       are  the ordered eigenvectors of
+Not a real error.
+
+[11]
+! Preview: Snippet 12 started.
+<-><->
+      
+l.81 \begin{equation*}
+                      
+Not a real error.
+
+! Preview: Snippet 12 ended.(791524+0x13904367).
+<-><->
+      
+l.83 \end{equation*}
+                    
+Not a real error.
+
+[12]
+! Preview: Snippet 13 started.
+<-><->
+      
+l.85 \subsection
+                *{(b)}
+Not a real error.
+
+! Preview: Snippet 13 ended.(589824+196608x22609920).
+<-><->
+      
+l.85 \subsection*{(b)}
+                      
+Not a real error.
+
+[13]
+! Preview: Snippet 14 started.
+<-><->
+      
+l.89 \begin{align*}
                    
 Not a real error.
 
-[2
+! Preview: Snippet 14 ended.(2102980+0x16299685).
+<-><->
+      
+l.92 \end{align*}
+                 
+Not a real error.
 
-]  !name(examination.tex) !offset(-2) 
+[14]
+! Preview: Snippet 15 started.
+<-><->
+      
+l.94 canonical variables are $
+                              x_1^{(1)}$ which represents \textit{1973
+Not a real error.
+
+! Preview: Snippet 15 ended.(684486+174758x1078161).
+<-><->
+      
+l.94 canonical variables are $x_1^{(1)}$
+                                         which represents \textit{1973
+Not a real error.
+
+[15]  !name(examination.tex) !offset(-30) 
 
 LaTeX Warning: There were undefined references.
 
@@ -241,23 +438,27 @@ Package logreq Info: Writing requests to '_region_.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 822 strings out of 483508
- 11528 string characters out of 5992603
- 433802 words of memory out of 5000000
- 14810 multiletter control sequences out of 15000+600000
- 7422 words of font info for 29 fonts, out of 8000000 for 9000
+ 826 strings out of 483426
+ 11582 string characters out of 5991755
+ 436094 words of memory out of 5000000
+ 14884 multiletter control sequences out of 15000+600000
+ 10783 words of font info for 40 fonts, out of 8000000 for 9000
  350 hyphenation exceptions out of 8191
- 33i,5n,25p,212b,125s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on _region_.pdf (2 pages, 50234 bytes).
+ 33i,10n,25p,212b,227s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy7.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmsy10.pfb>
+Output written on _region_.pdf (15 pages, 78048 bytes).
 PDF statistics:
- 35 PDF objects out of 1000 (max. 8388607)
- 24 compressed objects within 1 object stream
+ 93 PDF objects out of 1000 (max. 8388607)
+ 65 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -15,16 +15,21 @@
     "amssymb"
     "subcaption"
     "graphicx"
+    "bm"
     "diagbox"
     "biblatex"
     "listings"
     "color")
    (TeX-add-symbols
+    '("corr" 2)
+    '("cov" 2)
+    "tr"
     "listingsfont"
     "listingsfontinline")
    (LaTeX-add-labels
-    "sec:e"
-    "eq:ex2-conf-region")
+    "sec:exercise-10"
+    "sec:a-6"
+    "sec:b-9")
    (LaTeX-add-bibliographies
     "ref")))
 

@@ -18,9 +18,28 @@ clearly be seen at $x_1 = 284$.
 \subsection*{(b)}
 \label{sec:b-1}
 
-Using the Box corrected test found in \cite[p. 311]{book}, we find that
-we can not pool the covariance matrices (see code for details).
-
+Using the Box corrected test found in \cite[p.311]{book}, we find that
+we can not pool the covariance matrices. The test a LRT where we have
+the ratio
+\begin{equation*}
+\Lambda =   \prod_{l}\left(\frac{|\b S_{l}|}{|\b S_{p}|}
+  \right)^{(n_{l}-1)/2},
+\end{equation*}
+and the correction
+\begin{equation*}
+  u = 
+  \left(
+    \sum_{l}\frac{1}{n_{l}-1}-\frac{1}{\sum_{l}n_{l}-1}
+  \right)
+  \left(
+    \frac{2p^{2} + 3p -1}{6(p+1)(g-1)},
+  \right)
+\end{equation*}
+where $p = 2$ and $g = 2$ is the number of groups. Then
+\begin{equation*}
+  C = (1-u)\ln \Lambda
+\end{equation*}
+is $\chi^{2}(\frac 12 p(p+1)(g-1))$.
 \subsection*{(c)}
 \label{sec:c-1}
 
@@ -36,8 +55,8 @@ variable is larger than
 \begin{equation*}
  c  = \frac{fp}{f-p+1}F_{1-\alpha}(p, n-p), %c = f*p*qf(1-0.05, p, f-p)/(f-p+1)
 \end{equation*}
-where $f = n - 1$, and $p = 2$. Since $T^2 = 7.494772$ and $c =
-6.27986$, we reject $H_0: \mu_{\rm male} = \mu_{\rm female} $.
+where $f = n - 1$, and $p = 2$. Since $T^2 = 0.34$ and $c =
+6.27986$, we can not reject $H_0: \mu_{\rm male} = \mu_{\rm female} $.
 
 The result would most likely hold if we changed the value of the
 outlier to $x_1 = 184$ instead of 284, since the sample size should be too
@@ -45,8 +64,6 @@ large enough for any drastic changes in the variance matrix or mean to
 happen.
 
 \subsection*{(d)}
-\label{sec:d}
-??
 
 \subsection*{(e)}
 \label{sec:e}
@@ -77,20 +94,18 @@ intervals, for each $a$, is given by
 where.
 we get the intervals
 \begin{align*}
-  (-170.698117786475&; 157.771855160212), \quad \text{for } a = (1,0)
+  (-13.85&, 0.92), \quad \text{for } a = (1,0)
   \\
-  (-149.071120157853&;151.424655511388), \quad \text{for } a = (0,1)
+  (-5.58&, "7.93), \quad \text{for } a = (0,1)
 \end{align*}
 
 \subsection*{(f)}
 \label{sec:f}
 
 From the interval we find the Exercise (e), we see that there are no
-genrall difference for the lengths between the female and the male birds.
-\subsection*{\texttt{R} code}
-\label{sec:textttr-code}
+general difference for the lengths between the female and the male birds.
 
-\lstinputlisting[style=R]{../ex2.R}
+
 
 %%% Local Variables:
 %%% mode: latex

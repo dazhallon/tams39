@@ -6,6 +6,11 @@
 \usepackage{subcaption}
 \usepackage{graphicx}
 
+\usepackage{bm}
+\renewcommand{\b}[1]{\bm{#1}}
+\newcommand{\tr}{\text{ tr }}
+\newcommand{\cov}[2]{\text{cov}(#1,#2)}
+\newcommand{\corr}[2]{\text{corr}(#1,#2)}
 \usepackage{diagbox}
 
 \usepackage{biblatex}
@@ -57,16 +62,48 @@
 \date{}
 \begin{document}
 
-\message{ !name(ex2.tex) !offset(-10) }
+\message{ !name(ex10.tex) !offset(-65) }
 
-\label{sec:e}
+\section*{Exercise 10}
+\label{sec:exercise-10}
 
-The confidence region if given by the equation, for $\mu = (\mu_1, \mu_2).$
-\begin{equation}
-  \label{eq:ex2-conf-region}
- \{\mu:\ n (\delta - \mu)^T S_p^{-1} (\delta-\mu)\leq \frac{(n-1)p}{n-p}F_{1-\alpha}(p,n-p)\},
-\end{equation}
-\message{ !name(examination.tex) !offset(-2) }
+\subsection*{(a)}
+\label{sec:a-6}
+
+The sample canonical correlations is $\b\alpha_1  = (0.93, -0.37  )^T$,
+$\b \beta_2 = (-0.54, -0.84 )^T$, $\b \alpha_2 = (-0.28,  0.96 )^T$ and $\b
+\beta_2 = (-0.91,0.40)^T$. where $\b \alpha_1$ and $\b \alpha_2$ are the
+ordered eigenvectors of 
+\begin{equation*}
+  \b{\Sigma^{-1}_{11}\Sigma_{12}\Sigma_{22}^{-1}\Sigma_{21}}, 
+\end{equation*}
+and $\b \beta_2$ and $\b \beta_2$ are  the ordered eigenvectors of 
+\begin{equation*}
+  \b{\Sigma^{-1}_{22}\Sigma_{21}\Sigma_{11}^{-1}\Sigma_{12}}.
+\end{equation*}
+
+\subsection*{(b)}
+\label{sec:b-9}
+
+The first canonical variables are given by
+\begin{align*}
+  u_1 &= \b \alpha_1^T \b x_1= 0.93 x_1^{(1)} - 0.37 x_2^{(1)} \\
+  v_1 &= \b \beta_1^T \b x_2 = -0.54 x_1^{(2)} - 0.84 x_2^{(2)}.
+\end{align*}
+We can first notice how the only variable tha causes any of the
+canonical variables are $x_1^{(1)}$ which represents \textit{1973
+  nonprimary homicides}. From these we draw the conclusion that the
+number of homicides varies the most among the different states, while
+for the other crimes, we can imagine that the as the other variables
+gets larger, there is less differemce among the states. Thus we can
+expected these types of crimes being more evenly distributed among the states.
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "examination"
+%%% End:
+
+\message{ !name(examination.tex) !offset(-30) }
 
 \end{document}
 %%% Local Variables:

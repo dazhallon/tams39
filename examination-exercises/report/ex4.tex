@@ -14,7 +14,7 @@ and using the Box correction, we get
 \begin{equation*}
   -2  \frac{m}{f} \ln \lambda^* = 49.2750,
 \end{equation*}
-which we comapre against the critical value
+which we compare against the critical value
 \begin{equation*}
   c = \chi^2_{0.95}(f) = 58.1240,
 \end{equation*}
@@ -23,7 +23,7 @@ hence the covariance matrices can be pooled into one matrix.
 \subsection*{(b)}
 \label{sec:b-3}
 
-We could calculate the linear seprators, $ l_i^T x_0 + c_i$, where
+We could calculate the linear separators, $ l_i^T x_0 + c_i$, where
 we obtain
 \begin{align*}
 l_1^T x_0 + c_1 &= (-0.57, 1.80, 1.01, 6.33, 18.94, 0.33)x_0 + -703.95 \\ 
@@ -37,14 +37,14 @@ $
 \subsection*{(C)}
 \label{sec:c-3}
 
-Since we have unkwn mean and variance, we use the approximation 
+Since we have unknown mean and variance, we use the approximation 
 \begin{align*}
   e_1 &= \phi(\Delta) \frac{\Delta^2 + 12(p-1)}{16\Delta} \\
   e_2 &=  \phi(\Delta)\frac{\Delta^2 - 4(p-1)}{16\Delta},
 \end{align*}
 where $\Delta$,  $a_1$ and $a_2$  are defined as in the lectures.
 Using the pooled matrix $S_p$ for all three populations, we got the
-probablity of classifying wrongly into $\pi_1$ to be
+probability of classifying wrongly into $\pi_1$ to be
 \begin{equation*}
   e_1 \approx 0.0019
 \end{equation*},
@@ -52,12 +52,7 @@ and for $\pi_2$ to be
 \begin{equation*}
   e_2  \approx 0.0019.
 \end{equation*}
-\subsection*{Code}
-\label{sec:code}
 
-
-
-\lstinputlisting[style=matlab]{./../ex4.m}
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "examination"

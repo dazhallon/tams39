@@ -8,9 +8,7 @@
     "sec:b-1"
     "sec:c-1"
     "eq:1"
-    "sec:d"
     "sec:e"
     "eq:ex2-conf-region"
-    "sec:f"
-    "sec:textttr-code")))
+    "sec:f")))
 
