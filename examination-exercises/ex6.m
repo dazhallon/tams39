@@ -81,3 +81,11 @@ end
 
 % I think that the avg- weight might affect in an non-linear way.
 
+X1 = X(:, 1:end-1);
+B1 = X1\Y;
+Sigma1 = n^-1 * (Y - X1*B1)'*(Y - X1*B1);
+r = rank(X) - 1;
+[n m] = size(Y);
+q = 1;
+statistic = -(n - r - 1- 0.5*(m-r+q+1))*(log(det(sigmahat2)) - log(det(Sigma1)))
+critical = chi2inv(0.95, m*(r-1))

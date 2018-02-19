@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  15 OCT 2017 13:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  9 FEB 2018 12:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -476,6 +476,10 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen119
 \Gin@req@width=\dimen120
 )
+(/usr/share/texlive/texmf-dist/tex/latex/comment/comment.sty
+\CommentStream=\write3
+
+Excluding comment 'comment')
 (/usr/share/texlive/texmf-dist/tex/latex/tools/bm.sty
 Package: bm 2014/10/28 v1.1c Bold Symbol Support (DPC/FMi)
 \symboldoperators=\mathgroup6
@@ -665,7 +669,7 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 \bibparsep=\skip57
 \bibhang=\skip58
 \blx@bcfin=\read1
-\blx@bcfout=\write3
+\blx@bcfout=\write4
 \c@mincomprange=\count155
 \c@maxcomprange=\count156
 \c@mincompwidth=\count157
@@ -843,21 +847,21 @@ File: english.lbx 2016/03/03 v3.3 biblatex localization (PK/JW/AB)
 )
 \@quotelevel=\count307
 \@quotereset=\count308
-LaTeX Font Info:    Try loading font information for U+msa on input line 63.
+LaTeX Font Info:    Try loading font information for U+msa on input line 71.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 63.
+LaTeX Font Info:    Try loading font information for U+msb on input line 71.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) )
 Beginning to dump on file prv_examination.fmt
- (preloaded format=prv_examination 2017.10.15)
-16574 strings of total length 258245
-433653 memory locations dumped; current usage is 491&391835
-14108 multiletter control sequences
+ (preloaded format=prv_examination 2018.2.9)
+16613 strings of total length 258852
+434575 memory locations dumped; current usage is 491&392757
+14143 multiletter control sequences
 \font\nullfont=nullfont
 \font\OMX/cmex/m/n/10=cmex10
 \font\tenln=line10

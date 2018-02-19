@@ -48,18 +48,20 @@ mainComponentsVectors = V(:,mainComponents)
 % compared to the other messurements. This means that we can find alot of
 % variance in the legnth of the base of dorsal thin.
 
-
+%%
 
 disp('(b)')
 % calculate the conf int for the first PC
 lambda = D(end,end);
-c = norminv(1-0.025/2);
+c = norminv(1-0.05/2);
 n = 67; 
 tmp = c*sqrt(2/n);
 leftbound = lambda/(1 + tmp);
 rightbound = lambda/(1 - tmp);
 fprintf('conf int: (%.2f, %.2f)\n', leftbound, rightbound);
+printMatrix([leftbound, rightbound])
 
+%%
 disp('(c)')  
 d = diag(D);
 E1hat = 0;
@@ -70,6 +72,7 @@ for k = 1:21-1
   end
 end
 
+%%
 disp('(d)')
 rho = zeros(p);
 
@@ -80,6 +83,8 @@ for i = 1:p
   end
 end
 
+printMatrix(rho(:,end-5:end))
+%%
 %{
   rho(i,k) is the correlation between PC i (where i = 21 is the largest)
   and data variable k. E.g. rho(21, 1) is the correlation between the most

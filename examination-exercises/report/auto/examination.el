@@ -26,15 +26,20 @@
     "amssymb"
     "subcaption"
     "graphicx"
+    "comment"
     "bm"
     "diagbox"
     "biblatex"
     "listings"
     "color")
    (TeX-add-symbols
+    '("rank" 1)
+    '("abs" 1)
+    '("mean" 1)
     '("corr" 2)
     '("cov" 2)
     "tr"
+    "diag"
     "listingsfont"
     "listingsfontinline")
    (LaTeX-add-bibliographies

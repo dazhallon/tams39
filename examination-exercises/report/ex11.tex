@@ -30,63 +30,82 @@ because they are body exercises and do not use any weights.
 \subsection*{(b)}
 \label{sec:b-10}
 
-The sample canonical correlations are $\b \alpha_1 = (0.44, -0.90, 0.03
-)^T$, $\b \beta_1~=~(-0.26, -0.80, 0.54 )^T$, and $\b \alpha = (-0.16 ,0.43 ,0.89  
-)^T$ and $\b \beta_2 = (-0.70 ,0.67 ,-0.23 )^T$. \\
-\\
-These are harder to interpret. From \cite[pp.545-547]{book} it is
-suggested that we compute the covariance between $\alpha_1$ and $X_1$,
-etc.. Then we find that 
-\begin{align*}
-  \cov {\b X_1}{\b \alpha_1} &=
+Using the same results as in Exercise 10(a), we get that the sample
+canonical correaltions are
+\begin{equation*}
+  \rho_{1} =0.7956 , \quad \rho_{2} =  0.2006,\quad  \rho_{3} = 0.0726,
+\end{equation*}
+where the sample cancocial coefficients where
+\begin{equation*}
+  \b \alpha_{1} =
   \begin{pmatrix}
-    -31.00 &-5.99 &4.86 
-  \end{pmatrix} \\
-  \cov {\b X_2}{\b \beta_1} &=
+    -0.03 \\ 
+    0.49 \\ 
+    -0.01
+  \end{pmatrix}, \quad
+  \b \alpha_{2} =
   \begin{pmatrix}
-    -55.23 &-734.65 &-119.42  
+    0.08 \\ 
+    -0.37 \\ 
+    0.03      
+  \end{pmatrix}, \quad
+  \b \alpha_{3} =
+  \begin{pmatrix}
+    -0.01 \\ 
+    0.16 \\ 
+    0.15
   \end{pmatrix}
-\end{align*}
-Here we can see that that the pulse and waist size has quite low effect
-on the variation  whereas the other variables as a stronger
-correlation. It is interesting that most of these covariance are
-negative.  
+\end{equation*},
+and
+
+\begin{equation*}
+  \b \beta_{1} =
+  \begin{pmatrix}
+    0.07 \\ 
+    0.02 \\ 
+    -0.01 
+  \end{pmatrix}, \quad
+  \b \beta_{2} =
+  \begin{pmatrix}
+    0.07 \\ 
+    0.00 \\ 
+    0.02  
+  \end{pmatrix}, \quad
+  \b \beta_{3} =
+  \begin{pmatrix}
+    0.25 \\ 
+    -0.02 \\ 
+    0.01  
+  \end{pmatrix}.
+\end{equation*}
 
 \subsection*{(c)}
 \label{sec:c-9}
 
 We test the hypothesis $H_0: \rho_{k+1} = \dots = \rho_{p} = 0,$ for $k
-= 0,1,2$, by using the test suggested in Lecture 11. Let 
-\begin{equation*}
-  \b A =\b S_{11}^{-\frac 12} \b S_{12}\b S_{22}^{-\frac 12},
-\end{equation*}
-set the LRT as
-\begin{equation*}
-  \ln \Lambda = \sum_{i = k+1}^{p} \ln (1 - r^2_{i}),
-\end{equation*}
-and use the correction 
-\begin{equation*}
-  u =  n - k \frac 12(p + q  + 3) - \sum_{i = 1}^{k} r^2_i,
-\end{equation*}
-suggested by Fujikoshi, we get \\
-\\
-\begin{center}
-\begin{tabular}[h]{c|cc|c}
- $k$ &  $Q$ & $c$ & Conclusion\\ \hline
-  0& 20.97 &16.92 & Reject\\ 
- 1 & 16.17 &9.49 & Reject\\ 
- 2 & 10.98 &3.84 & Reject
-\end{tabular}
-\end{center}
-where 
-\begin{equation*}
-  Q = -u \ln \Lambda,
-\end{equation*}
-and
-\begin{equation*}
-  c = \chi^2_{0.95}((p-k)(q-k)).
-\end{equation*}
-
+= 0,1,2$, $p = 3$, by using the test found in
+\cite[p. 565]{book}. Consider the hypothesises $H_{0}^{(k)}:
+\rho_{k+1},\dots, \rho_{p} = 0$, for $k = 0,1,2$ and $p =
+3$. $H_{0}^{(k)}$ is rejected if 
+\begin{equation}\label{eq:test_ex11}
+  -\left(n - 1  - \frac{1}{2}(p+q+1)\right) \sum_{i = k+1}^{p} \ln (1 -
+  \rho_{i}^{2}) > \chi^{2}_{(p-k)(1-k)}(1-\alpha), \quad \alpha = 0.05.
+\end{equation}
+Deonte $Q$ and $c$ as the LHS and the RHS of \eqref{eq:test_ex11}
+respectivley. We present the results in Table \ref{tab:test_ex11}. 
+\begin{table}
+  \centering
+  \begin{tabular}{l|ccc}
+    $k$&$Q$&$c$& Reject $H_{0}^{k}$ \\ \hline
+    0 &19.93 &16.92 & yes \\ 
+    1 &0.72 &9.49 & no \\ 
+    2 &0.06 &3.84 & no  
+  \end{tabular}
+  \caption{Results from the tests}
+  \label{tab:test_ex11}
+\end{table}
+We make the conclussion that the only non-zero sample canonical
+correlation is $\rho_{1}$.
 \subsection*{Redoing the exercise but with normalized samples}
 \label{sec:redoing-exercise-but}
 
@@ -134,53 +153,68 @@ The sample correlation matrix is now
 \end{equation*}
 which is the same matrix as for $\b X$.\\
 \\
-The canonical correlation variables is now
+The sample canonical correlations where 
+\begin{equation*}
+  \rho_{1} = 0.7956,\quad  \rho_{2} =   0.2006,\quad \rho_{3} =  0.0726
+\end{equation*},
+with canonical coefficients
+\begin{equation*}
+  \b \alpha_{1} =
+  \begin{pmatrix}
+    -0.78 \\ 
+    1.58 \\ 
+    -0.06 
+  \end{pmatrix}, \quad
+  \b \alpha_{2} =
+  \begin{pmatrix}
+    -0.03 \\ 
+    0.49 \\ 
+    -0.01
+  \end{pmatrix}, \quad
+  \b \alpha_{3} =
+  \begin{pmatrix}
+    -0.19 \\ 
+    0.51 \\ 
+    1.05  
+  \end{pmatrix},
+\end{equation*}
+and
 
-\begin{align*}
-  \b \alpha_{1} &=
-                  \begin{pmatrix}
-                    0.44 &-0.90 &0.03  
-                  \end{pmatrix}^{T} \\
-  \b \beta_{1} &=
-                 \begin{pmatrix}
-                   -0.26 &-0.80 &0.54  
-                 \end{pmatrix}^{T} \\
-  \b \alpha_{2} &=
-                  \begin{pmatrix}
-                    -0.16 &0.43 &0.89  
-                  \end{pmatrix}^{T} \\
-  \b \beta_{2} &=
-                 \begin{pmatrix}
-                   -0.70 &0.67 &-0.23 
-                 \end{pmatrix}^{T}
-\end{align*}
-Now we can see clearer how the canonical correlations relates to the
-data. The first canonical pair may tell us that the pulse how the
-middle-aged man might not cause much difference in how well the
-exercises are performed. 
- In the first canonical pair, we have the correlations
-\begin{align*}
-  \corr {\b X_{1}}{ \b u_{1}} &=
+\begin{equation*}
+  \b \beta_{1} =
   \begin{pmatrix}
-    -0.35 &-0.53 &0.19 
-  \end{pmatrix}\\
-  \corr {\b X_{2}}{ \b v_{1}} &=
+    0.35 \\ 
+    1.05 \\ 
+    -0.72  
+  \end{pmatrix}, \quad
+  \b \beta_{2} =
   \begin{pmatrix}
-    -0.55 &-0.62 &-0.12 
+    -0.38 \\ 
+    0.12 \\ 
+    1.06  
+  \end{pmatrix}, \quad
+  \b \beta_{3} =
+  \begin{pmatrix}
+    1.30 \\ 
+    -1.24 \\ 
+    0.42  
   \end{pmatrix}
-\end{align*}
-\\
-Lastly, we do the same test as before. This time we had the following
-results:
-\begin{center}
-\begin{tabular}[h]{c|cc|c}
-  $k$ & $Q$ & $c$ & Conclusion \\ \hline
-0.00 &20.05 &16.92 & Reject \\ 
-1.00 &15.53 &9.49 & Reject\\ 
-2.00 &10.98 &3.84  & Reject
-\end{tabular}
-\end{center}
-That is we can not conclude that any correlation $\rho$ is zeros.
+\end{equation*}
+Finally we use test the same hypothesises described in Exercise
+(c). The results are presented in Table
+\ref{tab:test_ex11_standardized}. So we can conclude that only
+$\rho_{1}$ is non-zero of all the sample canonical correlations. 
+\begin{table}
+  \centering
+  \begin{tabular}{l|ccc}
+    $k$&$Q$&$c$& Reject $H_{0}^{k}$ \\ \hline
+    0 &19.93 &16.92 & yes \\ 
+    1 &0.72 &9.49 & no \\ 
+    2 &0.06 &3.84 & no  
+  \end{tabular}
+  \caption{Results from the tests}
+  \label{tab:test_ex11_standardized}
+\end{table} 
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "examination"

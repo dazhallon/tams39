@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=prv_examination 2017.10.15)  15 OCT 2017 18:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=prv_examination 2018.2.9)  9 FEB 2018 12:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -34,6 +34,7 @@ graphics.cfg    2010/04/23 v1.9 graphics configuration of TeX Live
   pdftex.def    2011/05/27 v0.06d Graphics/color for pdfTeX
 infwarerr.sty    2010/04/08 v1.3 Providing info/warning/error messages (HO)
  ltxcmds.sty    2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+ comment.sty    
       bm.sty    2014/10/28 v1.1c Bold Symbol Support (DPC/FMi)
  diagbox.sty    2016/02/24 v2.1 Making table heads with diagonal lines
   pict2e.sty    2016/02/05 v0.3b Improved picture commands (HjG,RN,JT)
@@ -81,20 +82,20 @@ listings.cfg    2015/06/04 1.6 listings configuration
     umsa.fd    2013/01/14 v3.01 AMS symbols A
     umsb.fd    2013/01/14 v3.01 AMS symbols B
         .
-No file _region_.aux.
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
-LaTeX Font Info:    ... okay on input line 63.
-(/usr/share/texmf/tex/latex/preview/preview.sty
+(./_region_.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+ (/usr/share/texmf/tex/latex/preview/preview.sty
 Package: preview 2010/02/14 11.88 (AUCTeX/preview-latex)
 
 (/usr/share/texmf/tex/latex/preview/prtightpage.def
@@ -135,7 +136,7 @@ See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.63 \begin{document}
+l.71 \begin{document}
                      
 If you do not understand this error, please take a closer look
 at the documentation of the `caption' package, especially the
@@ -191,38 +192,38 @@ e
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-Package biblatex Info: Reference section=0 on input line 63.
-Package biblatex Info: Reference segment=0 on input line 63.
+Package biblatex Info: Reference section=0 on input line 71.
+Package biblatex Info: Reference segment=0 on input line 71.
 \c@lstlisting=\count317
 
- !name(ex10.tex) !offset(-65) 
+ !name(ex4.tex) !offset(-73) 
 ! Preview: Snippet 1 started.
 <-><->
       
-l.67 \section
-             *{Exercise 10}
+l.74 \section
+             *{Exercise 4}
 Not a real error.
 
 Preview: Tightpage -32891 -32891 32891 32891
 ! Preview: Snippet 1 ended.(655359+0x22609920).
 <-><->
       
-l.67 \section*{Exercise 10}
-                           
+l.74 \section*{Exercise 4}
+                          
 Not a real error.
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 ! Preview: Snippet 2 started.
 <-><->
       
-l.70 \subsection
+l.77 \subsection
                 *{(a)}
 Not a real error.
 
 ! Preview: Snippet 2 ended.(589824+196608x22609920).
 <-><->
       
-l.70 \subsection*{(a)}
+l.77 \subsection*{(a)}
                       
 Not a real error.
 
@@ -230,201 +231,516 @@ Not a real error.
 ! Preview: Snippet 3 started.
 <-><->
       
-l.73 The sample canonical correlations is $
-                                           \b\alpha_1  = (0.93, -0.37  )^T$,
+l.81 $
+      H_{0}: \Sigma_{1} =\Sigma_{2}  = \Sigma_{3}$ is considered. We
 Not a real error.
 
-! Preview: Snippet 3 ended.(551306+163840x5720056).
+! Preview: Snippet 3 ended.(447828+98303x5434465).
 <-><->
       
-l.73 ...tions is $\b\alpha_1  = (0.93, -0.37  )^T$
-                                                  ,
+l.81 $H_{0}: \Sigma_{1} =\Sigma_{2}  = \Sigma_{3}$
+                                                   is considered. We
 Not a real error.
 
 [3]
 ! Preview: Snippet 4 started.
 <-><->
       
-l.74 $
-      \b \beta_2 = (-0.54, -0.84 )^T$, $\b \alpha_2 = (-0.28,  0.96 )^T$ and...
-
+l.82 reject $
+             H_{0}$ if  $\Lambda^{*}$ is small
 Not a real error.
 
-! Preview: Snippet 4 ended.(551306+163840x6163639).
+! Preview: Snippet 4 ended.(447828+98303x838771).
 <-><->
       
-l.74 $\b \beta_2 = (-0.54, -0.84 )^T$
-                                     , $\b \alpha_2 = (-0.28,  0.96 )^T$ and...
-
+l.82 reject $H_{0}$
+                    if  $\Lambda^{*}$ is small
 Not a real error.
 
 [4]
 ! Preview: Snippet 5 started.
 <-><->
       
-l.74 $\b \beta_2 = (-0.54, -0.84 )^T$, $
-                                        \b \alpha_2 = (-0.28,  0.96 )^T$ and...
-
+l.82 reject $H_{0}$ if  $
+                         \Lambda^{*}$ is small
 Not a real error.
 
-! Preview: Snippet 5 ended.(551306+163840x5720056).
+! Preview: Snippet 5 ended.(451272+0x756395).
 <-><->
       
-l.74 ...84 )^T$, $\b \alpha_2 = (-0.28,  0.96 )^T$
-                                                   and $\b
+l.82 reject $H_{0}$ if  $\Lambda^{*}$
+                                      is small
 Not a real error.
 
 [5]
 ! Preview: Snippet 6 started.
 <-><->
       
-l.74 ...$, $\b \alpha_2 = (-0.28,  0.96 )^T$ and $
-                                                  \b
+l.83 \begin{equation*}
+                      
 Not a real error.
 
-! Preview: Snippet 6 ended.(551306+163840x5653913).
+! Preview: Snippet 6 ended.(1934766+0x15780622).
 <-><->
       
-l.75 \beta_2 = (-0.91,0.40)^T$
-                              . where $\b \alpha_1$ and $\b \alpha_2$ are the
+l.86 \end{equation*}
+                    
 Not a real error.
 
 [6]
 ! Preview: Snippet 7 started.
 <-><->
       
-l.75 \beta_2 = (-0.91,0.40)^T$. where $
-                                       \b \alpha_1$ and $\b \alpha_2$ are the
+l.87 where $
+            f_{i} = n_{i} - 1$, are the degrees of freedom for group $i = 1,
 Not a real error.
 
-! Preview: Snippet 7 ended.(291271+98303x792499).
+! Preview: Snippet 7 ended.(455111+127431x3153078).
 <-><->
       
-l.75 ...a_2 = (-0.91,0.40)^T$. where $\b \alpha_1$
-                                                   and $\b \alpha_2$ are the
+l.87 where $f_{i} = n_{i} - 1$
+                              , are the degrees of freedom for group $i = 1,
 Not a real error.
 
 [7]
 ! Preview: Snippet 8 started.
 <-><->
       
-l.75 ...(-0.91,0.40)^T$. where $\b \alpha_1$ and $
-                                                  \b \alpha_2$ are the
+l.87 ...1$, are the degrees of freedom for group $
+                                                  i = 1,
 Not a real error.
 
-! Preview: Snippet 8 ended.(291271+98303x792499).
+! Preview: Snippet 8 ended.(432226+127431x2665167).
 <-><->
       
-l.75 ...^T$. where $\b \alpha_1$ and $\b \alpha_2$
-                                                   are the
+l.88 2, 3$
+          , $f = \sum_{i=1}^{3}f_{i}$, and
 Not a real error.
 
 [8]
 ! Preview: Snippet 9 started.
 <-><->
       
-l.77 \begin{equation*}
-                      
+l.88 2, 3$, $
+             f = \sum_{i=1}^{3}f_{i}$, and
 Not a real error.
 
-! Preview: Snippet 9 ended.(791524+0x13904367).
+! Preview: Snippet 9 ended.(625146+196611x3486985).
 <-><->
       
-l.79 \end{equation*}
-                    
+l.88 2, 3$, $f = \sum_{i=1}^{3}f_{i}$
+                                     , and
 Not a real error.
 
 [9]
 ! Preview: Snippet 10 started.
 <-><->
       
-l.80 and $
-          \b \beta_2$ and $\b \beta_2$ are  the ordered eigenvectors of
+l.89 \begin{equation*}
+                      
 Not a real error.
 
-! Preview: Snippet 10 ended.(455111+127431x726356).
+! Preview: Snippet 10 ended.(1348011+0x17491184).
 <-><->
       
-l.80 and $\b \beta_2$
-                      and $\b \beta_2$ are  the ordered eigenvectors of
+l.92 \end{equation*}
+                    
 Not a real error.
 
 [10]
 ! Preview: Snippet 11 started.
 <-><->
       
-l.80 and $\b \beta_2$ and $
-                           \b \beta_2$ are  the ordered eigenvectors of
+l.94 \begin{equation*}
+                      
 Not a real error.
 
-! Preview: Snippet 11 ended.(455111+127431x726356).
+! Preview: Snippet 11 ended.(2019151+0x12997834).
 <-><->
       
-l.80 and $\b \beta_2$ and $\b \beta_2$
-                                       are  the ordered eigenvectors of
+l.96 \end{equation*}
+                    
 Not a real error.
 
 [11]
 ! Preview: Snippet 12 started.
 <-><->
       
-l.81 \begin{equation*}
-                      
+l.97 The test $
+               \Lambda^{*} < c$, for some $c$, is an unbiased test.
 Not a real error.
 
-! Preview: Snippet 12 ended.(791524+0x13904367).
+! Preview: Snippet 12 ended.(451272+25623x1913812).
 <-><->
       
-l.83 \end{equation*}
-                    
+l.97 The test $\Lambda^{*} < c$
+                               , for some $c$, is an unbiased test.
 Not a real error.
 
 [12]
 ! Preview: Snippet 13 started.
 <-><->
       
-l.85 \subsection
-                *{(b)}
+l.97 The test $\Lambda^{*} < c$, for some $
+                                           c$, is an unbiased test.
 Not a real error.
 
-! Preview: Snippet 13 ended.(589824+196608x22609920).
+! Preview: Snippet 13 ended.(282168+0x283611).
 <-><->
       
-l.85 \subsection*{(b)}
-                      
+l.97 The test $\Lambda^{*} < c$, for some $c$
+                                             , is an unbiased test.
 Not a real error.
 
 [13]
 ! Preview: Snippet 14 started.
 <-><->
       
-l.89 \begin{align*}
-                   
+l.99 \begin{equation*}
+                      
 Not a real error.
 
-! Preview: Snippet 14 ended.(2102980+0x16299685).
+! Preview: Snippet 14 ended.(1442675+0x17886361).
 <-><->
       
-l.92 \end{align*}
-                 
+l.101 \end{equation*}
+                     
 Not a real error.
 
 [14]
 ! Preview: Snippet 15 started.
 <-><->
       
-l.94 canonical variables are $
-                              x_1^{(1)}$ which represents \textit{1973
+l.102 where $
+             m = f- 2\alpha$, where
 Not a real error.
 
-! Preview: Snippet 15 ended.(684486+174758x1078161).
+! Preview: Snippet 15 ended.(455111+127431x3390951).
 <-><->
       
-l.94 canonical variables are $x_1^{(1)}$
-                                         which represents \textit{1973
+l.102 where $m = f- 2\alpha$
+                            , where
 Not a real error.
 
-[15]  !name(examination.tex) !offset(-30) 
+[15]
+! Preview: Snippet 16 started.
+<-><->
+      
+l.103 \begin{equation*}
+                       
+Not a real error.
+
+! Preview: Snippet 16 ended.(2019151+0x16431010).
+<-><->
+      
+l.109 \end{equation*}
+                     
+Not a real error.
+
+[16]
+! Preview: Snippet 17 started.
+<-><->
+      
+l.111 \begin{equation*}
+                       
+Not a real error.
+
+! Preview: Snippet 17 ended.(1302500+0x14033791).
+<-><->
+      
+l.113 \end{equation*}
+                     
+Not a real error.
+
+[17]
+! Preview: Snippet 18 started.
+<-><->
+      
+l.115 \begin{equation*}
+                       
+Not a real error.
+
+! Preview: Snippet 18 ended.(730073+0x15887388).
+<-><->
+      
+l.117 \end{equation*}
+                     
+Not a real error.
+
+[18]
+! Preview: Snippet 19 started.
+<-><->
+      
+l.118 hence $
+             H_{0}$ cannot be rejected, the covariance matrices cannot be
+Not a real error.
+
+! Preview: Snippet 19 ended.(447828+98303x838771).
+<-><->
+      
+l.118 hence $H_{0}$
+                    cannot be rejected, the covariance matrices cannot be
+Not a real error.
+
+[19]
+! Preview: Snippet 20 started.
+<-><->
+      
+l.120 \subsection
+                 *{(b)}
+Not a real error.
+
+! Preview: Snippet 20 ended.(589824+196608x22609920).
+<-><->
+      
+l.120 \subsection*{(b)}
+                       
+Not a real error.
+
+[20]
+! Preview: Snippet 21 started.
+<-><->
+      
+l.124 \begin{equation*}
+                       
+Not a real error.
+
+! Preview: Snippet 21 ended.(4718638+0x20208245).
+<-><->
+      
+l.134 \end{equation*}
+                     
+Not a real error.
+
+[21]
+! Preview: Snippet 22 started.
+<-><->
+      
+l.135 we can use the distance function $
+                                        d_{i}(\b x_{0}) = (\b x_{0} - \mean
+Not a real error.
+
+! Preview: Snippet 22 ended.(575988+286896x10660334).
+<-><->
+      
+l.137 x_{i})$
+              given in \cite[p. 611]{book}, where  $\b x_{0}$ is classified to
+Not a real error.
+
+[22]
+
+LaTeX Warning: Citation 'book' on page 1 undefined on input line 137.
+
+! Preview: Snippet 23 started.
+<-><->
+      
+l.137 ...)$ given in \cite[p. 611]{book}, where  $
+                                                  \b x_{0}$ is classified to
+Not a real error.
+
+! Preview: Snippet 23 ended.(291271+98303x725903).
+<-><->
+      
+l.137 ...in \cite[p. 611]{book}, where  $\b x_{0}$
+                                                   is classified to
+Not a real error.
+
+[23]
+! Preview: Snippet 24 started.
+<-><->
+      
+l.138 $
+       \pi_{i}$ if $d_{i}(\b x_{0}) = \min_{i = 1, 2, 3}
+Not a real error.
+
+! Preview: Snippet 24 ended.(282168+98303x591761).
+<-><->
+      
+l.138 $\pi_{i}$
+                if $d_{i}(\b x_{0}) = \min_{i = 1, 2, 3}
+Not a real error.
+
+[24]
+! Preview: Snippet 25 started.
+<-><->
+      
+l.138 $\pi_{i}$ if $
+                    d_{i}(\b x_{0}) = \min_{i = 1, 2, 3}
+Not a real error.
+
+! Preview: Snippet 25 ended.(491520+187504x8036017).
+<-><->
+      
+l.141 \right\}$
+               . The distance functions can be created with
+Not a real error.
+
+[25]
+! Preview: Snippet 26 started.
+<-><->
+      
+l.142 \begin{equation*}
+                       
+Not a real error.
+
+! Preview: Snippet 26 ended.(4718638+0x20096584).
+<-><->
+      
+l.152 \end{equation*}
+                     
+Not a real error.
+
+[26]
+! Preview: Snippet 27 started.
+<-><->
+      
+l.154 \begin{equation*}
+                       
+Not a real error.
+
+! Preview: Snippet 27 ended.(4718638+0x19357010).
+<-><->
+      
+l.182 \end{equation*}
+                     
+Not a real error.
+
+[27]
+! Preview: Snippet 28 started.
+<-><->
+      
+l.186 \subsection
+                 *{(c)}
+Not a real error.
+
+! Preview: Snippet 28 ended.(589824+196608x22609920).
+<-><->
+      
+l.186 \subsection*{(c)}
+                       
+Not a real error.
+
+[28]
+! Preview: Snippet 29 started.
+<-><->
+      
+l.190 \begin{equation*}
+                       
+Not a real error.
+
+! Preview: Snippet 29 ended.(1612804+0x22609920).
+<-><->
+      
+l.195 \end{equation*}
+                     
+Not a real error.
+
+[29]
+! Preview: Snippet 30 started.
+<-><->
+      
+l.197 \begin{equation*}
+                       
+Not a real error.
+
+! Preview: Snippet 30 ended.(1475443+0x22166949).
+<-><->
+      
+l.201 \end{equation*}
+                     
+Not a real error.
+
+[30]
+! Preview: Snippet 31 started.
+<-><->
+      
+l.202 ...error of missclassificating a member of $
+                                                  \pi_{0}$ onto
+Not a real error.
+
+! Preview: Snippet 31 ended.(282168+98303x667576).
+<-><->
+      
+l.202 ... missclassificating a member of $\pi_{0}$
+                                                   onto
+Not a real error.
+
+[31]
+! Preview: Snippet 32 started.
+<-><->
+      
+l.203 $
+       \pi_{1}$ is given by
+Not a real error.
+
+! Preview: Snippet 32 ended.(282168+98303x667576).
+<-><->
+      
+l.203 $\pi_{1}$
+                is given by
+Not a real error.
+
+[32]
+! Preview: Snippet 33 started.
+<-><->
+      
+l.204 \begin{equation*}
+                       
+Not a real error.
+
+! Preview: Snippet 33 ended.(1442675+0x18862313).
+<-><->
+      
+l.207 \end{equation*}
+                     
+Not a real error.
+
+[33]
+! Preview: Snippet 34 started.
+<-><->
+      
+l.208 ...error of missclassificating a member of $
+                                                  \pi_{0}$ onto
+Not a real error.
+
+! Preview: Snippet 34 ended.(282168+98303x667576).
+<-><->
+      
+l.208 ... missclassificating a member of $\pi_{0}$
+                                                   onto
+Not a real error.
+
+[34]
+! Preview: Snippet 35 started.
+<-><->
+      
+l.209 $
+       \pi_{2}$ is
+Not a real error.
+
+! Preview: Snippet 35 ended.(282168+98303x667576).
+<-><->
+      
+l.209 $\pi_{2}$
+                is
+Not a real error.
+
+[35]
+! Preview: Snippet 36 started.
+<-><->
+      
+l.210 \begin{equation*}
+                       
+Not a real error.
+
+! Preview: Snippet 36 ended.(1442675+0x18862313).
+<-><->
+      
+l.213 \end{equation*}
+                     
+Not a real error.
+
+[36] Excluding 'comment' comment.  !name(examination.tex) !offset(-150) 
 
 LaTeX Warning: There were undefined references.
 
@@ -438,27 +754,28 @@ Package logreq Info: Writing requests to '_region_.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 826 strings out of 483426
- 11582 string characters out of 5991755
- 436094 words of memory out of 5000000
- 14884 multiletter control sequences out of 15000+600000
+ 963 strings out of 483387
+ 13965 string characters out of 5991148
+ 438016 words of memory out of 5000000
+ 15054 multiletter control sequences out of 15000+600000
  10783 words of font info for 40 fonts, out of 8000000 for 9000
  350 hyphenation exceptions out of 8191
- 33i,10n,25p,212b,227s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy7.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmsy10.pfb>
-Output written on _region_.pdf (15 pages, 78048 bytes).
+ 33i,8n,25p,228b,735s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmsy7.pfb>
+Output written on _region_.pdf (36 pages, 112577 bytes).
 PDF statistics:
- 93 PDF objects out of 1000 (max. 8388607)
- 65 compressed objects within 1 object stream
+ 164 PDF objects out of 1000 (max. 8388607)
+ 113 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

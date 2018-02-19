@@ -5,34 +5,76 @@
 \subsection*{(a)}
 \label{sec:a-6}
 
-The sample canonical correlations is $\b\alpha_1  = (0.93, -0.37  )^T$,
-$\b \beta_2 = (-0.54, -0.84 )^T$, $\b \alpha_2 = (-0.28,  0.96 )^T$ and $\b
-\beta_2 = (-0.91,0.40)^T$. where $\b \alpha_1$ and $\b \alpha_2$ are the
-ordered eigenvectors of 
+According to Result 10.1 in \cite[p. 541]{book}, the sample canonical coefficients is given by finding the eigenpairs of
 \begin{equation*}
-  \b{\Sigma^{-1}_{11}\Sigma_{12}\Sigma_{22}^{-1}\Sigma_{21}}, 
+  \b R_{11}^{-1/2} \b R_{12} \b R_{22}^{-1/2} \b R_{21} \b R_{11}^{-1/2}
 \end{equation*}
-and $\b \beta_2$ and $\b \beta_2$ are  the ordered eigenvectors of 
+which we done with $(\rho^{2}_{i}, \b e_{i})$, $i =1,2$, which gives us the
+coefficients for $\b X^{(1)}$ by $\b\alpha_{i} = \b R_{11}^{-1/2} \b e_{i}$, $i =1,2$. Similarly the eigenpairs of
 \begin{equation*}
-  \b{\Sigma^{-1}_{22}\Sigma_{21}\Sigma_{11}^{-1}\Sigma_{12}}.
+  \b R_{22}^{-1/2} \b R_{21} \b R_{11}^{-1/2} \b R_{12} \b R_{22}^{-1/2},
 \end{equation*}
+denoted by $(\rho^{2}_{i}, \b f_{i})$, $i =1,2$, are the canonical coefficients for $\b
+X^{(2)}$ is given by $\b\beta_{i} = \b R_{22}^{-1/2} \b f_{i}$, $i= 1,2$. It
+follows that the canonical correlations are given by
+\begin{align*}
+  \rho_{1} &=  \sqrt{0.1248} =  0.3533\\
+  \rho_{2} &=  \sqrt{0.0003} = 0.0158.
+\end{align*}
 
 \subsection*{(b)}
 \label{sec:b-9}
 
-The first canonical variables are given by
+The canonical coefficients  was calculated to be
 \begin{align*}
-  u_1 &= \b \alpha_1^T \b x_1= 0.93 x_1^{(1)} - 0.37 x_2^{(1)} \\
-  v_1 &= \b \beta_1^T \b x_2 = -0.54 x_1^{(2)} - 0.84 x_2^{(2)}.
-\end{align*}
-We can first notice how the only variable that causes any of the
-canonical variables are $x_1^{(1)}$ which represents \textit{1973
-  nonprimary homicides}. From these we draw the conclusion that the
-number of homicides varies the most among the different states, while
-for the other crimes, we can imagine that the as the other variables
-gets larger, there is less difference among the states. Thus we can
-expected these types of crimes being more evenly distributed among the states.
+  \begin{matrix}
+     \b \alpha_{1} =  (1.22,   -0.48)^{T},  & \b \beta_{1} =  (0.62,0.97)^{T} \\
+  \b \alpha_{2} =  (-0.34, 1.17)^{T},  & \b \beta_{2} = (-0.83, 0.37)^{T}
+  \end{matrix}
+\end{align*}, 
+and so the first canonical pair is
+\begin{equation*}
+  \hat u_1 = 1.22 x_{1}^{(1)} - 0.48 x_{2}^{(1)} , \quad \hat v_{1} =
+  0.62 x_{1}^{(2)} + 0.97 x_{2}^{(2)}. 
+\end{equation*}
+We can see that $\hat u_{1}$ represents mostly the number of homicides
+ (1973) while $\hat v_{1}$ represented mostly the certainty for
+ punishment (1970). We can investigate further by computing the sample
+ correlation between $\hat u_{1}$ and $x^{(1)}$, as well as the the
+ sample covariance between $\hat v_{1}$ and $x^{(1)}$, $\hat u_{1}$ and
+ $x^{(2)}$, and also $\hat v_{1}$ and  $x^{(2)}$ (see \cite[p. 552]{book}). We get that
+ \begin{align*}
+   R_{\hat u_{1}, x^{(1)}} &= \begin{pmatrix}0.92 &0.27   \end{pmatrix} \\
+   R_{\hat v_{1}, x^{(2)}} &= \begin{pmatrix}-0.93 &0.60   \end{pmatrix} \\
+   R_{\hat u_{1}, x^{(2)}} &= \begin{pmatrix}-0.13 &-0.28 \end{pmatrix} \\   
+   R_{\hat v_{1}, x^{(1)}} &= \begin{pmatrix}-0.01 &-0.02   \end{pmatrix} 
+ \end{align*}
+This tells us also that nonprimary homicides also correlates strongly
+with, as well as $\hat v_{1}$ also correlates very strongly with the
+certainty of punishment.\\
+\\
+The final interpretation of $\hat u_{1}$ is that it represents the
+non-primary homicides, and $\hat v_{1}$ is concluded as the certainty
+for punishment, as both $\hat u_{1}$ correlates not that much with the
+primal homicides, and $\hat v_{1}$ do not correlate strongly with the
+severity of the punishment. . 
 
+
+
+\begin{comment}
+  The first canonical variables are given by
+  \begin{align*}
+    u_1 &= \b \alpha_1^T \b x_1= 0.93 x_1^{(1)} - 0.37 x_2^{(1)} \\
+    v_1 &= \b \beta_1^T \b x_2 = -0.54 x_1^{(2)} - 0.84 x_2^{(2)}.
+  \end{align*}
+  We can first notice how the only variable that causes any of the
+  canonical variables are $x_1^{(1)}$ which represents \textit{1973
+    nonprimary homicides}. From these we draw the conclusion that the
+  number of homicides varies the most among the different states, while
+  for the other crimes, we can imagine that the as the other variables
+  gets larger, there is less difference among the states. Thus we can
+  expected these types of crimes being more evenly distributed among the states.
+\end{comment}
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "examination"

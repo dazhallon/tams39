@@ -6,15 +6,23 @@
 \usepackage{subcaption}
 \usepackage{graphicx}
 
+\usepackage{comment}
+
 \usepackage{bm}
 \renewcommand{\b}[1]{\bm{#1}}
 \newcommand{\tr}{\text{ tr }}
 \newcommand{\cov}[2]{\text{cov}(#1,#2)}
 \newcommand{\corr}[2]{\text{corr}(#1,#2)}
+\newcommand{\mean}[1]{\overline{\b{#1}}}
 \usepackage{diagbox}
+\newcommand{\abs}[1]{
+  \left|
+    #1
+  \right|}
+\newcommand{\rank}[1]{\text{rank #1}}
+\newcommand{\diag}{\text{diag }}
 
 \usepackage{biblatex}
-
 \bibliography{ref}
 
 \graphicspath{{./images/}}
@@ -62,48 +70,169 @@
 \date{}
 \begin{document}
 
-\message{ !name(ex10.tex) !offset(-65) }
-
-\section*{Exercise 10}
-\label{sec:exercise-10}
+\message{ !name(ex4.tex) !offset(-73) }
+\section*{Exercise 4}
+\label{sec:exercise-4}
 
 \subsection*{(a)}
-\label{sec:a-6}
+\label{sec:a-3}
 
-The sample canonical correlations is $\b\alpha_1  = (0.93, -0.37  )^T$,
-$\b \beta_2 = (-0.54, -0.84 )^T$, $\b \alpha_2 = (-0.28,  0.96 )^T$ and $\b
-\beta_2 = (-0.91,0.40)^T$. where $\b \alpha_1$ and $\b \alpha_2$ are the
-ordered eigenvectors of 
+To check if the covariance matrices can be pooled, the hypothesis
+$H_{0}: \Sigma_{1} =\Sigma_{2}  = \Sigma_{3}$ is considered. We
+reject $H_{0}$ if  $\Lambda^{*}$ is small
 \begin{equation*}
-  \b{\Sigma^{-1}_{11}\Sigma_{12}\Sigma_{22}^{-1}\Sigma_{21}}, 
+  \lambda^* = \frac{\prod_{i = 1}^{3} \abs{V_i}^{f_i/2}}{\abs{V}^{f/2}}
+  \frac{f^{pf/2}}{\prod_{i = 1}^{3} f_i ^{pf_{i}/2}},
 \end{equation*}
-and $\b \beta_2$ and $\b \beta_2$ are  the ordered eigenvectors of 
+where $f_{i} = n_{i} - 1$, are the degrees of freedom for group $i = 1,
+2, 3$, $f = \sum_{i=1}^{3}f_{i}$, and
 \begin{equation*}
-  \b{\Sigma^{-1}_{22}\Sigma_{21}\Sigma_{11}^{-1}\Sigma_{12}}.
+  \b V_{i} = X_{i} (\b I_{n_{i}}  - \frac 1n_{i}\b 1_{n_{i}} \b 1_{n_{i}}^{T})^{T}
+  X_{i}^{T},\quad i = 1,2,3,
 \end{equation*}
-
+and
+\begin{equation*}
+  \b V = \sum_{i=1}^{3} \b V_{i}.
+\end{equation*}
+The test $\Lambda^{*} < c$, for some $c$, is an unbiased test.
+Further, we can use the correction found in Lecture 5, where
+\begin{equation*}
+  -2 \frac{m}{f} \ln \Lambda^{*} \sim \chi^{2}(df), \quad df = \frac{1}{2}p(p+1)(r-1),
+\end{equation*}
+where $m = f- 2\alpha$, where
+\begin{equation*}
+  \alpha = 
+  \left(
+    \sum_{i = 1}^{3} \frac{f}{f_{i}} - 1
+  \right)
+  \frac{2p^{2} + p -1}{12(p+1)(3-1)}.
+\end{equation*}
+Then 
+\begin{equation*}
+   -2 \frac{m}{f} \ln \Lambda^{*} = 49.26
+\end{equation*}
+and
+\begin{equation*}
+  \chi^{2}(df)_{1 - \alpha} = 91.670, \quad \alpha = 0.05,
+\end{equation*}
+hence $H_{0}$ cannot be rejected, the covariance matrices cannot be
+pooled. 
 \subsection*{(b)}
-\label{sec:b-9}
+\label{sec:b-3}
 
-The first canonical variables are given by
-\begin{align*}
-  u_1 &= \b \alpha_1^T \b x_1= 0.93 x_1^{(1)} - 0.37 x_2^{(1)} \\
-  v_1 &= \b \beta_1^T \b x_2 = -0.54 x_1^{(2)} - 0.84 x_2^{(2)}.
-\end{align*}
-We can first notice how the only variable tha causes any of the
-canonical variables are $x_1^{(1)}$ which represents \textit{1973
-  nonprimary homicides}. From these we draw the conclusion that the
-number of homicides varies the most among the different states, while
-for the other crimes, we can imagine that the as the other variables
-gets larger, there is less differemce among the states. Thus we can
-expected these types of crimes being more evenly distributed among the states.
+Since we can pool the sample matrix, which is given as
+\begin{equation*}
+  \b S_{\rm spooled} =
+  \begin{pmatrix}
+    156.82 &57.13 &20.27 &22.13 &0.16 &20.40 \\ 
+    57.13 &53.20 &10.93 &9.57 &-0.47 &11.67 \\ 
+    20.27 &10.93 &5.95 &6.30 &-0.23 &4.67 \\ 
+    22.13 &9.57 &6.30 &22.39 &-0.54 &11.37 \\ 
+    0.16 &-0.47 &-0.23 &-0.54 &0.99 &0.06 \\ 
+    20.40 &11.67 &4.67 &11.37 &0.06 &53.09 
+  \end{pmatrix},
+\end{equation*}
+we can use the distance function $d_{i}(\b x_{0}) = (\b x_{0} - \mean
+x_{i})^{T} \b S_{\rm spooled}^{-1} (\b x_{0} - \mean
+x_{i})$ given in \cite[p. 611]{book}, where  $\b x_{0}$ is classified to
+$\pi_{i}$ if $d_{i}(\b x_{0}) = \min_{i = 1, 2, 3}
+\left\{
+    d_{i}(\b x_{0})
+\right\}$. The distance functions can be created with
+\begin{equation*}
+  S_{\rm pooled}^{-1} =
+  \begin{pmatrix}
+    0.01 &-0.01 &-0.03 &-0.00 &-0.01 &-0.00 \\ 
+    -0.01 &0.04 &-0.04 &0.01 &0.01 &-0.00 \\ 
+    -0.03 &-0.04 &0.42 &-0.07 &0.04 &-0.00 \\ 
+    -0.00 &0.01 &-0.07 &0.07 &0.03 &-0.01 \\ 
+    -0.01 &0.01 &0.04 &0.03 &1.05 &-0.01 \\ 
+    -0.00 &-0.00 &-0.00 &-0.01 &-0.01 &0.02  
+  \end{pmatrix},
+\end{equation*}
+and 
+\begin{equation*}
+  \mean x_{1} =
+  \begin{pmatrix}
+    183.10 \\ 
+    129.62 \\ 
+    51.24 \\ 
+    146.19 \\ 
+    14.10 \\ 
+    104.86 
+  \end{pmatrix}, \quad 
+  \mean x_{2} =
+  \begin{pmatrix}
+    201.00 \\ 
+    119.32 \\ 
+    48.87 \\ 
+    124.65 \\ 
+    14.29 \\ 
+    81.00  
+  \end{pmatrix}, \quad 
+  \mean x_{3} =
+  \begin{pmatrix}
+    138.23 \\ 
+    125.09 \\ 
+    51.59 \\ 
+    138.27 \\ 
+    10.09 \\ 
+    106.59
+  \end{pmatrix}.
+\end{equation*}
+
+
+
+\subsection*{(c)}
+\label{sec:c-3}
+Since both the means and the varaince is unkown, we use the estimates
+of the errors of missclassification according to Okamato. First define 
+\begin{equation*}
+  a_{1} = \frac{\hat\Delta^{2} +
+    12(p-1)}{16\hat\Delta}\phi(\hat\Delta) =0.99 ,  \quad a_{2} =
+  \frac{\hat\Delta^{2} + 4(p-1)}{16\hat\Delta}\phi(\hat\Delta) =0.18 , \quad
+  \text{and}\quad a_{3} = \frac{\hat\Delta(p-1)}{4}\phi(\hat\Delta) = 7.70,
+\end{equation*}
+where 
+\begin{equation*}
+  \hat\Delta^{2} = \frac{f - p - 1}{f} (\mean x_{1} - \mean x_{2})^{T}
+  \b S_{\rm pooled}^{-1} (\mean x_{1} - \mean x_{2}) = 6.16,
+  \quad f = n_{1} + n_{2} - 2 = 50.
+\end{equation*}
+Then the error of missclassificating a member of $\pi_{0}$ onto 
+$\pi_{1}$ is given by 
+\begin{equation*}
+  e_{1} = P(\b x_{0} \in \pi_{2}) \approx  \phi(-\frac 12 \hat\Delta) + \frac{a_{1}}{n_{1}} +
+  \frac{a_{2}}{n_{2}} + \frac{a_{3}}{f} = 0.21,  
+\end{equation*}
+and the error of missclassificating a member of $\pi_{0}$ onto 
+$\pi_{2}$ is
+\begin{equation*}
+  e_{1} = P(\b x_{0} \in \pi_{1}) \approx  \phi(-\frac 12 \hat\Delta) + \frac{a_{2}}{n_{1}} +
+  \frac{a_{1}}{n_{2}} + \frac{a_{3}}{f} = 0.20.
+\end{equation*}
 
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "examination"
 %%% End:
 
-\message{ !name(examination.tex) !offset(-30) }
+
+\begin{comment}
+  
+  We could calculate the linear separators, $ l_i^T x_0 + c_i$, where
+  we obtain
+  \begin{align*}
+    l_1^T x_0 + c_1 &= (-0.57, 1.80, 1.01, 6.33, 18.94, 0.33)x_0 + -703.95 \\ 
+    l_2^T x_0 + c_2 &= (-0.14, 1.31, 1.48, 5.15, 18.31, 0.04)x_0 + -554.06 \\ 
+    l_3^T x_0 + c_3 &= (-1.08, 1.89, 3.03, 5.69, 15.11, 0.51)x_0 + -618.43,
+  \end{align*}
+  In which we can conclude that ${\bf x_0}$ belongs to  $\pi_i$ if $
+  l_i^T x_0 + c_i = \max_i \left(   l_i^T x_0 + c_i\right)
+  $
+
+\end{comment}
+\message{ !name(examination.tex) !offset(-150) }
 
 \end{document}
 %%% Local Variables:

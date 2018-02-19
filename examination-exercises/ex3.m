@@ -1,7 +1,7 @@
 % Exercise 3
 
 % read data
-
+clear; close all;
 X1 = [223 242 238;
   72 81 66;
   172 214 239;
@@ -75,7 +75,7 @@ if plots
   legend('Location', 'southeast')
 end
 
-
+%%
 disp('(b) test if the groups are parallel')
 % create covariance matrices
 Sp = zeros(3);
@@ -97,7 +97,6 @@ k = length(data)
 % create the outer matrix
 V = X'*(eye(n) - A*inv(A'*A)*A')*X;
 
-% create outer matrix
 Y = mus(1:end-1,:) - mus(end,:);
 Y = Y';
 CY = diag(1./ns(1:end-1)) - 1/ns(end)*ones(3,3);
@@ -109,14 +108,6 @@ H = Y*CYinv*Y';
 loglambdaH1 = log(det(C*V*C')) - log(det(C*V*C' + C*H*C'));
 loglambdaH1 = - loglambdaH1;
 u = (n - 0.5*(k + p + 1));
-% v = n*p + 0.5*p*(p+1)
-% v1 = length(data{1})*p + k-1 + p*(p+1)/2
-% u = v - v1;
-% test = loglambdaH1
-% alpha = 0.05;
-% c = chi2inv(1-alpha, u);
-
-%u = p - k + 1;
 test = -u*loglambdaH1 % test is chi squared with p-1 times k-1
 c = chi2inv(.95, (p-1)*(k-1))
 
@@ -125,8 +116,8 @@ if test < c
 else
   disp('The profiles are not parallel')
 end
-keyboard
 
+%%
 disp('(c) If the profiles are parallel, test if they are at the same level')
 lambda2 = det(C*V*C' + C*H*C')/det(C*V*C') * det(V)/det(V+H);
 F = -(1 - lambda2)/lambda2;
@@ -138,7 +129,8 @@ if test < c
 else
   disp('The profiles are not on the same level')
 end
-keyboard
+%%
+
 disp('(d) if the profiles are parallel, test if they are flat')
 
 muhat = mean(mus,1)';
@@ -146,7 +138,7 @@ lambda3 =  (1 + n*muhat'*C'*inv(C*V*C' + C*H*C')*C*muhat)^-1;
 
 test = (n - 3 + 1)/(3 - 1) * lambda3
 
-c = finv(0.95, 2 ,n - 3 + 1)
+c = finv(0.95, 2, n - 3 + 1)
 
 if test < c
   disp('The profiles are flat')

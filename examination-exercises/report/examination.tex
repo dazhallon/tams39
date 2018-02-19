@@ -6,12 +6,21 @@
 \usepackage{subcaption}
 \usepackage{graphicx}
 
+\usepackage{comment}
+
 \usepackage{bm}
 \renewcommand{\b}[1]{\bm{#1}}
 \newcommand{\tr}{\text{ tr }}
 \newcommand{\cov}[2]{\text{cov}(#1,#2)}
 \newcommand{\corr}[2]{\text{corr}(#1,#2)}
+\newcommand{\mean}[1]{\overline{\b{#1}}}
 \usepackage{diagbox}
+\newcommand{\abs}[1]{
+  \left|
+    #1
+  \right|}
+\newcommand{\rank}[1]{\text{rank #1}}
+\newcommand{\diag}{\text{diag }}
 
 \usepackage{biblatex}
 \bibliography{ref}
@@ -48,7 +57,6 @@
   showstringspaces=false,
   basicstyle=\footnotesize\ttfamily,
   keywordstyle=\bfseries\color{green},
-
   commentstyle=\color{gray},
   identifierstyle=\color{blue},
   stringstyle=\color{orange},
@@ -74,6 +82,7 @@
 \include{ex9}
 \include{ex10}
 \include{ex11}
+
 \printbibliography
 \end{document}
 %%% Local Variables:

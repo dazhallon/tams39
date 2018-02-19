@@ -1,4 +1,5 @@
-% exercise 7
+ % exercise 7
+%%
 close all; clear
 X1 = [191 223 242 248 266 274 272 279 286 287 286;
   64  72  81  66  92 114 126 123 134 148 140;
@@ -48,7 +49,7 @@ X4 = [201 202 229 232 224 237 217 268 244 275 246;
   172 213 263 260 276 273 267 286 283 290 298;
   224 258 248 257 257 267 260 279 299 289 300;
   246 257 269 280 289 291 306 301 295 312 311];
-
+%%
 disp('(a)');
 % without any structure for the mean, can an intraclass corealtio model be
 % assumed between the ten days? Test at level 5%
@@ -58,36 +59,36 @@ data = {X1, X2, X3, X4};
 hold on
 colors = {'b', 'r', 'c', 'k'};
 for i = 1:4
-  plot(0:size(X1,2)-1,mean(data{i},1), colors{i});
+  plot(0:size(X1,2)-1, mean(data{i},1), colors{i});
 end
 legend('Control','25-50r', '75-100r', '125-150r', 'Location','southeast')
 xlabel Days
 ylabel Score
 
 % set up a test for an intraclass matrix
-X = cat(1, data{1});
+
 p = size(X1,2)
 S = cell(4,1);
 Sp = zeros(p);
+n = 0;
 for i = 1:4
   S{i} = cov(data{i});
-  Sp = Sp +  (size(data{i},1)-1)*S{i};
+  Sp = Sp + (size(data{i},1)-1)*S{i};
+  n = n + size(data{i}, 1);
 end
-n = size(X,1);
 Sp = Sp/(n-4);
 
-% fix correct coeff correctly later
-% sigmahat = sqrt(trace(Sp)/(p*(n-1)*n))
-% rhohat = (sum(Sp(:) - trace(Sp)))/((p-1)*n*trace(Sp))
-Ssum = sum(Sp(:));
-logLAMBDA = log(det(Sp)) - log(Ssum/p) ...
- - (p-1)*log((p*trace(Sp) - Ssum)/(p*(p-1)))
+% With out any assumption about the mean, we don not pool the matrices 
+% (since the popluation are not assumed to have differenet means.)
+X = cat(1, data{:});
+S = cov(X); 
+Ssum = sum(S(:));
+logLAMBDA = log(det(S)) - log(Ssum/p) ...
+ - (p-1)*log((p*trace(S) - Ssum)/(p*(p-1)))
 
-u = n  - 1 - p*(p+1)^2*(2*p-3)/(6*(p-1)*(p^2+p-4));
+u = n - 1 - p*(p+1)^2*(2*p-3)/(6*(p-1)*(p^2+p-4));
 Q = -u*logLAMBDA
-
-g  = 0.5*p*(p+1) -2;
-
+g = 0.5*p*(p+1) - 2
 c = chi2inv(0.95, g)
 
 if (Q < c)
@@ -95,40 +96,28 @@ if (Q < c)
 else
   disp('There is not an intraclass matrix')
 end
-
+%%
 disp('(b)')
-logLAMBDA = (n/2)*log(det(Sp)) - (n/2)*sum(log(diag(Sp)));
+logLAMBDA = (n/2)*log(det(S)) - (n/2)*sum(log(diag(S)));
 
-% use the corection suggested in exercise 8.9 form book
-u = 2*(1 - (2*p + 11)/(6*n));
-
+% use the correction suggested in exercise 8.9a from book
+u = 2*(1 - (2*p+ 11)/(6*n));
 Q = - u * logLAMBDA
 c = chi2inv(0.95, p*(p-1)/2)
-
 % reject H0: that Sij = 0 if Q is small
 if (Q < c)
-  disp('The times steps are not independent')
+  disp('The times steps are  independent')
 else
   disp('The times steps are not independent')
 end
-
+%%
 disp('(c)')
 
-t = 0:10;
-B = [ ones(p,1),  t'];
-X = cat(1, data{:});
 
-% use the MLE instead from book
-BETA = zeros(2, 4);
-for i = 1:4
-  BETA(:,i) = inv(B'*inv(Sp)*B)*B'*inv(Sp)'*mean(data{i},1)';
-  %plot(t, BETA(1,i) + BETA(2,i)*t, colors{i})
-end
-BETA
- 
- 
+X = cat(1, data{:});
 %as done in lectures
-A = B;
+t = 0:10;
+A = [ ones(p,1),  t'];
 [n p] = size(X)
 C = zeros(4,n);
 niprev = 1;
@@ -139,54 +128,44 @@ for i = 1:4
   niprev = ni+1;
 end
 Pc = C'*inv(C*C')*C;
-V = X' * (eye(n) - Pc) * X;
-BETA = inv(A' *inv(V)*A) * A'*inv(V)*X'*C'*inv(C*C')
-for i = 1:4
-  plot(t, BETA(1,i) + BETA(2,i)*t, colors{i})
-end
-fig2 = figure(2);
+X = X';
+V = X * (eye(n) - Pc) * X';
+V1 = X*C'*inv(C*C')*C*X';
+B = inv(A'*inv(V)*A) * A'*inv(V)*X*C'*inv(C*C')
+Y = A*B*C; 
+SigmaHat = n^-1*(X - A*B*C)*(X - A*B*C)';
+
+
 hold on
 for i = 1:4
-  plot(t, BETA(1,i) + BETA(2,i)*t, colors{i})
+  plot(t, B(1,i) + B(2,i)*t, colors{i})
 end
 legend('Control','25-50r', '75-100r', '125-150r', 'Location','southeast')
 
+%%
 
 disp('(d)')
 %  test can be found on 39/47
 % design a test to test the difference between both parameter pairwise
 G = eye(2);
-[r, q] = size(G);
+[r, q] = size(G)
 H = [1 0 0 0]';
-[k, t] = size(H);
-B = BETA;
+[k, t] = size(H)
 for i = 2:4
-    i
     H(i) = -1;
     %V = X'*(eye(n) - A'*inv(A*A')*A)*X;
     % we can simplyfy W since C is just eye(2);
-    R = inv(C*C') + inv(C*C')*C*X*(inv(V) - ...
-        inv(V)*A*inv(A'*inv(V)*A)*A'*inv(V))*X'*C'*inv(C*C');
+    R = inv(C*C') + inv(C*C')*C*X'*(inv(V) - ...
+        inv(V)*A*inv(A'*inv(V)*A)*A'*inv(V))*X*C'*inv(C*C');
     logLAMBDA = log(det(G*inv(A'*inv(V)*A)*G')) - ...
         log(det(G*inv(A'*inv(V)*A)*G' + G*B*H*inv(H'*R*H)*H'*B'*G'));
     u = n - k + q - p -0.5*(r - t + 1);
     Q = -u*logLAMBDA
     c = chi2inv(0.95, r*t)
     if(Q < c)
-        fprintf('Group %d does not have any significant difference compared to the control group.f', i)
+        fprintf('Group %d does not have any significant difference compared to the control group.\n', i)
     else
-        fprintf('Group %d does have any significant difference compared to the control group.f', i)
+        fprintf('Group %d does have any significant difference compared to the control group.\n', i)
     end
+    H(i) = 0;
 end
-
-
-
-
-
-%{ 
-By observing BETA(:,1) - BETA(:, 2:4)
-, we might want to suggest that there infact a difference between the
-the tratment groups and the control group. Except for the second treatment
-group that hada radiation of 25-50r, which has similar parameters and can
-be observed in the plots as well.
-%}

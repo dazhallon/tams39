@@ -1,12 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  2 DEC 2017 15:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.8.23)  12 FEB 2018 11:42
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
-**examination.tex
-(./examination.tex
-LaTeX2e <2016/02/01>
-Babel <3.9q> and hyphenation patterns for 29 language(s) loaded.
-(/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
+**\input examination.tex
+(./examination.tex (/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
@@ -469,6 +467,10 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen119
 \Gin@req@width=\dimen120
 )
+(/usr/share/texlive/texmf-dist/tex/latex/comment/comment.sty
+\CommentStream=\write3
+
+Excluding comment 'comment')
 (/usr/share/texlive/texmf-dist/tex/latex/tools/bm.sty
 Package: bm 2014/10/28 v1.1c Bold Symbol Support (DPC/FMi)
 \symboldoperators=\mathgroup6
@@ -658,7 +660,7 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 \bibparsep=\skip57
 \bibhang=\skip58
 \blx@bcfin=\read1
-\blx@bcfout=\write3
+\blx@bcfout=\write4
 \c@mincomprange=\count155
 \c@maxcomprange=\count156
 \c@mincompwidth=\count157
@@ -828,28 +830,427 @@ File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package color Info: Driver file: pdftex.def on input line 143.
 )
-Runaway argument?
-{ belowcaptionskip=1\baselineskip , breaklines=true, frame=L, xleftma\ETC.
-! Paragraph ended before \lst@DefDriver@@ was complete.
-<to be read again> 
-                   \par 
-l.51 
-     
-? 
-! Emergency stop.
-<to be read again> 
-                   \par 
-l.51 
-     
-End of file on the terminal!
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
 
- 
+(/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2016/03/03 v3.3 biblatex localization (PK/JW/AB)
+)
+\@quotelevel=\count307
+\@quotereset=\count308
+
+(./examination.aux (./ex1.aux) (./ex2.aux) (./ex3.aux) (./ex4.aux) (./ex5.aux)
+(./ex6.aux) (./ex7.aux) (./ex8.aux) (./ex9.aux) (./ex10.aux) (./ex11.aux))
+\openout1 = `examination.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 71.
+LaTeX Font Info:    ... okay on input line 71.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: listings package is loaded.
+Package caption Info: End \AtBeginDocument code.
+
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count309
+\scratchdimen=\dimen136
+\scratchbox=\box33
+\nofMPsegments=\count310
+\nofMParguments=\count311
+\everyMPshowfont=\toks31
+\MPscratchCnt=\count312
+\MPscratchDim=\dimen137
+\MPnumerator=\count313
+\makeMPintoPDFobject=\count314
+\everyMPtoPDFconversion=\toks32
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+\openout4 = `examination.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'examination.bbl' found.
+
+(./examination.bbl)
+Package biblatex Info: Reference section=0 on input line 71.
+Package biblatex Info: Reference segment=0 on input line 71.
+\c@lstlisting=\count315
+LaTeX Font Info:    Try loading font information for U+msa on input line 72.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 72.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+\openout2 = `ex1.aux'.
+
+ (./ex1.tex
+Package epstopdf Info: Source file: <./images/ellipse-ex1.eps>
+(epstopdf)                    date: 2018-01-11 10:36:39
+(epstopdf)                    size: 48065 bytes
+(epstopdf)             Output file: <./images/ellipse-ex1-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2018-01-11 10:38:03
+(epstopdf)                    size: 10528 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/ellipse-ex1-eps-c
+onverted-to.pdf ./images/ellipse-ex1.eps>
+(epstopdf)             \includegraphics on input line 35.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/ellipse-ex1-eps-converted-to.pdf, id=8, 372.39125pt x 294.09875pt>
+File: ./images/ellipse-ex1-eps-converted-to.pdf Graphic file (type pdf)
+
+<use ./images/ellipse-ex1-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/ellipse-ex1-eps-converted-to.pdf used on inpu
+t line 35.
+(pdftex.def)             Requested size: 142.26378pt x 112.35553pt.
+
+Overfull \hbox (37.53477pt too wide) detected at line 50
+\OML/cmm/b/it/10 a[][] \OMS/cmsy/m/n/10 ^^@ [] ^^T \OML/cmm/b/it/10 a[]^^V \OMS
+/cmsy/m/n/10 ^^T \OML/cmm/b/it/10 a[][] \OT1/cmr/m/n/10 + []\OML/cmm/m/it/10 :
+ []
+
+[1
+
+ <./images/ellipse-ex1-eps-converted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 61--65
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 78--84
+
+ []
+
+
+Overfull \hbox (7.00494pt too wide) detected at line 88
+\OML/cmm/m/it/10 P [] \OMS/cmsy/m/n/10 ^^T \OT1/cmr/m/n/10 1 \OMS/cmsy/m/n/10 ^
+^@ \OML/cmm/m/it/10 ;
+ []
+
+) [2]
+\openout2 = `ex2.aux'.
+
+ (./ex2.tex
+Package epstopdf Info: Source file: <./images/ex2-scatterplot.eps>
+(epstopdf)                    date: 2017-09-19 14:40:24
+(epstopdf)                    size: 5226 bytes
+(epstopdf)             Output file: <./images/ex2-scatterplot-eps-converted-to.
+pdf>
+(epstopdf)                    date: 2017-09-19 16:06:00
+(epstopdf)                    size: 10830 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/ex2-scatterplot-e
+ps-converted-to.pdf ./images/ex2-scatterplot.eps>
+(epstopdf)             \includegraphics on input line 11.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/ex2-scatterplot-eps-converted-to.pdf, id=30, 458.71375pt x 297.11pt>
+File: ./images/ex2-scatterplot-eps-converted-to.pdf Graphic file (type pdf)
+
+<use ./images/ex2-scatterplot-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/ex2-scatterplot-eps-converted-to.pdf used on 
+input line 11.
+(pdftex.def)             Requested size: 142.26378pt x 92.14394pt.
+ [3
+
+
+ <./images/ex2-scatterplot-eps-converted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 93--102
+
+ []
+
+Package epstopdf Info: Source file: <./images/ex2fig.eps>
+(epstopdf)                    date: 2018-01-19 11:24:37
+(epstopdf)                    size: 70485 bytes
+(epstopdf)             Output file: <./images/ex2fig-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-01-19 11:24:55
+(epstopdf)                    size: 13156 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/ex2fig-eps-conver
+ted-to.pdf ./images/ex2fig.eps>
+(epstopdf)             \includegraphics on input line 132.
+Package epstopdf Info: Output file is already uptodate.
+<./images/ex2fig-eps-converted-to.pdf, id=41, 361.35pt x 292.09125pt>
+File: ./images/ex2fig-eps-converted-to.pdf Graphic file (type pdf)
+
+<use ./images/ex2fig-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/ex2fig-eps-converted-to.pdf used on input lin
+e 132.
+(pdftex.def)             Requested size: 284.52756pt x 229.9963pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[4]
+Package epstopdf Info: Source file: <./images/ex2fig_with_sim_intervals.eps>
+(epstopdf)                    date: 2018-01-19 11:24:37
+(epstopdf)                    size: 70846 bytes
+(epstopdf)             Output file: <./images/ex2fig_with_sim_intervals-eps-con
+verted-to.pdf>
+(epstopdf)                    date: 2018-01-19 11:28:46
+(epstopdf)                    size: 13243 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/ex2fig_with_sim_i
+ntervals-eps-converted-to.pdf ./images/ex2fig_with_sim_intervals.eps>
+(epstopdf)             \includegraphics on input line 155.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/ex2fig_with_sim_intervals-eps-converted-to.pdf, id=45, 361.35pt x 292
+.09125pt>
+File: ./images/ex2fig_with_sim_intervals-eps-converted-to.pdf Graphic file (typ
+e pdf)
+ <use ./images/ex2fig_with_sim_intervals-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/ex2fig_with_sim_intervals-eps-converted-to.pd
+f used on input line 155.
+(pdftex.def)             Requested size: 284.52756pt x 229.9963pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [5 <./images/ex2fig-eps-converted-to.pdf>] [6 <./images/ex2fig_with_sim_inter
+vals-eps-converted-to.pdf>]
+\openout2 = `ex3.aux'.
+
+ (./ex3.tex
+Package epstopdf Info: Source file: <./images/ex3-profiles.eps>
+(epstopdf)                    date: 2017-09-29 10:40:58
+(epstopdf)                    size: 15090 bytes
+(epstopdf)             Output file: <./images/ex3-profiles-eps-converted-to.pdf
+>
+(epstopdf)                    date: 2017-09-29 15:04:55
+(epstopdf)                    size: 5584 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/ex3-profiles-eps-
+converted-to.pdf ./images/ex3-profiles.eps>
+(epstopdf)             \includegraphics on input line 10.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/ex3-profiles-eps-converted-to.pdf, id=63, 421.575pt x 316.18124pt>
+File: ./images/ex3-profiles-eps-converted-to.pdf Graphic file (type pdf)
+
+<use ./images/ex3-profiles-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/ex3-profiles-eps-converted-to.pdf used on inp
+ut line 10.
+(pdftex.def)             Requested size: 241.84842pt x 181.38788pt.
+ [7
+
+
+ <./images/ex3-profiles-eps-converted-to.pdf>]) [8]
+\openout2 = `ex4.aux'.
+
+ (./ex4.tex [9
+
+
+] Excluding 'comment' comment.) [10]
+\openout2 = `ex5.aux'.
+
+
+(./ex5.tex
+Package epstopdf Info: Source file: <./images/ex5-marginalplots.eps>
+(epstopdf)                    date: 2018-01-12 17:43:56
+(epstopdf)                    size: 40380 bytes
+(epstopdf)             Output file: <./images/ex5-marginalplots-eps-converted-t
+o.pdf>
+(epstopdf)                    date: 2018-01-12 17:52:46
+(epstopdf)                    size: 37778 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/ex5-marginalplots
+-eps-converted-to.pdf ./images/ex5-marginalplots.eps>
+(epstopdf)             \includegraphics on input line 14.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/ex5-marginalplots-eps-converted-to.pdf, id=84, 428.60126pt x 317.185p
+t>
+File: ./images/ex5-marginalplots-eps-converted-to.pdf Graphic file (type pdf)
+ <use ./images/ex5-marginalplots-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/ex5-marginalplots-eps-converted-to.pdf used o
+n input line 14.
+(pdftex.def)             Requested size: 369.88582pt x 273.7369pt.
+
+Overfull \hbox (24.88582pt too wide) in paragraph at lines 14--15
+ [][] 
+ []
+
+[11
+
+
+ <./images/ex5-marginalplots-eps-converted-to.pdf>] [12]
+Package epstopdf Info: Source file: <./images/ex5-ellipse.eps>
+(epstopdf)                    date: 2018-01-12 17:43:57
+(epstopdf)                    size: 64474 bytes
+(epstopdf)             Output file: <./images/ex5-ellipse-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2018-01-12 17:52:46
+(epstopdf)                    size: 11251 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/ex5-ellipse-eps-c
+onverted-to.pdf ./images/ex5-ellipse.eps>
+(epstopdf)             \includegraphics on input line 156.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/ex5-ellipse-eps-converted-to.pdf, id=101, 375.4025pt x 292.09125pt>
+File: ./images/ex5-ellipse-eps-converted-to.pdf Graphic file (type pdf)
+
+<use ./images/ex5-ellipse-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/ex5-ellipse-eps-converted-to.pdf used on inpu
+t line 156.
+(pdftex.def)             Requested size: 284.52756pt x 221.39886pt.
+) [13 <./images/ex5-ellipse-eps-converted-to.pdf>]
+\openout2 = `ex6.aux'.
+
+ (./ex6.tex
+Overfull \hbox (24.3793pt too wide) detected at line 74
+\OMS/cmsy/m/n/10 ^^@ [] [] [] \OT1/cmr/m/n/10 = 8\OML/cmm/m/it/10 :\OT1/cmr/m/n
+/10 31\OML/cmm/m/it/10 ;  [] ^^_[]\OT1/cmr/m/n/10 (1 \OMS/cmsy/m/n/10 ^^@ \OML/
+cmm/m/it/10 \OT1/cmr/m/n/10 ) = 11\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 07\OML/cmm
+/m/it/10 ;
+ []
+
+[14
+
+
+] Excluding 'comment' comment.) [15]
+\openout2 = `ex7.aux'.
+
+ (./ex7.tex
+Underfull \hbox (badness 10000) in paragraph at lines 5--14
+
+ []
+
+[16
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 77--81
+
+ []
+
+[17]) [18]
+\openout2 = `ex8.aux'.
+
+ (./ex8.tex [19
+
+
+] Excluding 'comment' comment. [20]) [21]
+\openout2 = `ex9.aux'.
+
+ (./ex9.tex
+[22
+
+
+]) [23]
+\openout2 = `ex10.aux'.
+
+ (./ex10.tex
+Underfull \hbox (badness 10000) in paragraph at lines 51--61
+
+ []
+
+Excluding 'comment' comment.) [24
+
+
+]
+\openout2 = `ex11.aux'.
+
+ (./ex11.tex
+Underfull \hbox (badness 10000) in paragraph at lines 19--29
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--29
+
+ []
+
+[25
+
+
+] [26]
+Underfull \hbox (badness 10000) in paragraph at lines 153--157
+
+ []
+
+) [27] [28
+
+
+] (./examination.aux (./ex1.aux) (./ex2.aux) (./ex3.aux) (./ex4.aux)
+(./ex5.aux) (./ex6.aux) (./ex7.aux) (./ex8.aux) (./ex9.aux) (./ex10.aux)
+(./ex11.aux))
+Package logreq Info: Writing requests to 'examination.run.xml'.
+\openout1 = `examination.run.xml'.
+
+ ) 
 Here is how much of TeX's memory you used:
- 10195 strings out of 494374
- 159131 string characters out of 6164954
- 374157 words of memory out of 5000000
- 13398 multiletter control sequences out of 15000+600000
- 3640 words of font info for 14 fonts, out of 8000000 for 9000
+ 12023 strings out of 494374
+ 188772 string characters out of 6164954
+ 626435 words of memory out of 5000000
+ 15040 multiletter control sequences out of 15000+600000
+ 18003 words of font info for 67 fonts, out of 8000000 for 9000
  350 hyphenation exceptions out of 8191
- 44i,0n,40p,819b,218s stack positions out of 5000i,500n,10000p,200000b,80000s
-!  ==> Fatal error occurred, no output PDF file produced!
+ 44i,15n,45p,826b,873s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cmextra/cmmib7.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmtt8.pfb>
+Output written on examination.pdf (29 pages, 370683 bytes).
+PDF statistics:
+ 227 PDF objects out of 1000 (max. 8388607)
+ 155 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+

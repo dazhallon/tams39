@@ -48,11 +48,11 @@ SIGMA = Lambda*Lambda' + diag(Psi);
 logLRT = log(det(R)) - log(det(SIGMA));
 g = 0.5*((p-k)^2 - (p+k));
 n = 210; 
-u = n - (2*p+4*k+11)/6;
+u = n - 1 - (2*p+4*k+5)/6;
 Q = -u *logLRT
 c = chi2inv(0.95, g)
 
-if (Q <c)
+if (Q <= c)
   fprintf('We cannot reject H, the number of k = %d chosen is adequate\n',...
     k)
 else

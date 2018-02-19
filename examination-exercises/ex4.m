@@ -120,13 +120,14 @@ alpha = 0;
 for i = 1:k
   alpha = alpha + f/fs(i );
 end
-alpha  = alpha - 1;
+alpha = alpha - 1;
 alpha = alpha * (2*p^2 + 3*p - 1)/(12*(p+1)*(k-1));
-m = f- 2*alpha;
+m = f - 2*alpha;
 
 test = -2*f^-1 * m * loglambdastar
 
-c = chi2inv(0.95, df)
+g = p*(p+1)/2 - 2;
+c = chi2inv(0.95, f)
 
 if test < c
   disp('The covariance matrices can be pooled')
@@ -134,7 +135,7 @@ else
   disp('The covariance matrices can not be pooled')
 end
 
-
+%%
 disp('(b) Derive the classification rule for these data')
  % using FLD we can find the linear classification rules.
  % this is done by finding the lines that maxmimizes the noem from each
@@ -166,30 +167,16 @@ end
 disp(['example: x0 = ', num2str(x0')])
 disp(['We can classify x0 as pi_', num2str(i)]);
 
+%%
 disp('(c) Estimate the errors of misclassification of... ')
 
 delta = means(:,1) - means(:,2);
-
-% % should we use the pooled matrix for pi1 and pi2, or the collective for
-% all?
-pooled12 = ((ns(1)-1)*cov(data{1}) + (ns(2)-1)*cov(data{2}))...
-  /(ns(1) + ns(2) - 2);
-%K = 0.5*delta'*inv(pooled12)*(means(:,1) + means(:,2));
-Delta = (f - p -1)*sqrt(delta'*inv(Sp)*delta)/f;
-%Delta = sqrt(delta'*inv(Sp)*delta);
-% Get different result using the spooled matrix from earlier. 
-% However, the difference between e1 and e2 is virtually 0.
-
-a1 = normpdf(Delta)*(Delta^2 + 12*(p-1)) / (16*Delta);
-a2 = normpdf(Delta)*(Delta^2 - 4*(p-1)) / (16*Delta);
-
+f = ns(1) + ns(2) - 2
+Delta = sqrt(delta'*invSp*delta*(f-p-1)/f)
+a1 = normcdf(Delta)*(Delta^2 + 12*(p-1)) / (16*Delta)
+a2 = normcdf(Delta)*(Delta^2 - 4*(p-1)) / (16*Delta)
+a3 = normcdf(Delta)*(Delta*(p-1)) / (4)
 disp('Misscalsifaction into pi1')
-e1 = normpdf(-0.5*Delta) + a1/ns(1) + a2/ns(2)
-
+e1 = normcdf(-0.5*Delta) + a1/ns(1) + a2/ns(2) + a3/f
 disp('Misscalsifcation into pi2')
-e2 = normpdf(-0.5*Delta) + a2/ns(1) + a1/ns(2)
-
-% comment: Delta gets very large and so nompdf(Delta) becomes so small that
-% a1 and a2 are virtualy 0, implying e1 and e2 is virtually the same, 
-% which might not be wrong by any stretch.
-
+e2 = normcdf(-0.5*Delta) + a2/ns(1) + a1/ns(2) + a3/f

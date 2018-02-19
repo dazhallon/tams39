@@ -1,4 +1,3 @@
-
 \subsection*{Exercise 9}
 \label{sec:exercise-9}
 
@@ -6,29 +5,71 @@ We consider the the following model for $k$ factors
 \begin{equation*}
   \b X = \b \mu  + \b{LF} + \b \epsilon,
 \end{equation*}
-where $\b L: (p\times k)$ are the unknown factors.
-
+where $\b L: (p\times m)$ are the loading factors, which are
+deterministic. $\b F = (F_{1}, \dots, F_{m})$ and $\b \epsilon =
+(\epsilon_{1}, \dots, \epsilon_{p})$ are $m + p$ unobserved
+values which we assume has the structure
+\begin{align*}
+  E(\b F) &= \b 0,\quad \cov{\b F}{\b F} = \b I \\
+  E(\b \epsilon) &= \b 0,\quad \cov{\b \epsilon}{\b \epsilon}  = \b \Psi =
+  \diag(\psi_{1}, \dots, \psi_{p})
+\\
+  \cov{\b \epsilon}{\b F} &= \b 0.
+\end{align*}
+finally, we assume that $\b \epsilon \sim N(\b 0, \b \Psi)$. So that
+$\b X \sim N(\b \mu, \b \Sigma)$, where $\b \Sigma = \b L \b L ^{T} +
+\b \Psi$. 
 \subsection*{(b)}
 \label{sec:b-8}
 
-According to the upper limit given in Lecture 10, we should let $k$ be
-at most equal 10.
-
+We note that a PCA of the correlation matrix yields that the cumulative
+coverage of the principal values are 
+\begin{equation*}
+  \begin{pmatrix}
+    31.00 &41.04 &49.73 &56.15 &61.97 &67.65 &72.84 &77.67 &81.76\\
+    85.68 &88.96 &91.96 &94.86 &97.65 &100.00 
+  \end{pmatrix}\quad (\%)
+\end{equation*}
+so we can expected that we need quite a few factors to covered the total
+variance.  An initial guess, is that we want to cover at least 85 \% of
+the total variance. This gives a vague indication that $m = 10$
+factors can be used. On the other hand, according to
+\cite[p. 485]{book}, the variance of $\b X$ as $p(p+1)/2$ different
+covariances, which we approximate by
+\begin{equation*}
+  \b \Sigma = \b L \b L^{T} + \Psi,
+\end{equation*}
+meaning that $p(p+1)/2$ covariance should be reproduced by $pm$ factor
+loadnings from $\b L \b L^{T}$, plus $p$ variances from $\b
+\Psi$. Considering the equation 
+\begin{equation*}
+  p(p + 1)/2 = pm + p,
+\end{equation*}
+gives $m =(p + 1)/2 - 1 = 7 $ factors, since $p = 15$. Finally, we can
+also note that the eigenvalues given to us in the PCA is
+\begin{equation*}
+  \b \lambda =
+  \begin{pmatrix}
+    0.35 &0.42 &0.43 &0.45 &0.49 &0.59 &0.61 &0.72 &0.78 &0.85 \\ 0.87 &0.96 &1.30 &1.51 &4.65 
+  \end{pmatrix}
+\end{equation*}
+where only the 3 largest eigenvalues are greater or equal to one. This
+can be seen as an indication that only 3 factors needs to be used. 
 \subsection*{(c)}
 \label{sec:c-8}
-
-$k = 10$ is to high as we shall see. We set up the test
+ We set up the test which is
+according to \cite[p. 502]{book}:
 \begin{align*}
   \ln \Lambda &= \ln(\det(\b R)) - \ln(\det(\b \Sigma)) \\
-  u &=  n - (2p+4k+11)/6 \\
-  g &= \frac 12 ((p-k)^2 - (p+k)) \\
-  Q &= -u \ln \Lambda =   0.0539\\
-  c &= 0 = \chi^2_{0.95}(g),
+  u &=  n - 1 -(2p+4m+5)/6 \\
+  g &= \frac 12 ((p-m)^2 - (p+m)) \\
+  Q &= -u \ln \Lambda \\
+  c &=  \chi^2_{0.95}(g),
 \end{align*}
-where $\b \Sigma = \b{LL^T} + \b \Psi$. Since $Q > c$ we reject the
-hypothesis. However, if we were to choose $k=9$, we get $Q = 0.7723$
-and $c =  12.5916$, thus we conclude that we can choose $k = 9$.
-%%% Local Variables
+where $\b \Sigma = \b{LL^T} + \b \Psi$. We see that we get rejection at
+$m = 2$ since $c = 97.35$ and $Q = 132.37$, but we find that $m = 3$
+is adequate, since $c = 82.53$ and $Q = 71.42$. 
+%%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "examination"
 %%% End:

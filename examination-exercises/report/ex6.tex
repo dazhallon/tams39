@@ -8,16 +8,13 @@
 
 The foll wing linear model was designed
 \begin{equation*}
-  \b Y = \b{XB},
+  \b Y = \b{XB} + \b E,
 \end{equation*}
-where $\b Y$ is the out parameters and $\b X$ is the design matrix
-\begin{equation*}
-  \b X = (\b 1_n, \b x_1, \b x_2),
-\end{equation*}
-and $\b B:(3 \times 4) $ contained the unknown parameter values, which
+where $\b Y$ is the out parameters, $\b X = (\b 1_n, \b x_1, \b x_2)$
+is the design matrix, and $\b B:(3 \times 4) $ contained the unknown parameter values, which
 was estimated using linear regression as
 \begin{equation*}
-  \b B =
+  \b\hat B =
   \begin{pmatrix}
     -94.60 &-228.67 &-258.80 &-246.05 &-232.96 \\ 
     19.27 &43.65 &48.99 &47.33 &45.10 \\ 
@@ -46,6 +43,43 @@ the first and last time steps have negative correlation an is almost 0.
 \subsection*{(c)}
 \label{sec:c-5}
 
+The average weight is governed by the last row in $\b B$, $\b B_{2}$, so therefore we
+want to test $H_{0}: \b B_{2} = \b 0$. According to Result 7.11 in
+\cite[p. 396]{book}, the  following modified statistic is rejected if it
+is large:
+
+\begin{equation*}
+  -\left[n - r- 1 - \frac{1}{2}(m-r+q+1)\right]\ln
+  \left(
+    \frac{\abs{\b\hat\Sigma}}{\abs{\b\hat\Sigma_{1}}}
+  \right) \sim \chi^{2}_{m(r-q)},
+\end{equation*}
+where $n= 25$ is the sample size, $r=2$ is such that $\rank {X} = r + 1$,
+$m=4$ is the number of outputs, and $q=1$ is the number of rows in
+$B_{2}$. The matrices $\b \hat \Sigma$ is the standard MLE, and
+$\b\hat\Sigma_{1}$ is the MLE under $H_{0}$. We get $\b\hat\Sigma_{1}$
+by solving the least squared problem that $H_{0}$ yield. So we get that
+\begin{equation*}
+  \b\hat B_{1} = (\b X_{1}^{T} \b X_{1})^{-1}\b X_{1} \b Y, \quad
+  \text{and} \quad 
+  \b\hat\Sigma_{1} = \frac{1}{n} (\b Y  - \b X_{1} \b\hat B_{1})^{T}(\b
+  Y  - \b X_{1} \b \hat B_{1}).
+\end{equation*}
+Then
+\begin{equation*}
+    -\left[n - r- 1 - \frac{1}{2}(m-r+q+1)\right]\ln
+  \left(
+    \frac{\abs{\b\hat\Sigma}}{\abs{\b\hat\Sigma_{1}}}
+  \right) =8.31, \quad \text{and}\quad \chi^{2}_{m(r-q)}(1 - \alpha) = 11.07,
+\end{equation*}
+hence $H_{0}$ cannot be rejected. 
+
+\begin{comment}
+To test what effect the average weight to fish has on the the regression
+model we consider $H_{0}: \b C \b B = \b B_{2} = \b 0$. Where the
+matrix $\b C$ is a matrix of dimension $(r - q)\times (r+1)$, where
+$\rank X = r + 1$, and $q$ is the number of 
+
 We can the test if the \textit{average weight} affect the causation of
 death by considering the test where each element of the bottom row of $\b
 B$ should be equal to zero. We get the hypothesis
@@ -72,6 +106,7 @@ test on a significance level of 5 \%. We find that
     &\approx 0.7931 > 0.05,
 \end{align*}
 hence we reject $H_0$.
+\end{comment}
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "examination"

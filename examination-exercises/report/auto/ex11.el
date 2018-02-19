@@ -6,5 +6,8 @@
     "sec:a-7"
     "sec:b-10"
     "sec:c-9"
-    "sec:redoing-exercise-but")))
+    "eq:test_ex11"
+    "tab:test_ex11"
+    "sec:redoing-exercise-but"
+    "tab:test_ex11_standardized")))
 

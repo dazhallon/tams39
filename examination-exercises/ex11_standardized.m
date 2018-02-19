@@ -1,4 +1,4 @@
-% exercise 
+
 clear; close all; clc
 X = [191  36  50   5  162   60;
   189  37  52   2  110   60;
@@ -20,9 +20,12 @@ X = [191  36  50   5  162   60;
   157  32  52  11  230   80;
   156  33  54  15  225   73;
   138  33  68   2  110   43];
+[n m] = size(X)
+Z = (X - ones(n,1)*mean(X, 1))./sqrt(ones(n,1)*diag(cov(X))')
+R = cov(Z);
+S = R
 %%
 disp('(a)')
-R = corr(X)
 %{
 The weight and waist size correlates strongly, and the pulse seem to
 decrease the smaller the person is. 
@@ -37,7 +40,6 @@ are body exercises and do not use any weights.
 
 %%
 disp('(b)')
-S = cov(X);
 b1 = 1:3;
 b2 = 4:6;
 S1 = S(b1,b1);
@@ -51,8 +53,8 @@ B = inv(sqrtm(S2))*S21*inv(S1)*S12*inv(sqrtm(S2));
 rho = diag(sqrt(da));
 [~, order] = sort(rho, 'descend');
 rho = rho(order)
-Va = Va(:, order); 
-Vb = Vb(:, order);
+Va = Va(:, order) 
+Vb = Vb(:, order)
 alpha = inv(sqrtm(S1))*Va
 for i = 1:3
   printMatrix(alpha(:,i))
@@ -64,7 +66,7 @@ end
 
 %%
 disp('(c)')
-[n] = size(X,1);
+[n] = size(Z,1);
 q = 3; p = 3;
 Q = zeros(1,q);
 c = zeros(1,q);

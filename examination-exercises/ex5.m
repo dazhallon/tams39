@@ -1,4 +1,5 @@
 % exercise 5
+close all; clear;
 X = [8  98 7 2 12  8 2;
   7 107 4 3  9  5 3;
   7 103 4 3  5  6 3;
@@ -80,31 +81,42 @@ disp('Analyze the residuals')
 
 y = X(:,5);
 x = [ones(n,1), X(:,1:2)];
+r = rank(x) - 1
+yhat = x*betas;
 diff = (y - x*betas);
 SSE = diff'*diff
-df = n - 2;
-s = SSE/df;
+df = n - r - 1;
+s = SSE/n;
+Rsquared = (yhat'*yhat)/(y'*y)
 
 q = [1 10 80];
 ymean = q * betas
-k = size(betas, 17);
+k = size(betas, 1);
 df = n - k -1;
 LHS = ymean - sqrt(s)*tinv(0.975, df)*sqrt(1+q*inv(x'*x)*q');
 RHS = ymean + sqrt(s)*tinv(0.975, df)*sqrt(1+q*inv(x'*x)*q');
 disp('95 % prediction interval')
 fprintf('(%.2f, %.2f)\n', LHS, RHS);
-
+printMatrix([LHS, RHS])
 
 disp('(d) perform a ')
 
 Y = X(:,5:6);
+[n m] = size(Y);
 A = [ones(n,1), X(:,1:2)];
 B = A \ Y;
 fprintf('%.2f & %.2f \\\\ \n', B)
 
 disp('Analyze the residuals')
 DIFF = Y - A*B;
-SIGMAMLE = (n-2)^-1* DIFF'*DIFF
+Yhat = A*B;
+DIFF'*DIFF
+r = rank(A)- 1; 
+
+SIGMAMLE = (n-r-1)^-1* DIFF'*DIFF
+printMatrix(SIGMAMLE)
+RSQUARED = (Yhat'*Yhat)./(Y'*Y)
+printMatrix(RSQUARED)
 
 disp('Create a confidence elisp')
 q = [1 10 80];
@@ -112,7 +124,8 @@ ymean = q*B;
 
 
 mu =  sym('mu', [2 1], 'real'); 
-eq = (n-2).*  (ymean' - mu)' * inv(SIGMAMLE) * (ymean' - mu ) == sqrt(1+q*inv(x'*x)*q')*finv(0.95,1,  n-2);
+eq = (n-r-m).*  (ymean' - mu)' * inv(SIGMAMLE) * (ymean' - mu ) == ...
+  sqrt(1+q*inv(A'*A)*q')*finv(0.95,m,  n-r-m);
 
 scale = sqrt(det(S))*0.01;
 xmin = ymean(1) - scale; xmax = ymean(1) + scale; 
