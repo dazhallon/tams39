@@ -128,12 +128,16 @@ for i = 1:4
   niprev = ni+1;
 end
 Pc = C'*inv(C*C')*C;
+
+
 X = X';
 V = X * (eye(n) - Pc) * X';
 V1 = X*C'*inv(C*C')*C*X';
+Pa = A*inv(A'*inv(V)*A)*A'*inv(V);
 B = inv(A'*inv(V)*A) * A'*inv(V)*X*C'*inv(C*C')
-Y = A*B*C; 
-SigmaHat = n^-1*(X - A*B*C)*(X - A*B*C)';
+Y = A*B*C;
+SigmaHat = n^-1*(X - A*B*C)*(X - A*B*C)'
+
 
 
 hold on

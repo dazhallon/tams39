@@ -89,16 +89,16 @@ so $H_2 | H_1$ is rejected, the profiles are not on the same level.
 
 Here, we use the test variables 
 \begin{equation*}
-  \lambda_{H_3 | H_1} = \frac{1}{1 + n \bar{\bf x}^T C^T (CVC^T +
-    CHC^T)^{-1}C\bar{\bf x}},
+  \lambda_{H_3 | H_1} = \frac{1}{1 + n \bar{\bf x}^T \b C^T (\b{CVC}^T +
+    \b{CHC}^T)^{-1}}\b C\bar{\bf x},
 \end{equation*}
 and create the test variable
 \begin{equation*}
-  Q = \frac{n - p +1}{p - 1}\lambda_{H_3 |H_1},
+  Q = \frac{n - p +1}{p - 1}\lambda_{H_3 |H_1}, 
 \end{equation*}
 which we compare to 
 \begin{equation*}
-  c = F_{0.95}(p-1, n-p+1).
+  c = F_{p-1, n-p+1}(0.95).x
 \end{equation*}
 We get
 \begin{equation*}

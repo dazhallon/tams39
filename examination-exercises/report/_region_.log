@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=prv_examination 2018.2.9)  9 FEB 2018 12:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=prv_examination 2018.2.22)  22 FEB 2018 09:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -196,19 +196,19 @@ Package biblatex Info: Reference section=0 on input line 71.
 Package biblatex Info: Reference segment=0 on input line 71.
 \c@lstlisting=\count317
 
- !name(ex4.tex) !offset(-73) 
+ !name(ex2.tex) !offset(-73) 
 ! Preview: Snippet 1 started.
 <-><->
       
 l.74 \section
-             *{Exercise 4}
+             *{Exercise 2}
 Not a real error.
 
 Preview: Tightpage -32891 -32891 32891 32891
 ! Preview: Snippet 1 ended.(655359+0x22609920).
 <-><->
       
-l.74 \section*{Exercise 4}
+l.74 \section*{Exercise 2}
                           
 Not a real error.
 
@@ -228,287 +228,317 @@ l.77 \subsection*{(a)}
 Not a real error.
 
 [2]
+
+LaTeX Warning: Reference `fig:ex2-scatter' on page 1 undefined on input line 80
+.
+
 ! Preview: Snippet 3 started.
 <-><->
       
-l.81 $
-      H_{0}: \Sigma_{1} =\Sigma_{2}  = \Sigma_{3}$ is considered. We
+l.81 clearly be seen at $
+                         x_1 = 284$.
 Not a real error.
 
-! Preview: Snippet 3 ended.(447828+98303x5434465).
+! Preview: Snippet 3 ended.(422343+98303x2525408).
 <-><->
       
-l.81 $H_{0}: \Sigma_{1} =\Sigma_{2}  = \Sigma_{3}$
-                                                   is considered. We
+l.81 clearly be seen at $x_1 = 284$
+                                   .
 Not a real error.
 
 [3]
 ! Preview: Snippet 4 started.
 <-><->
       
-l.82 reject $
-             H_{0}$ if  $\Lambda^{*}$ is small
+l.82 \begin{figure}
+                   [h]
 Not a real error.
 
-! Preview: Snippet 4 ended.(447828+98303x838771).
+Package epstopdf Info: Source file: <./images/ex2-scatterplot.eps>
+(epstopdf)                    date: 2017-09-19 14:40:24
+(epstopdf)                    size: 5226 bytes
+(epstopdf)             Output file: <./images/ex2-scatterplot-eps-converted-to.
+pdf>
+(epstopdf)                    date: 2017-09-19 16:06:00
+(epstopdf)                    size: 10830 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/ex2-scatterplot-e
+ps-converted-to.pdf ./images/ex2-scatterplot.eps>
+(epstopdf)             \includegraphics on input line 84.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/ex2-scatterplot-eps-converted-to.pdf, id=16, 458.71375pt x 297.11pt>
+File: ./images/ex2-scatterplot-eps-converted-to.pdf Graphic file (type pdf)
+
+<use ./images/ex2-scatterplot-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/ex2-scatterplot-eps-converted-to.pdf used on 
+input line 84.
+(pdftex.def)             Requested size: 142.26378pt x 92.14394pt.
+
+! Preview: Snippet 4 ended.(8266969+0x22609920).
 <-><->
       
-l.82 reject $H_{0}$
-                    if  $\Lambda^{*}$ is small
+l.88 \end{figure}
+                 
 Not a real error.
 
-[4]
+[4
+
+
+
+ <./images/ex2-scatterplot-eps-converted-to.pdf>]
 ! Preview: Snippet 5 started.
 <-><->
       
-l.82 reject $H_{0}$ if  $
-                         \Lambda^{*}$ is small
+l.90 \subsection
+                *{(b)}
 Not a real error.
 
-! Preview: Snippet 5 ended.(451272+0x756395).
+! Preview: Snippet 5 ended.(589824+196608x22609920).
 <-><->
       
-l.82 reject $H_{0}$ if  $\Lambda^{*}$
-                                      is small
+l.90 \subsection*{(b)}
+                      
 Not a real error.
 
 [5]
 ! Preview: Snippet 6 started.
 <-><->
       
-l.83 \begin{equation*}
-                      
+l.93 We remove the sample with $
+                                x^{\rm male}_{1} = 284$.
 Not a real error.
 
-! Preview: Snippet 6 ended.(1934766+0x15780622).
+! Preview: Snippet 6 ended.(556402+162667x3337330).
 <-><->
       
-l.86 \end{equation*}
-                    
+l.93 ...e the sample with $x^{\rm male}_{1} = 284$
+                                                  .
 Not a real error.
 
 [6]
 ! Preview: Snippet 7 started.
 <-><->
       
-l.87 where $
-            f_{i} = n_{i} - 1$, are the degrees of freedom for group $i = 1,
+l.94 Let $
+          H_{0}: \b S_{\rm male} = \b S_{\rm female}$ versus $A \neq
 Not a real error.
 
-! Preview: Snippet 7 ended.(455111+127431x3153078).
+! Preview: Snippet 7 ended.(449650+98303x5773988).
 <-><->
       
-l.87 where $f_{i} = n_{i} - 1$
-                              , are the degrees of freedom for group $i = 1,
+l.94 ..._{0}: \b S_{\rm male} = \b S_{\rm female}$
+                                                   versus $A \neq
 Not a real error.
 
 [7]
 ! Preview: Snippet 8 started.
 <-><->
       
-l.87 ...1$, are the degrees of freedom for group $
-                                                  i = 1,
+l.94 ...S_{\rm male} = \b S_{\rm female}$ versus $
+                                                  A \neq
 Not a real error.
 
-! Preview: Snippet 8 ended.(432226+127431x2665167).
+! Preview: Snippet 8 ended.(455111+127430x1963341).
 <-><->
       
-l.88 2, 3$
-          , $f = \sum_{i=1}^{3}f_{i}$, and
+l.95 H$
+       . For this test we can use Box's test for equality of covariance
 Not a real error.
 
 [8]
 ! Preview: Snippet 9 started.
 <-><->
       
-l.88 2, 3$, $
-             f = \sum_{i=1}^{3}f_{i}$, and
+l.96 matrices, in which we reject $
+                                   H_{0}$ if
 Not a real error.
 
-! Preview: Snippet 9 ended.(625146+196611x3486985).
+! Preview: Snippet 9 ended.(447828+98303x838771).
 <-><->
       
-l.88 2, 3$, $f = \sum_{i=1}^{3}f_{i}$
-                                     , and
+l.96 matrices, in which we reject $H_{0}$
+                                          if
 Not a real error.
 
 [9]
 ! Preview: Snippet 10 started.
 <-><->
       
-l.89 \begin{equation*}
-                      
+l.97 \begin{equation*}
+                      \label{eq:boxcorrection}
 Not a real error.
 
-! Preview: Snippet 10 ended.(1348011+0x17491184).
+! Preview: Snippet 10 ended.(2019151+0x22609920).
 <-><->
       
-l.92 \end{equation*}
-                    
+l.105 \end{equation*}
+                     
 Not a real error.
 
-[10]
+[10
+
+]
 ! Preview: Snippet 11 started.
 <-><->
       
-l.94 \begin{equation*}
-                      
+l.106 where $
+             p=2$ is the dimension of the populations, $g = 2$ is the
 Not a real error.
 
-! Preview: Snippet 11 ended.(2019151+0x12997834).
+! Preview: Snippet 11 ended.(422343+127431x1531215).
 <-><->
       
-l.96 \end{equation*}
-                    
+l.106 where $p=2$
+                  is the dimension of the populations, $g = 2$ is the
 Not a real error.
 
 [11]
 ! Preview: Snippet 12 started.
 <-><->
       
-l.97 The test $
-               \Lambda^{*} < c$, for some $c$, is an unbiased test.
+l.106 ...2$ is the dimension of the populations, $
+                                                  g = 2$ is the
 Not a real error.
 
-! Preview: Snippet 12 ended.(451272+25623x1913812).
+! Preview: Snippet 12 ended.(422343+127431x1537586).
 <-><->
       
-l.97 The test $\Lambda^{*} < c$
-                               , for some $c$, is an unbiased test.
+l.106 ...the dimension of the populations, $g = 2$
+                                                   is the
 Not a real error.
 
 [12]
 ! Preview: Snippet 13 started.
 <-><->
       
-l.97 The test $\Lambda^{*} < c$, for some $
-                                           c$, is an unbiased test.
+l.108 \begin{equation*}
+                       
 Not a real error.
 
-! Preview: Snippet 13 ended.(282168+0x283611).
+! Preview: Snippet 13 ended.(2019151+0x18939226).
 <-><->
       
-l.97 The test $\Lambda^{*} < c$, for some $c$
-                                             , is an unbiased test.
+l.116 \end{equation*}
+                     
 Not a real error.
 
 [13]
 ! Preview: Snippet 14 started.
 <-><->
       
-l.99 \begin{equation*}
-                      
+l.117 We represent the male population with $
+                                             i=1$ and the female by
 Not a real error.
 
-! Preview: Snippet 14 ended.(1442675+0x17886361).
+! Preview: Snippet 14 ended.(432226+0x1427267).
 <-><->
       
-l.101 \end{equation*}
-                     
+l.117 We represent the male population with $i=1$
+                                                  and the female by
 Not a real error.
 
 [14]
 ! Preview: Snippet 15 started.
 <-><->
       
-l.102 where $
-             m = f- 2\alpha$, where
+l.118 $
+       i=2$. The covariance matrices $\b S_{i}$ is the sample mean for $i =
 Not a real error.
 
-! Preview: Snippet 15 ended.(455111+127431x3390951).
+! Preview: Snippet 15 ended.(432226+0x1427267).
 <-><->
       
-l.102 where $m = f- 2\alpha$
-                            , where
+l.118 $i=2$
+           . The covariance matrices $\b S_{i}$ is the sample mean for $i =
 Not a real error.
 
 [15]
 ! Preview: Snippet 16 started.
 <-><->
       
-l.103 \begin{equation*}
-                       
+l.118 $i=2$. The covariance matrices $
+                                      \b S_{i}$ is the sample mean for $i =
 Not a real error.
 
-! Preview: Snippet 16 ended.(2019151+0x16431010).
+! Preview: Snippet 16 ended.(449650+98303x672159).
 <-><->
       
-l.109 \end{equation*}
-                     
+l.118 $i=2$. The covariance matrices $\b S_{i}$
+                                                is the sample mean for $i =
 Not a real error.
 
 [16]
 ! Preview: Snippet 17 started.
 <-><->
       
-l.111 \begin{equation*}
-                       
+l.118 ...rices $\b S_{i}$ is the sample mean for $
+                                                  i =
 Not a real error.
 
-! Preview: Snippet 17 ended.(1302500+0x14033791).
+! Preview: Snippet 17 ended.(432226+127431x2046217).
 <-><->
       
-l.113 \end{equation*}
-                     
+l.119 1,2$
+          , and the pooled matrix, $\b S_{\rm pooled}$, is given by
 Not a real error.
 
 [17]
 ! Preview: Snippet 18 started.
 <-><->
       
-l.115 \begin{equation*}
-                       
+l.119 1,2$, and the pooled matrix, $
+                                    \b S_{\rm pooled}$, is given by
 Not a real error.
 
-! Preview: Snippet 18 ended.(730073+0x15887388).
+! Preview: Snippet 18 ended.(449650+187504x1997714).
 <-><->
       
-l.117 \end{equation*}
-                     
+l.119 ...nd the pooled matrix, $\b S_{\rm pooled}$
+                                                  , is given by
 Not a real error.
 
 [18]
 ! Preview: Snippet 19 started.
 <-><->
       
-l.118 hence $
-             H_{0}$ cannot be rejected, the covariance matrices cannot be
+l.120 \begin{equation*}
+                       
 Not a real error.
 
-! Preview: Snippet 19 ended.(447828+98303x838771).
+! Preview: Snippet 19 ended.(2019151+0x16849013).
 <-><->
       
-l.118 hence $H_{0}$
-                    cannot be rejected, the covariance matrices cannot be
+l.123 \end{equation*}
+                     
 Not a real error.
 
 [19]
 ! Preview: Snippet 20 started.
 <-><->
       
-l.120 \subsection
-                 *{(b)}
+l.125 \begin{equation*}
+                       
 Not a real error.
 
-! Preview: Snippet 20 ended.(589824+196608x22609920).
+! Preview: Snippet 20 ended.(2019151+0x20857342).
 <-><->
       
-l.120 \subsection*{(b)}
-                       
+l.133 \end{equation*}
+                     
 Not a real error.
 
 [20]
 ! Preview: Snippet 21 started.
 <-><->
       
-l.124 \begin{equation*}
+l.135 \begin{equation*}
                        
 Not a real error.
 
-! Preview: Snippet 21 ended.(4718638+0x20208245).
+! Preview: Snippet 21 ended.(859244+0x17446045).
 <-><->
       
-l.134 \end{equation*}
+l.137 \end{equation*}
                      
 Not a real error.
 
@@ -516,122 +546,122 @@ Not a real error.
 ! Preview: Snippet 22 started.
 <-><->
       
-l.135 we can use the distance function $
-                                        d_{i}(\b x_{0}) = (\b x_{0} - \mean
+l.138 Hence we should not reject $
+                                  H_{0}$, the matrices can be pooled. On the
 Not a real error.
 
-! Preview: Snippet 22 ended.(575988+286896x10660334).
+! Preview: Snippet 22 ended.(447828+98303x838771).
 <-><->
       
-l.137 x_{i})$
-              given in \cite[p. 611]{book}, where  $\b x_{0}$ is classified to
+l.138 Hence we should not reject $H_{0}$
+                                        , the matrices can be pooled. On the
 Not a real error.
 
 [22]
-
-LaTeX Warning: Citation 'book' on page 1 undefined on input line 137.
-
 ! Preview: Snippet 23 started.
 <-><->
       
-l.137 ...)$ given in \cite[p. 611]{book}, where  $
-                                                  \b x_{0}$ is classified to
+l.140 $
+       x_{1}^{\rm male} = 184$, we get that
 Not a real error.
 
-! Preview: Snippet 23 ended.(291271+98303x725903).
+! Preview: Snippet 23 ended.(556402+162667x3337330).
 <-><->
       
-l.137 ...in \cite[p. 611]{book}, where  $\b x_{0}$
-                                                   is classified to
+l.140 $x_{1}^{\rm male} = 184$
+                              , we get that
 Not a real error.
 
 [23]
 ! Preview: Snippet 24 started.
 <-><->
       
-l.138 $
-       \pi_{i}$ if $d_{i}(\b x_{0}) = \min_{i = 1, 2, 3}
+l.141 \begin{equation*}
+                       
 Not a real error.
 
-! Preview: Snippet 24 ended.(282168+98303x591761).
+! Preview: Snippet 24 ended.(2019151+0x20948365).
 <-><->
       
-l.138 $\pi_{i}$
-                if $d_{i}(\b x_{0}) = \min_{i = 1, 2, 3}
+l.149 \end{equation*}
+                     
 Not a real error.
 
 [24]
 ! Preview: Snippet 25 started.
 <-><->
       
-l.138 $\pi_{i}$ if $
-                    d_{i}(\b x_{0}) = \min_{i = 1, 2, 3}
+l.151 \subsection
+                 *{(c)}
 Not a real error.
 
-! Preview: Snippet 25 ended.(491520+187504x8036017).
+! Preview: Snippet 25 ended.(589824+196608x22609920).
 <-><->
       
-l.141 \right\}$
-               . The distance functions can be created with
-Not a real error.
-
-[25]
-! Preview: Snippet 26 started.
-<-><->
-      
-l.142 \begin{equation*}
+l.151 \subsection*{(c)}
                        
 Not a real error.
 
-! Preview: Snippet 26 ended.(4718638+0x20096584).
+[25]
+
+LaTeX Warning: Citation 'book' on page 1 undefined on input line 154.
+
+! Preview: Snippet 26 started.
 <-><->
       
-l.152 \end{equation*}
-                     
+l.154 ...2 in \cite[p. 286]{book} we can use the $
+                                                  T^{2}$ test
+Not a real error.
+
+! Preview: Snippet 26 ended.(533465+0x768002).
+<-><->
+      
+l.154 ...cite[p. 286]{book} we can use the $T^{2}$
+                                                   test
 Not a real error.
 
 [26]
 ! Preview: Snippet 27 started.
 <-><->
       
-l.154 \begin{equation*}
-                       
+l.155  where we accept $
+                        H_{0}:\b \mu_{\rm male} = \b \mu_{\rm female}$ versus
 Not a real error.
 
-! Preview: Snippet 27 ended.(4718638+0x19357010).
+! Preview: Snippet 27 ended.(447828+127431x5793862).
 <-><->
       
-l.182 \end{equation*}
-                     
+l.155 ...:\b \mu_{\rm male} = \b \mu_{\rm female}$
+                                                   versus
 Not a real error.
 
 [27]
 ! Preview: Snippet 28 started.
 <-><->
       
-l.186 \subsection
-                 *{(c)}
+l.156  $
+        H_{1}:\b \mu_{\rm male} \neq \b \mu_{\rm female}$ if
 Not a real error.
 
-! Preview: Snippet 28 ended.(589824+196608x22609920).
+! Preview: Snippet 28 ended.(455111+127431x5793862).
 <-><->
       
-l.186 \subsection*{(c)}
-                       
+l.156 ... \mu_{\rm male} \neq \b \mu_{\rm female}$
+                                                   if
 Not a real error.
 
 [28]
 ! Preview: Snippet 29 started.
 <-><->
       
-l.190 \begin{equation*}
+l.157 \begin{equation*}
                        
 Not a real error.
 
-! Preview: Snippet 29 ended.(1612804+0x22609920).
+! Preview: Snippet 29 ended.(1706501+0x22609920).
 <-><->
       
-l.195 \end{equation*}
+l.166 \end{equation*}
                      
 Not a real error.
 
@@ -639,108 +669,438 @@ Not a real error.
 ! Preview: Snippet 30 started.
 <-><->
       
-l.197 \begin{equation*}
-                       
+l.167 with a confidence level of $
+                                  1-\alpha$, where $\b Y = \b X_{\rm male}- \b
 Not a real error.
 
-! Preview: Snippet 30 ended.(1475443+0x22166949).
+! Preview: Snippet 30 ended.(422343+54613x1550332).
 <-><->
       
-l.201 \end{equation*}
-                     
+l.167 with a confidence level of $1-\alpha$
+                                           , where $\b Y = \b X_{\rm male}- \b
 Not a real error.
 
 [30]
 ! Preview: Snippet 31 started.
 <-><->
       
-l.202 ...error of missclassificating a member of $
-                                                  \pi_{0}$ onto
+l.167 ...a confidence level of $1-\alpha$, where $
+                                                  \b Y = \b X_{\rm male}- \b
 Not a real error.
 
-! Preview: Snippet 31 ended.(282168+98303x667576).
+! Preview: Snippet 31 ended.(580715+163840x12195775).
 <-><->
       
-l.202 ... missclassificating a member of $\pi_{0}$
-                                                   onto
+l.168 ...ean X_{\rm male}- \mean X_{\rm female} )$
+                                                   and $n$ is the total numb...
+
 Not a real error.
 
 [31]
 ! Preview: Snippet 32 started.
 <-><->
       
-l.203 $
-       \pi_{1}$ is given by
+l.168 ...{\rm male}- \mean X_{\rm female} )$ and $
+                                                  n$ is the total number of ...
+
 Not a real error.
 
-! Preview: Snippet 32 ended.(282168+98303x667576).
+! Preview: Snippet 32 ended.(282168+0x393370).
 <-><->
       
-l.203 $\pi_{1}$
-                is given by
+l.168 ...rm male}- \mean X_{\rm female} )$ and $n$
+                                                   is the total number of sa...
+
 Not a real error.
 
 [32]
 ! Preview: Snippet 33 started.
 <-><->
       
-l.204 \begin{equation*}
-                       
+l.169  $
+        T^{2}\approx 24.96 $
 Not a real error.
 
-! Preview: Snippet 33 ended.(1442675+0x18862313).
+! Preview: Snippet 33 ended.(533465+0x3134577).
 <-><->
       
-l.207 \end{equation*}
-                     
+l.169  $T^{2}\approx 24.96 $
+                            
 Not a real error.
 
 [33]
 ! Preview: Snippet 34 started.
 <-><->
       
-l.208 ...error of missclassificating a member of $
-                                                  \pi_{0}$ onto
+l.170 and $
+           c^{2}_{\alpha} \approx 6.28$, thus we reject $H_{0}$. \\
 Not a real error.
 
-! Preview: Snippet 34 ended.(282168+98303x667576).
+! Preview: Snippet 34 ended.(533465+162016x2695979).
 <-><->
       
-l.208 ... missclassificating a member of $\pi_{0}$
-                                                   onto
+l.170 and $c^{2}_{\alpha} \approx 6.28$
+                                       , thus we reject $H_{0}$. \\
 Not a real error.
 
 [34]
 ! Preview: Snippet 35 started.
 <-><->
       
-l.209 $
-       \pi_{2}$ is
+l.170 ..._{\alpha} \approx 6.28$, thus we reject $
+                                                  H_{0}$. \\
 Not a real error.
 
-! Preview: Snippet 35 ended.(282168+98303x667576).
+! Preview: Snippet 35 ended.(447828+98303x838771).
 <-><->
       
-l.209 $\pi_{2}$
-                is
+l.170 ...ha} \approx 6.28$, thus we reject $H_{0}$
+                                                  . \\
 Not a real error.
 
 [35]
 ! Preview: Snippet 36 started.
 <-><->
       
-l.210 \begin{equation*}
+l.172 ...stead change the outlier to 184, we get $
+                                                  T^{2} \approx 25.66$ and
+Not a real error.
+
+! Preview: Snippet 36 ended.(533465+0x3134577).
+<-><->
+      
+l.172 ...lier to 184, we get $T^{2} \approx 25.66$
+                                                   and
+Not a real error.
+
+[36]
+! Preview: Snippet 37 started.
+<-><->
+      
+l.173 $
+       c_{\alpha}^{2} \approx  6.27$, so we get the same conclusion as when
+Not a real error.
+
+! Preview: Snippet 37 ended.(533465+162016x2695979).
+<-><->
+      
+l.173 $c_{\alpha}^{2} \approx  6.27$
+                                    , so we get the same conclusion as when
+Not a real error.
+
+[37]
+! Preview: Snippet 38 started.
+<-><->
+      
+l.174 we removed the outlier; $
+                               H_{0}$ is rejected.
+Not a real error.
+
+! Preview: Snippet 38 ended.(447828+98303x838771).
+<-><->
+      
+l.174 we removed the outlier; $H_{0}$
+                                      is rejected.
+Not a real error.
+
+[38]
+! Preview: Snippet 39 started.
+<-><->
+      
+l.175 \subsection
+                 *{(d)}
+Not a real error.
+
+! Preview: Snippet 39 ended.(589824+196608x22609920).
+<-><->
+      
+l.175 \subsection*{(d)}
                        
 Not a real error.
 
-! Preview: Snippet 36 ended.(1442675+0x18862313).
+[39]
+
+LaTeX Warning: Citation 'book' on page 1 undefined on input line 176.
+
+! Preview: Snippet 40 started.
 <-><->
       
-l.213 \end{equation*}
+l.177  $
+        \b a^{T} (\mean x_{\rm male} - \mean x_{\rm female})$ with $\b a
+Not a real error.
+
+! Preview: Snippet 40 ended.(551306+163840x5609470).
+<-><->
+      
+l.177 ...ean x_{\rm male} - \mean x_{\rm female})$
+                                                   with $\b a
+Not a real error.
+
+[40]
+! Preview: Snippet 41 started.
+<-><->
+      
+l.177 ...\rm male} - \mean x_{\rm female})$ with $
+                                                  \b a
+Not a real error.
+
+! Preview: Snippet 41 ended.(708522+286896x13450808).
+<-><->
+      
+l.183 $
+        is most responsible for rejecting $H_{0}$ in Exercise (c).
+Not a real error.
+
+[41]
+! Preview: Snippet 42 started.
+<-><->
+      
+l.183 $ is most responsible for rejecting $
+                                           H_{0}$ in Exercise (c).
+Not a real error.
+
+! Preview: Snippet 42 ended.(447828+98303x838771).
+<-><->
+      
+l.183 $ is most responsible for rejecting $H_{0}$
+                                                  in Exercise (c).
+Not a real error.
+
+[42]
+! Preview: Snippet 43 started.
+<-><->
+      
+l.184 \subsection
+                 *{(e)}
+Not a real error.
+
+! Preview: Snippet 43 ended.(589824+196608x22609920).
+<-><->
+      
+l.184 \subsection*{(e)}
+                       
+Not a real error.
+
+[43]
+! Preview: Snippet 44 started.
+<-><->
+      
+l.188 \begin{align}
+                   
+Not a real error.
+
+! Preview: Snippet 44 ended.(4332465+0x22609920).
+<-><->
+      
+l.199 \end{align}
+                 
+Not a real error.
+
+[44
+
+]
+! Preview: Snippet 45 started.
+<-><->
+      
+l.200 where for $
+                 \mu = (\mu_1, \mu_2)$, and $\alpha = 0.05$. The confidence
+Not a real error.
+
+! Preview: Snippet 45 ended.(491520+163840x3447465).
+<-><->
+      
+l.200 where for $\mu = (\mu_1, \mu_2)$
+                                      , and $\alpha = 0.05$. The confidence
+Not a real error.
+
+[45]
+! Preview: Snippet 46 started.
+<-><->
+      
+l.200 where for $\mu = (\mu_1, \mu_2)$, and $
+                                             \alpha = 0.05$. The confidence
+Not a real error.
+
+! Preview: Snippet 46 ended.(422343+0x2460555).
+<-><->
+      
+l.200 ...mu = (\mu_1, \mu_2)$, and $\alpha = 0.05$
+                                                  . The confidence
+Not a real error.
+
+[46]
+
+LaTeX Warning: Reference `fig:ex2fig' on page 1 undefined on input line 201.
+
+! Preview: Snippet 47 started.
+<-><->
+      
+l.203 \begin{figure}
+                    [h]
+Not a real error.
+
+Package epstopdf Info: Source file: <./images/ex2fig.eps>
+(epstopdf)                    date: 2018-01-19 11:24:37
+(epstopdf)                    size: 70485 bytes
+(epstopdf)             Output file: <./images/ex2fig-eps-converted-to.pdf>
+(epstopdf)                    date: 2018-01-19 11:24:55
+(epstopdf)                    size: 13156 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/ex2fig-eps-conver
+ted-to.pdf ./images/ex2fig.eps>
+(epstopdf)             \includegraphics on input line 205.
+Package epstopdf Info: Output file is already uptodate.
+<./images/ex2fig-eps-converted-to.pdf, id=165, 361.35pt x 292.09125pt>
+File: ./images/ex2fig-eps-converted-to.pdf Graphic file (type pdf)
+
+<use ./images/ex2fig-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/ex2fig-eps-converted-to.pdf used on input lin
+e 205.
+(pdftex.def)             Requested size: 284.52756pt x 229.9963pt.
+
+! Preview: Snippet 47 ended.(17301262+0x22609920).
+<-><->
+      
+l.209 \end{figure}
+                  
+Not a real error.
+
+[47
+
+
+ <./images/ex2fig-eps-converted-to.pdf>]
+! Preview: Snippet 48 started.
+<-><->
+      
+l.210 The simultaneous confidence interval are $
+                                                \b \mu = \b \mu_{\rm male}- \b
+Not a real error.
+
+! Preview: Snippet 48 ended.(382293+127431x5673864).
+<-><->
+      
+l.211 \mu_{\rm female}$
+                        then we get that the confidence region for $\mu_{1}$
+Not a real error.
+
+[48]
+! Preview: Snippet 49 started.
+<-><->
+      
+l.211 ...n we get that the confidence region for $
+                                                  \mu_{1}$
+Not a real error.
+
+! Preview: Snippet 49 ended.(282168+127431x688889).
+<-><->
+      
+l.211 ... that the confidence region for $\mu_{1}$
+                                                  
+Not a real error.
+
+[49]
+! Preview: Snippet 50 started.
+<-><->
+      
+l.213 \begin{equation*}
+                       
+Not a real error.
+
+! Preview: Snippet 50 ended.(786439+0x13771670).
+<-><->
+      
+l.217 \end{equation*}
                      
 Not a real error.
 
-[36] Excluding 'comment' comment.  !name(examination.tex) !offset(-150) 
+[50]
+! Preview: Snippet 51 started.
+<-><->
+      
+l.218 and, for $
+                \mu_{2}$,
+Not a real error.
+
+! Preview: Snippet 51 ended.(282168+127431x688889).
+<-><->
+      
+l.218 and, for $\mu_{2}$
+                        ,
+Not a real error.
+
+[51]
+! Preview: Snippet 52 started.
+<-><->
+      
+l.219 \begin{equation*}
+                       
+Not a real error.
+
+! Preview: Snippet 52 ended.(786439+0x13498601).
+<-><->
+      
+l.223 \end{equation*}
+                     
+Not a real error.
+
+[52]
+
+LaTeX Warning: Reference `fig:ex2_sim_intervals' on page 1 undefined on input l
+ine 225.
+
+! Preview: Snippet 53 started.
+<-><->
+      
+l.226 \begin{figure}
+                    [h]
+Not a real error.
+
+Package epstopdf Info: Source file: <./images/ex2fig_with_sim_intervals.eps>
+(epstopdf)                    date: 2018-01-19 11:24:37
+(epstopdf)                    size: 70846 bytes
+(epstopdf)             Output file: <./images/ex2fig_with_sim_intervals-eps-con
+verted-to.pdf>
+(epstopdf)                    date: 2018-01-19 11:28:46
+(epstopdf)                    size: 13243 bytes
+(epstopdf)             Command: <repstopdf --outfile=./images/ex2fig_with_sim_i
+ntervals-eps-converted-to.pdf ./images/ex2fig_with_sim_intervals.eps>
+(epstopdf)             \includegraphics on input line 228.
+Package epstopdf Info: Output file is already uptodate.
+
+<./images/ex2fig_with_sim_intervals-eps-converted-to.pdf, id=191, 361.35pt x 29
+2.09125pt>
+File: ./images/ex2fig_with_sim_intervals-eps-converted-to.pdf Graphic file (typ
+e pdf)
+ <use ./images/ex2fig_with_sim_intervals-eps-converted-to.pdf>
+Package pdftex.def Info: ./images/ex2fig_with_sim_intervals-eps-converted-to.pd
+f used on input line 228.
+(pdftex.def)             Requested size: 284.52756pt x 229.9963pt.
+
+! Preview: Snippet 53 ended.(16514830+0x22609920).
+<-><->
+      
+l.231 \end{figure}
+                  
+Not a real error.
+
+[53
+
+
+ <./images/ex2fig_with_sim_intervals-eps-converted-to.pdf>]
+! Preview: Snippet 54 started.
+<-><->
+      
+l.232 \subsection
+                 *{(f)}
+Not a real error.
+
+! Preview: Snippet 54 ended.(589824+196608x22609920).
+<-><->
+      
+l.232 \subsection*{(f)}
+                       
+Not a real error.
+
+[54]  !name(examination.tex) !offset(-159) 
 
 LaTeX Warning: There were undefined references.
 
@@ -754,28 +1114,26 @@ Package logreq Info: Writing requests to '_region_.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 963 strings out of 483387
- 13965 string characters out of 5991148
- 438016 words of memory out of 5000000
- 15054 multiletter control sequences out of 15000+600000
+ 996 strings out of 483387
+ 14771 string characters out of 5991147
+ 439016 words of memory out of 5000000
+ 15070 multiletter control sequences out of 15000+600000
  10783 words of font info for 40 fonts, out of 8000000 for 9000
  350 hyphenation exceptions out of 8191
- 33i,8n,25p,228b,735s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmsy7.pfb>
-Output written on _region_.pdf (36 pages, 112577 bytes).
+ 33i,13n,38p,228b,735s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmsy7.pfb>
+Output written on _region_.pdf (54 pages, 136138 bytes).
 PDF statistics:
- 164 PDF objects out of 1000 (max. 8388607)
- 113 compressed objects within 2 object streams
+ 235 PDF objects out of 1000 (max. 8388607)
+ 161 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

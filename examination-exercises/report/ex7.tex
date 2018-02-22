@@ -13,7 +13,7 @@ The hypothesis $H_{0}: \b\Sigma = \sigma^{2}[(1-\rho)\b I + \rho \b 1
 \b 1^{T}]$ is not rejected if
 \begin{equation*}
   \left[ n  - 1 - \frac{p(p+1)^2 (2p-3)}{6(p-1)(p^2+p-4)} \right] \ln
-    \Lambda < \chi^{2}_{0.95}(g),
+    \Lambda < \chi^{2}_{g}(0.95),
 \end{equation*}
 where 
 \begin{equation*}
@@ -30,7 +30,7 @@ We get that
 \end{equation*}
 which is larger than
 \begin{equation*}
-  \chi^{2}_{0.95}(g) \approx 83.68.
+  \chi^{2}_{g}(0.95) \approx 83.68.
 \end{equation*}
 So $H_{0}$ is rejected, there are no intraclass covariance matrix.
 
@@ -38,8 +38,7 @@ So $H_{0}$ is rejected, there are no intraclass covariance matrix.
 \label{sec:b-6}
 
 Further, we which to test if the correlation matrix is zero on all the
-sub diagonals. We use the test that can be found on Exercise 8.9 in
- in \cite[p. 472]{book}. Set 
+sub diagonals. We use the test found in Exercise 8.9 from \cite[p. 472]{book}. Set 
 \begin{equation*}
   \ln \Lambda = \frac n2 \ln |\b S |- \frac n2 \sum_{i = 1}^{p} \ln\b (S_{ii}),
 \end{equation*}
@@ -49,7 +48,7 @@ and
 \end{equation*}
 We find that that the test size
 \begin{equation*}
-  -u \ln \Lambda = 1159.79   > 73.3115 = c = \chi^2_{0.95}(p(p-1)/2).
+  -u \ln \Lambda = 1159.79  > 73.31 = c = \chi^2_{p(p-1)/2}(0.95).
 \end{equation*}
 Thus, it can be concluded that the scores at each time step is not
 independent. 
@@ -62,10 +61,10 @@ We consider the growth curve model
   \b Y = \b{ABC} +  \b E,
 \end{equation*}
 where $A = (\b 1_{p},\b t)$, $\b t = (0, 1, \dots, p - 1)^{T}$, $p =
-10$,  $\b B$ is
+10$,  $\b B$ contains
 the parametric values, where each column 
-consist of ,the parametric values for each group.  and $\b C$ is a
-matrix of controlling which groups each column in $\b B$ belong to. The
+consist of the parametric values for each group,  and $\b C$ is a
+matrix of controlling which group each column in $\b B$ belong to. The
 matrix $\b E \sim N_{p, n}(\b 0, \b \Sigma, \b I)$. We can write $\b C$ as
 \begin{equation*}
   \b C =
@@ -80,7 +79,7 @@ where $k = 4$ is the number of groups. \\
 The solution of finding the parameters in $\b B$ is given by 
 \begin{align*}
   \b \hat B &= (\b A^{T}\b V^{-1}\b A)^{-1}  \b A^{T}\b V^{-1}\b Y
-              \b C^{T}(\b C\b C^{T})^{-1}
+              \b C^{T}(\b C\b C^{T})^{-1} % looks great!
   \\
   &=
   \begin{pmatrix}
@@ -96,6 +95,7 @@ where
 \begin{equation*}
   \b P_{c} = \b C^{T}(\b C\b C^{T})^{-1}\b C.
 \end{equation*}
+% The oter matrices are to large to be displayed here. 
 
 \subsection*{(d)}
 \label{sec:d-2}
@@ -105,29 +105,29 @@ To compare the parameters we consider three different tests,
   H_i: \b B^{(1)} - \b B^{(i)} = \b 0,\quad i = 2,3,4,
 \end{equation*}
 where $\b B^{(i)}$ denotes column $i$ of $\b B$. We can reformulate the
-hypothesis as
+hypothesis $i$ as
 \begin{equation*}
-  H_i: \b{G B H_i} = \b 0, 
+  H_i: \b{G B H_i} = \b 0, \quad i = 2,3,4,
 \end{equation*}
 where the matrix $\b H_i$ has its first element equal to 1 and its $i$th element
 equal to $-1$. The matrix $\b G$ is just the identity matrix of
 dimension 2. We reject $H_{i}$ if 
 \begin{equation*}
   \Lambda_{i} = \frac{\abs{\b G (\b A^{T} \b V^{-1} \b A)^{-1}\b G^{T}}}
-  {\abs{\b G (\b A^{T} \b V^{-1} \b A)^{-1} + \b G \b \hat B\b H_{i}(\b
+  {\abs{\b G (\b A^{T} \b V^{-1} \b A)^{-1} \b G ^{T} + \b G \b \hat B\b H_{i}(\b
       H_{i}^{T} \b R \b H_{i})^{-1}\b H_{i}^{T} \b \hat B^{T} \b G^{T}}}
 \end{equation*}
 where
 \begin{align*}
   \b R = (\b C \b C^{T})^{-1} + ( &\b C \b C^{T})^{-1} CY^{T} \\
- &  \left[
+ &  \cdot\left[
     \b V^{-1}  - \b V^{-1}\b A(\b A^{T} \b V^{-1} \b A)^{-1}\b A^{T} \b V^{-1}
-  \right]
+  \right] 
   \b Y \b C^{T}(\b C \b C^{T})^{-1}.
 \end{align*}
 Then we get the  asymptotic distribution given by
 \begin{equation*}
- Q_{i} = - (n - k + q - p - \frac{1}{2}(r - t + 1)) \ln \Lambda_{i} \sim \chi^{2}_{rt}, 
+ Q_{i} = - \left(n - k + q - p - \frac{1}{2}(r - t + 1)\right) \ln \Lambda_{i} \sim \chi^{2}_{rt}, 
 \end{equation*}
 where $t=1$ is the number of columns in $\b H_{i}$, $r = 4$ is the
 number of rows in $\b H_{i}$, for all $i = 2,3,
