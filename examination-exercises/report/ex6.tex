@@ -1,4 +1,3 @@
-
 \section*{Exercise 6}
 \label{sec:exercise-6}
 
@@ -6,12 +5,12 @@
 \label{sec:a-5}
 
 
-The foll wing linear model was designed
+The following linear model was designed
 \begin{equation*}
   \b Y = \b{XB} + \b E,
 \end{equation*}
 where $\b Y$ is the out parameters, $\b X = (\b 1_n, \b x_1, \b x_2)$
-is the design matrix, and $\b B:(3 \times 4) $ contained the unknown parameter values, which
+is the design matrix, and $\b B:(3 \times 4) $ contained the unknown parameters which
 was estimated using linear regression as
 \begin{equation*}
   \b\hat B =
@@ -36,17 +35,16 @@ The sample correlation matrix was
     -0.09 &0.10 &0.22 &0.22 &0.24 &0.22 &1.00  
   \end{pmatrix}.
 \end{equation*}
-was is interesting is that the time steps that are close to each other
+was isWhat is interesting is that the time steps that are close to each other
 correlates more than those times further apart. We can even note that
-the first and last time steps have negative correlation an is almost 0.
+the first and last time steps have negative correlation and is almost 0.
 
 \subsection*{(c)}
 \label{sec:c-5}
 
 The average weight is governed by the last row in $\b B$, $\b B_{2}$, so therefore we
 want to test $H_{0}: \b B_{2} = \b 0$. According to Result 7.11 in
-\cite[p. 396]{book}, the  following modified statistic is rejected if it
-is large:
+\cite[p. 396]{book}, $H_{0}$ is rejected if the  following modified statistic is large:
 
 \begin{equation*}
   -\left[n - r- 1 - \frac{1}{2}(m-r+q+1)\right]\ln
@@ -70,7 +68,7 @@ Then
     -\left[n - r- 1 - \frac{1}{2}(m-r+q+1)\right]\ln
   \left(
     \frac{\abs{\b\hat\Sigma}}{\abs{\b\hat\Sigma_{1}}}
-  \right) =8.31, \quad \text{and}\quad \chi^{2}_{m(r-q)}(1 - \alpha) = 11.07,
+  \right) =8.31, \quad \text{and}\quad \chi^{2}_{m(r-q)}(1 - \alpha) = 11.07,\quad \alpha = 0.05,
 \end{equation*}
 hence $H_{0}$ cannot be rejected. 
 
