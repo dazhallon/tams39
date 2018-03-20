@@ -6,7 +6,7 @@
 \label{sec:a-4}
 
 The dot diagrams\footnote{Jag är lite osäker på hur dot diagram ska se
-  ut. Och framföralt hur man gjorde ett i \texttt{matlab}, men jag
+  ut och  hur man gör ett i \texttt{matlab}, men jag
   hoppas att detta illusterar det du är ute efter.} are shown in Figure \ref{fig:ex5-marginalplots}. 
 
 \begin{figure}[h]
@@ -47,29 +47,21 @@ The model used was
 \begin{equation*}
   y_1 = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \epsilon,
 \end{equation*}
-where $\hat{\beta} = (10.1145,\   -0.2113,\    0.0205)$, then the
+where $\hat{\b \beta} = (10.11,\   -0.21,\    0.02)$, then the
 residual sum of squares is
 \begin{equation*}
-  \b \epsilon^{T} \b \epsilon = 455.1356.
+  \b \epsilon^{T} \b \epsilon = 455.14
 \end{equation*}
-This is give the $R^{2} = (\b \hat \beta^{T} \b x)^{T} (\b \hat
-\beta^{T} \b x)/(\b Y^{T} \b Y) = 0.9033$, which is close to 1, and so
+This is gives that $R^{2} = (\b \hat{\b\beta}^{T} \b x)^{T} (\b \hat{\b\beta}^{T} \b x)/(\b Y^{T} \b Y) = 0.90$, which is close to 1, and so
 we get an indication that the model fits the data well. 
 Further, a prediction interval can be constructed using
 \begin{equation*}
-  \mean y \pm \sqrt{s^{2}}t_{df}(1 - \alpha/2)\sqrt{1 + \b q (\b x^{T} \b
+  \overline y \pm \sqrt{s^{2}}t_{df}(1 - \alpha/2)\sqrt{1 + \b q (\b x^{T} \b
     x)^{-1}\b q^{T}},
 \end{equation*}
-where $\mean y = \b \hat \beta^{T} \b q$, $s^{2} =\b \epsilon^{T} \b \epsilon / (df - 2) $, $df = n - k - 1
+where $\overline y = \hat{\b\beta}^{T} \b q$, $s^{2} =\b \epsilon^{T} \b \epsilon / (df - 2) $, $df = n - k - 1
 = 40$ is the degrees of freedom, and $\b q = (1, 10, 80)^{T}$ represents
-the point $(z_{1}, z_{2}) = (10, 80)$.  We get the prediction interval
-(with $\alpha = 0.05$)
-\begin{equation*}
-  \begin{pmatrix}
-    2.52 &16.77 
-  \end{pmatrix}.
-\end{equation*}
-
+the point $(z_{1}, z_{2}) = (10, 80)$.  We get the prediction interval $(2.52, 16.77)$, with $\alpha = 0.05$.
 \subsection*{(d)}
 
 Here, we propose the linear model
@@ -88,7 +80,7 @@ where
 \end{equation*}
 We found that
 \begin{equation*}
- \b \hat  B =
+ \hat{\b B} =
   \begin{pmatrix}
     10.11 & -0.21 \\ 
     0.02 & 8.28 \\ 
@@ -112,8 +104,8 @@ and
     2.07 &26.95  
   \end{pmatrix},\quad \rank X = r+1
 \end{equation*}
-and the $R^{2}_{ij}$ values, where $R^{2}_{ij} =  \hat Y_{i}^{T} 
-\hat Y_{j} /  Y_{i}^{T} Y_{j}$, we get
+and the $R^{2}_{ij}$ values, where $R^{2}_{ij} =  \hat{\b Y_{i}}^{T} 
+\hat{\b Y}_{j} /  \b Y_{i}^{T} \b Y_{j}$, we get
 \begin{equation*}
   \b R^{2} =
   \begin{pmatrix}
@@ -122,20 +114,19 @@ and the $R^{2}_{ij}$ values, where $R^{2}_{ij} =  \hat Y_{i}^{T}
   \end{pmatrix},
 \end{equation*}
 where all elements are fairly close to 1, which gives and indication
-that the model fits well. We can construct a prediction interval for
-$x_{1} = 10$, and $z_{2} = 80$ if we find the vectors $\b y =
-(y_{1}, y_{2})^{T}$ that
-satisfies
+that the model fits well. We can construct a prediction region for
+$z_{1} = 10$ and $z_{2} = 80$ if we find the vectors $\b y =
+(y_{1}, y_{2})^{T}$ that satisfies
 \begin{align*}
   \left(
-    \frac{\b \hat B^{T} \b q - \b y}{\sqrt{1 + \b q^{T}(\b X^{T} \b
+    \frac{\hat{\b B}^{T} \b q - \b y}{\sqrt{1 + \b q^{T}(\b X^{T} \b
         X)^{-1}\b q}}
   \right)^{T} &
   \left(
     \frac{n}{n-r-1}\b \Sigma
   \right)^{-1}
    \left(
-    \frac{\b \hat B^{T} \b q - \b y}{\sqrt{1 + \b q^{T}(\b X^{T} \b
+    \frac{\hat{\b B}^{T} \b q - \b y}{\sqrt{1 + \b q^{T}(\b X^{T} \b
         X)^{-1}\b q}}
   \right)
 \leq \\

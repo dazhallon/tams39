@@ -56,11 +56,11 @@ We get that
       \sum_{i=1}^{2}(n_{i} - 1)
     \right]
     \ln \abs{\b S_{\rm pooled}} - \sum_{i=1}^{2}[(n_{i}-1) \ln \abs{\b S_{i}}]
-  \right) \approx 1.0431
+  \right) \approx 1.04
 \end{equation*}
 and
 \begin{equation*}
-  \chi^{2}_{p(p+1)(g-1)/2}(1-\alpha) \approx 7.8147 , \quad \alpha =0.05.
+  \chi^{2}_{p(p+1)(g-1)/2}(1-\alpha) \approx 7.81 , \quad \alpha =0.05.
 \end{equation*}
 Hence we should not reject $H_{0}$, the matrices can be pooled. On the
 other hand, if we  instead change the outlier earlier to
@@ -72,13 +72,13 @@ $x_{1}^{\rm male} = 184$, we get that
       \sum_{i=1}^{2}(n_{i} - 1)
     \right]
     \ln \abs{\b S_{\rm pooled}} - \sum_{i=1}^{2}[(n_{i}-1) \ln \abs{\b S_{i}}]
-  \right) \approx 1.2223,
+  \right) \approx 1.22,
 \end{equation*}
 and the same conclusion holds.
 \subsection*{(c)}
 \label{sec:c-1}
 We remove the outlier.
- Using Result 6.2 in \cite[p. 286]{book} we can use the $T^{2}$ test
+ Using Result 6.2 in \cite[p. 286]{book} we can use the $T^{2}$-test
  where we accept $H_{0}:\b \mu_{\rm male} = \b \mu_{\rm female}$ versus
  $H_{1}:\b \mu_{\rm male} \neq \b \mu_{\rm female}$ if 
 \begin{equation*}
@@ -104,9 +104,7 @@ we removed the outlier; $H_{0}$ is rejected.
  $\b a^{T} (\mean x_{\rm male} - \mean x_{\rm female})$ with $\b a
  \propto \b S_{\rm pooled}^{-1}(\mean x_{\rm male} - \mean x_{\rm
    female}) =
- \begin{pmatrix}
-   -0.16 &0.09
- \end{pmatrix}^{T}
+ (   -0.16, 0.09)^{T}
 $ is most responsible for rejecting $H_{0}$ in Exercise (c). 
 \subsection*{(e)}
 \label{sec:e}
@@ -124,9 +122,9 @@ The confidence region if given by the equation
 \\
 \leq \frac{(n-2)p}{n-1+p}F_{p, n-1+p}(1-\alpha) =:c^{2}_{\alpha}
 \end{align}
-where for $\mu = (\mu_1, \mu_2)$, and $\alpha = 0.05$. The confidence
-ellipse is represented in Figure \ref{fig:ex2fig}.
-
+where for $\b \mu = (\mu_1, \mu_2)^{T}$, and $\alpha = 0.05$. The confidence
+ellipse is represented in Figure \ref{fig:ex2fig}.\\
+\\
 \begin{figure}[h]
   \centering
   \includegraphics[width=10cm]{ex2fig}

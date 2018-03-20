@@ -30,7 +30,7 @@ coverage of the principal values are
     85.68 &88.96 &91.96 &94.86 &97.65 &100.00 
   \end{pmatrix}\quad (\%)
 \end{equation*}
-so we can expected that we need quite a few factors to covered the total
+so we can expected that we need quite a few factors to cover the total
 variance.  An initial guess, is that we want to cover at least 85 \% of
 the total variance. This gives a vague indication that $m = 10$
 factors can be used. On the other hand, according to
@@ -60,7 +60,7 @@ As a conclusion, we recommend to use 3 factors to explain the data.
 \subsection*{(c)}
 \label{sec:c-8}
  We set up the test which is
-according to \cite[p. 502]{book}:
+according to \cite[p. 502]{book}
 \begin{align*}
   \ln \Lambda &= \ln(\det(\b R)) - \ln(\det(\b \Sigma)) \\
   u &=  n - 1 -(2p+4m+5)/6 \\
@@ -68,7 +68,7 @@ according to \cite[p. 502]{book}:
   Q &= -u \ln \Lambda \\
   c &=  \chi^2_{0.95}(g),
 \end{align*}
-where $\b \Sigma = \b{LL^T} + \b \Psi$. We see that we get rejection at
+where $\b \Sigma = \b{LL^T} + \b \Psi$. We get rejection at
 $m = 2$ since $c = 97.35$ and $Q = 132.37$, but we find that $m = 3$
 is adequate, since $c = 82.53$ and $Q = 71.42$. 
 %%% Local Variables:

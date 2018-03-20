@@ -2,6 +2,7 @@
 \usepackage[utf8]{inputenc}
 
 \usepackage{amsmath,amsthm,amssymb}
+\usepackage{mathtools}
 
 \usepackage{subcaption}
 \usepackage{graphicx}
@@ -10,6 +11,7 @@
 
 \usepackage{bm}
 \renewcommand{\b}[1]{\bm{#1}}
+\newcommand{\hatb}[1]{\hat{\b{#1}}}
 \newcommand{\tr}{\text{ tr }}
 \newcommand{\cov}[2]{\text{cov}(#1,#2)}
 \newcommand{\corr}[2]{\text{corr}(#1,#2)}
@@ -70,178 +72,166 @@
 \date{}
 \begin{document}
 
-\message{ !name(ex2.tex) !offset(-73) }
-\section*{Exercise 2}
-\label{sec:exercise-2}
+\message{ !name(ex5.tex) !offset(-75) }
+
+\section*{Exercise 5}
+\label{sec:exercise5}
 
 \subsection*{(a)}
-\label{sec:a-1}
+\label{sec:a-4}
 
-The scatter plot can be found in Figure \ref{fig:ex2-scatter} the outlier can be
-clearly be seen at $x_1 = 284$.
+The dot diagrams\footnote{Jag är lite osäker på hur dot diagram ska se
+  ut och  hur man gör ett i \texttt{matlab}, men jag
+  hoppas att detta illusterar det du är ute efter.} are shown in Figure \ref{fig:ex5-marginalplots}. 
+
 \begin{figure}[h]
   \centering
-  \includegraphics[width=5cm]{ex2-scatterplot}
-  \caption{Scatter plot of the tail length and the wing span for male
-    hook-billed kites.}
-  \label{fig:ex2-scatter}
+  \includegraphics[width=13cm]{ex5-marginalplots}
+  \caption{The marginal dot diagrams for all variables}
+  \label{fig:ex5-marginalplots}
 \end{figure}
 
 \subsection*{(b)}
-\label{sec:b-1}
+\label{sec:b-4}
 
-We remove the sample with $x^{\rm male}_{1} = 284$.
-Let $H_{0}: \b S_{\rm male} = \b S_{\rm female}$ versus $A \neq
-H$. For this test we can use Box's test for equality of covariance
-matrices, in which we reject $H_{0}$ if 
-\begin{equation*}\label{eq:boxcorrection}
-  (1 - u)
-  \left(
-    \left[
-      \sum_{i=1}^{2}(n_{i} - 1)
-    \right]
-    \ln \abs{\b S_{\rm pooled}} - \sum_{i=1}^{2}(n_{i}-1) \ln \abs{\b S_{i}}
-  \right) > \chi^{2}_{p(p+1)(g-1)/2}(1-\alpha),
-\end{equation*}
-where $p=2$ is the dimension of the populations, $g = 2$ is the
-number of groups in the experiment, and
+The sample mean is given as
 \begin{equation*}
-  u = 
-  \left[
-    \sum_{i=1}^{2}\frac{1}{n_{i}-1} - \frac{1}{\sum_{i=1}^{2}(n_{i}-1)}
-  \right]
-  \left[
-    \frac{2p^{2} + 3p - 1}{6(p+1)(g-1)}
-  \right].
-\end{equation*}
-We represent the male population with $i=1$ and the female by
-$i=2$. The covariance matrices $\b S_{i}$ is the sample mean for $i =
-1,2$, and the pooled matrix, $\b S_{\rm pooled}$, is given by 
-\begin{equation*}
-  \b S_{\rm pooled}=  \frac{1}{\sum_{i=1}^{2}(n_{1} -
-    1)}\sum_{i=1}^{2}(n_{i}-1)\b S_{i}  .
-\end{equation*}
-We get that 
-\begin{equation*}
-    (1 - u)
-  \left(
-    \left[
-      \sum_{i=1}^{2}(n_{i} - 1)
-    \right]
-    \ln \abs{\b S_{\rm pooled}} - \sum_{i=1}^{2}[(n_{i}-1) \ln \abs{\b S_{i}}]
-  \right) \approx 1.0431
-\end{equation*}
-and
-\begin{equation*}
-  \chi^{2}_{p(p+1)(g-1)/2}(1-\alpha) \approx 7.8147 , \quad \alpha =0.05.
-\end{equation*}
-Hence we should not reject $H_{0}$, the matrices can be pooled. On the
-other hand, if we  instead change the outlier earlier to
-$x_{1}^{\rm male} = 184$, we get that 
-\begin{equation*}
-    (1 - u)
-  \left(
-    \left[
-      \sum_{i=1}^{2}(n_{i} - 1)
-    \right]
-    \ln \abs{\b S_{\rm pooled}} - \sum_{i=1}^{2}[(n_{i}-1) \ln \abs{\b S_{i}}]
-  \right) \approx 1.2223,
-\end{equation*}
-and the same conclusion holds.
-\subsection*{(c)}
-\label{sec:c-1}
-We remove the outlier.
- Using Result 6.2 in \cite[p. 286]{book} we can use the $T^{2}$ test
- where we accept $H_{0}:\b \mu_{\rm male} = \b \mu_{\rm female}$ versus
- $H_{1}:\b \mu_{\rm male} \neq \b \mu_{\rm female}$ if 
-\begin{equation*}
-T^{2} = \b Y^{T}
-\left[
-  \left(
-    \frac{1}{n_{\rm male}} + \frac{1}{n_{\rm female}}
-  \right)
-  \b S_{\rm pooled}
-\right]^{-1} \b Y
-\leq \frac{(n-2)p}{n-1+p}F_{p, n-1+p}(1-\alpha) =:c^{2}_{\alpha},
-\end{equation*}
-with a confidence level of $1-\alpha$, where $\b Y = \b X_{\rm male}- \b
-X_{\rm female} - (\mean X_{\rm male}- \mean X_{\rm female} )$ and $n$ is the total number of samples. From the given data, we get that
- $T^{2}\approx 24.96 $
-and $c^{2}_{\alpha} \approx 6.28$, thus we reject $H_{0}$. \\
-\\
-If we instead change the outlier to 184, we get $T^{2} \approx 25.66$ and
-$c_{\alpha}^{2} \approx  6.27$, so we get the same conclusion as when
-we removed the outlier; $H_{0}$ is rejected.
-\subsection*{(d)}
- From the remark found in \cite[p. 289]{book}, the linear combination
- $\b a^{T} (\mean x_{\rm male} - \mean x_{\rm female})$ with $\b a
- \propto \b S_{\rm pooled}^{-1}(\mean x_{\rm male} - \mean x_{\rm
-   female}) =
- \begin{pmatrix}
-   -0.16 &0.09
- \end{pmatrix}^{T}
-$ is most responsible for rejecting $H_{0}$ in Exercise (c). 
-\subsection*{(e)}
-\label{sec:e}
-
-The confidence region if given by the equation
-\begin{align}
-  \label{eq:ex2-conf-region}
- (\mean x_{\rm male}  - \mean x_{\rm female} - \b \mu)^{T}
-\left[
-  \left(
-    \frac{1}{n_{\rm male}} + \frac{1}{n_{\rm female}}
-  \right)
-  \b S_{\rm pooled}
-\right]^{-1} (\mean x_{\rm male}  - \mean x_{\rm female} - \b \mu) \nonumber
-\\
-\leq \frac{(n-2)p}{n-1+p}F_{p, n-1+p}(1-\alpha) =:c^{2}_{\alpha}
-\end{align}
-where for $\mu = (\mu_1, \mu_2)$, and $\alpha = 0.05$. The confidence
-ellipse is represented in Figure \ref{fig:ex2fig}.
-
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=10cm]{ex2fig}
-  \caption{The confidence region of the difference
-    $\b \mu_{\rm male} - \b \mu_{\rm female}$ with confidence 95\%. }
-  \label{fig:ex2fig}
-\end{figure}
-The simultaneous confidence interval are $\b \mu = \b \mu_{\rm male}- \b
-\mu_{\rm female}$ then we get that the confidence region for $\mu_{1}$
-is given by 
-\begin{equation*}
+  \bar{x} =
   \begin{pmatrix}
-   -11.90 &-1.03  
+    7.50 & 73.86 & 4.55 & 2.19 & 10.05 & 9.40 & 3.10 
+  \end{pmatrix}^T
+\end{equation*}
+and the sample covariance matrix is
+\begin{equation*}
+  \b S =
+  \begin{pmatrix}
+    2.50 & -2.78 & -0.38 & -0.46 & -0.59 & -2.23 & 0.17 \\ 
+    -2.78 & 300.52 & 3.91 & -1.39 & 6.76 & 30.79 & 0.62 \\ 
+    -0.38 & 3.91 & 1.52 & 0.67 & 2.31 & 2.82 & 0.14 \\ 
+    -0.46 & -1.39 & 0.67 & 1.18 & 1.09 & -0.81 & 0.18 \\ 
+    -0.59 & 6.76 & 2.31 & 1.09 & 11.36 & 3.13 & 1.04 \\ 
+    -2.23 & 30.79 & 2.82 & -0.81 & 3.13 & 30.98 & 0.59 \\ 
+    0.17 & 0.62 & 0.14 & 0.18 & 1.04 & 0.59 & 0.48 \\ 
   \end{pmatrix}
 \end{equation*}
-and, for $\mu_{2}$, 
+
+\subsection*{(c)}
+\label{sec:c-4}
+
+The model used was
+\begin{equation*}
+  y_1 = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \epsilon,
+\end{equation*}
+where $\hat{\b \beta} = (10.11,\   -0.21,\    0.02)$, then the
+residual sum of squares is
+\begin{equation*}
+  \b \epsilon^{T} \b \epsilon = 455.14
+\end{equation*}
+This is gives that $R^{2} = (\b \hat{\b\beta}^{T} \b x)^{T} (\b \hat{\b\beta}^{T} \b x)/(\b Y^{T} \b Y) = 0.90$, which is close to 1, and so
+we get an indication that the model fits the data well. 
+Further, a prediction interval can be constructed using
+\begin{equation*}
+  \overline y \pm \sqrt{s^{2}}t_{df}(1 - \alpha/2)\sqrt{1 + \b q (\b x^{T} \b
+    x)^{-1}\b q^{T}},
+\end{equation*}
+where $\overline y = \hat{\b\beta}^{T} \b q$, $s^{2} =\b \epsilon^{T} \b \epsilon / (df - 2) $, $df = n - k - 1
+= 40$ is the degrees of freedom, and $\b q = (1, 10, 80)^{T}$ represents
+the point $(z_{1}, z_{2}) = (10, 80)$.  We get the prediction interval $(2.52, 16.77)$, with $\alpha = 0.05$.
+\subsection*{(d)}
+
+Here, we propose the linear model
 \begin{equation*}
   \begin{pmatrix}
-   -6.16 &8.52  
+    \b y_1 & \b y_2
+  \end{pmatrix} = 
+  \b X\b B + \b E,
+\end{equation*}
+where 
+\begin{equation*}
+ \b X =
+  \begin{pmatrix}
+    \b 1_n & \b x_1 & \b x_2
   \end{pmatrix}.
 \end{equation*}
-The confidence intervals ''frames'' the confidence region, as is shown
-in Figure \ref{fig:ex2_sim_intervals}. 
-\begin{figure}[h]
-  \centering
-  \includegraphics[width=10cm]{ex2fig_with_sim_intervals}
-  \caption{Confidence region with and the simultaneous $T^{2}$-intervals plotted. }
-  \label{fig:ex2_sim_intervals}
-\end{figure}
-\subsection*{(f)}
-\label{sec:f}
-There is evidence for that female birds have longer tails. However,
-there is no significant difference between the genders when it comes to
-the length of their wingspan. 
+We found that
+\begin{equation*}
+ \hat{\b B} =
+  \begin{pmatrix}
+    10.11 & -0.21 \\ 
+    0.02 & 8.28 \\ 
+    -0.79 & 0.10 
+  \end{pmatrix}.
+\end{equation*}
+With the sum or squared errors being
+\begin{equation*}
+  \b E ^{T} \b E = 
+  \begin{pmatrix}
+    455.14 &82.91 \\ 
+    82.91 &1077.97
+  \end{pmatrix},
+\end{equation*}
 
+and
+\begin{equation*}
+  \b \Sigma = \frac{1}{n-r-1} \b E ^{T} \b E = 
+  \begin{pmatrix}
+    11.38 &2.07 \\ 
+    2.07 &26.95  
+  \end{pmatrix},\quad \rank X = r+1
+\end{equation*}
+and the $R^{2}_{ij}$ values, where $R^{2}_{ij} =  \hat{\b Y_{i}}^{T} 
+\hat{\b Y}_{j} /  \b Y_{i}^{T} \b Y_{j}$, we get
+\begin{equation*}
+  \b R^{2} =
+  \begin{pmatrix}
+    0.90 &0.98 \\ 
+    0.98 &0.78
+  \end{pmatrix},
+\end{equation*}
+where all elements are fairly close to 1, which gives and indication
+that the model fits well. We can construct a prediction region nterval for
+$z_{1} = 10$ and $z_{2} = 80$ if we find the vectors $\b y =
+(y_{1}, y_{2})^{T}$ that
+satisfies
+\begin{align*}
+  \left(
+    \frac{\hat{\b B}^{T} \b q - \b y}{\sqrt{1 + \b q^{T}(\b X^{T} \b
+        X)^{-1}\b q}}
+  \right)^{T} &
+  \left(
+    \frac{n}{n-r-1}\b \Sigma
+  \right)^{-1}
+   \left(
+    \frac{\hat{\b B}^{T} \b q - \b y}{\sqrt{1 + \b q^{T}(\b X^{T} \b
+        X)^{-1}\b q}}
+  \right)
+\leq \\
+  &
+    \left(
+    \frac{m(n-r-1)}{n-r-m}
+    \right)
+    F_{m,n-r-m}(1-\alpha),
+\end{align*}
+where $q = (1, 10, 80)^{T}$, and $m$ is the number of responses. The
+resulting ellipse is displayed in Figure \ref{fig:ex5-ellipse}. In the
+prediction ellipse, the midpoints for $y_{1}$
+is the same as in the prediction interval from the exercise above. Also
+note that we get a much wider interval in the
+prediction interval compared to the prediction region. 
+
+\begin{figure}
+  \centering
+  \includegraphics[width=10cm]{ex5-ellipse}
+  \caption{The prediction region for $z_1 = 10$, and $z_2 = 80$.}
+  \label{fig:ex5-ellipse}
+\end{figure}
 
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "examination"
 %%% End:
 
-\message{ !name(examination.tex) !offset(-159) }
+\message{ !name(examination.tex) !offset(-147) }
 
 \end{document}
 %%% Local Variables:

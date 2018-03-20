@@ -30,13 +30,13 @@ PC's that covers at least 85 \% of the total variance is
   \end{pmatrix},
 \end{equation*}
 given in reversed order. So the main PC is in the
-right-most column. We interpret these PCs as following
+right-most column. We interpret these PCs as following:
 \begin{enumerate}
 \item The first PC is very even along the measurements, which makes it
   hard say anything concrete. But we might consider this PC as the
   order to prioritize the measurements, e.g. we might want to measure
-  measurements number 1 \textit{Total length, tip of snout to notch of
-    flukes} rather then the measurement number 21 \textit{Length of base
+  measurement number 1 \textit{Total length, tip of snout to notch of
+    flukes} rather than the measurement number 21 \textit{Length of base
     dorsal fin}, since we will get more characteristic that makes sperm
   whales differ from each other.
 \item For the second PC (which  covers about 5 \% of the total variance), we notice how messurement 7 and 21 are very
@@ -44,15 +44,15 @@ right-most column. We interpret these PCs as following
     eye to center of ear} and 21 \textit{Length of base  dorsal fin}. It
   is again very hard to say anything meaningful, but we could guess that
   this PC represents measurements of outer regions of the
-  whale. Especially the flukes, as measurements number 15-17 is also
+  whale. Especially the flukes, as measurement number 15-17 are also
   highly represented.
 \end{enumerate}
-The rest of the main components are very hard to interpret and only
+The rest of the principal components are very hard to interpret and only
 covers less than 5 \% of the total variance.
 
 \subsection*{(b)}
 \label{sec:b-7}
- We can construct the confidence interval for the first PC by using
+ From \cite[pp. 456-457]{book} we can construct the confidence interval for the first PC by using
  that
  \begin{equation*}
    \hat\lambda_i \in N(\lambda_i, 2\lambda^2_i/n),
@@ -74,7 +74,7 @@ where $c = \phi^{-1}(1 - \alpha/2)$. The confidence interval for $i =
 
 \subsection*{(c)}
 \label{sec:c-7}
-The asymptotic distribution of $ \hat{\b h_1}$ is given by $\sqrt n
+The asymptotic distribution of $ \hat{\b h}_1$ is given by $\sqrt n
 (\hat{\b{h}}_i - \b h_i) \in N_p(\b 0, \b E_i)$
 We calculate the matrix $\b E$ as
 \begin{equation*}
@@ -90,8 +90,8 @@ study it in \texttt{matlab} using the the attached code in
 
 The conventional way of calculating the correlation between the PCs and
 the original sample data can not be done here since we only have access
-to the correlation matrix $\b R$. However, we ca still give indications
-of the PCs correlates with the data. From Results 8.3 in Chapter 8 in
+to the correlation matrix $\b R$. However, we can still give indications
+how the PCs correlates with the data. From Results 8.3 in Chapter 8 in
 \cite[p.433]{book}, we see that correlations are approximately
 \begin{comment}
 \begin{equation*}

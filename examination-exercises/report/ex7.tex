@@ -3,8 +3,8 @@
 \label{sec:exercise-7}
 
 Since there are no structure for the mean, the sample covariance matrix
-is created by taking the sample covariance matrix of $\b X = [X_{1},
-X_{2}, X_{3}, X_{4}]$ with dimension $(n \times p)$, where $n = 45$ and
+is created by taking the sample covariance matrix of $\b X = (X_{1},
+X_{2}, X_{3}, X_{4})$ with dimension $(n \times p)$, where $n = 45$ and
 $p= 11$, and the matrices $X_{i}$ represents the samples of the
 different groups. We let $i = 1$ be the control group, $i = 2$ be
 25-50r, $i = 3$ be 75-100r, and $i = 4$ be  125-250r. \\
@@ -21,7 +21,7 @@ where
 \end{equation*}
 and
 \begin{equation*}
- \ln\Lambda = \ln\abs S- \ln\frac{\b 1^{T} \b S \b 1}{p}  - (p-1)\ln\frac{p\tr S - \b 1^{T} \b S \b 1}{p(p-1)}.
+ \ln\Lambda = \ln\abs{\b S}- \ln\frac{\b 1^{T} \b S \b 1}{p}  - (p-1)\ln\frac{p\tr \b S - \b 1^{T} \b S \b 1}{p(p-1)}.
 \end{equation*}
 We get that
 \begin{equation*}
@@ -50,7 +50,7 @@ We find that that the test size
 \begin{equation*}
   -u \ln \Lambda = 1159.79  > 73.31 = c = \chi^2_{p(p-1)/2}(0.95).
 \end{equation*}
-Thus, it can be concluded that the scores at each time step is not
+Thus, it can be concluded that the scores at each time step are not
 independent. 
 
 \subsection*{(c)}
@@ -65,7 +65,7 @@ where $A = (\b 1_{p},\b t)$, $\b t = (0, 1, \dots, p - 1)^{T}$, $p =
 the parametric values, where each column 
 consist of the parametric values for each group,  and $\b C$ is a
 matrix of controlling which group each column in $\b B$ belong to. The
-matrix $\b E \sim N_{p, n}(\b 0, \b \Sigma, \b I)$. We can write $\b C$ as
+error term is a matrix given by $\b E \sim N_{p, n}(\b 0, \b \Sigma, \b I)$. We can write $\b C$ as
 \begin{equation*}
   \b C =
   \begin{pmatrix}
@@ -76,9 +76,9 @@ matrix $\b E \sim N_{p, n}(\b 0, \b \Sigma, \b I)$. We can write $\b C$ as
 \end{equation*}
 where $k = 4$ is the number of groups. \\
 \\
-The solution of finding the parameters in $\b B$ is given by 
+The parameters in $\b B$ are given by 
 \begin{align*}
-  \b \hat B &= (\b A^{T}\b V^{-1}\b A)^{-1}  \b A^{T}\b V^{-1}\b Y
+  \hatb B &= (\b A^{T}\b V^{-1}\b A)^{-1}  \b A^{T}\b V^{-1}\b Y
               \b C^{T}(\b C\b C^{T})^{-1} % looks great!
   \\
   &=
@@ -100,7 +100,7 @@ where
 \subsection*{(d)}
 \label{sec:d-2}
 
-To compare the parameters we consider three different tests,
+To compare the parameters we consider three different tests for each $i = 2,3,4$,
 \begin{equation*}
   H_i: \b B^{(1)} - \b B^{(i)} = \b 0,\quad i = 2,3,4,
 \end{equation*}
@@ -114,8 +114,8 @@ equal to $-1$. The matrix $\b G$ is just the identity matrix of
 dimension 2. We reject $H_{i}$ if 
 \begin{equation*}
   \Lambda_{i} = \frac{\abs{\b G (\b A^{T} \b V^{-1} \b A)^{-1}\b G^{T}}}
-  {\abs{\b G (\b A^{T} \b V^{-1} \b A)^{-1} \b G ^{T} + \b G \b \hat B\b H_{i}(\b
-      H_{i}^{T} \b R \b H_{i})^{-1}\b H_{i}^{T} \b \hat B^{T} \b G^{T}}}
+  {\abs{\b G (\b A^{T} \b V^{-1} \b A)^{-1} \b G ^{T} + \b G \hatb B\b H_{i}(\b
+      H_{i}^{T} \b R \b H_{i})^{-1}\b H_{i}^{T} \hatb B^{T} \b G^{T}}}
 \end{equation*}
 where
 \begin{align*}

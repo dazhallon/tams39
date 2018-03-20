@@ -36,7 +36,7 @@ To test if the profiles are parallel the test presented in Lecture
          \end{pmatrix}, \\
   \b Y &=
          \begin{pmatrix}
-           \b \mu_{1} - \mu_{4} &\b \mu_{2} - \mu_{4} &\b \mu_{3} - \mu_{4} 
+            \mu_{1} - \mu_{4} & \mu_{2} - \mu_{4} & \mu_{3} - \mu_{4} 
          \end{pmatrix} \\
   \b C_{Y}^{-1} &= \diag (n_{1}, n_{2}, n_{3}) - \frac{1}{n}   (n_{1},
                   n_{2}, n_{3})^{T} (n_{1}, n_{2}, n_{3}), \\
@@ -57,7 +57,7 @@ than
 \begin{equation*}
   c = \chi^{2}_{(p-1)(k-1)}(1 - \alpha), \quad \alpha = 0.05.
 \end{equation*}
-Since $Q =4.0443 $ and $c = 12.5916$, we cannot reject $H_{1}$, the
+Since $Q =4.04 $ and $c = 12.59$, we cannot reject $H_{1}$, the
 profiles are parallel
 
 
@@ -67,12 +67,12 @@ profiles are parallel
 Since, the profiles are parallel, we can set up a test for checking if
 the profiles are on the same level. The likelihood ratio is 
 \begin{equation*}
-  \lambda_{H_2 | H_1} = \frac{\abs{\b C\b V \b C^{T} + \b C \b H\b C^T}}{\abs{\b
+  \Lambda_{H_2 | H_1} = \frac{\abs{\b C\b V \b C^{T} + \b C \b H\b C^T}}{\abs{\b
       C\b V \b C^T}}\frac{\abs{\b V}}{\abs{\b V+\b H}},
 \end{equation*}
 from which $H_{2}|H_{1}$ is rejected if 
 \begin{equation*}
-  Q = \left(\frac{n-k - p +1}{k - 1}\right)\frac{1 - \lambda_{H_2 |H_1}}{\lambda_{H_2 | H_1}},
+  Q = \left(\frac{n-k - p +1}{k - 1}\right)\frac{1 - \Lambda_{H_2 |H_1}}{\Lambda_{H_2 | H_1}},
 \end{equation*}
 is larger then 
 \begin{equation*}
@@ -80,7 +80,7 @@ is larger then
 \end{equation*}
 We get
 \begin{equation*}
- 7.9361  = Q < c = 3.2145,
+ 7.94  = Q < c = 3.21,
 \end{equation*}
 so $H_2 | H_1$ is rejected, the profiles are not on the same level.
 
@@ -89,12 +89,12 @@ so $H_2 | H_1$ is rejected, the profiles are not on the same level.
 
 Here, we use the test variables 
 \begin{equation*}
-  \lambda_{H_3 | H_1} = \frac{1}{1 + n \bar{\bf x}^T \b C^T (\b{CVC}^T +
+  \Lambda_{H_3 | H_1} = \frac{1}{1 + n \bar{\bf x}^T \b C^T (\b{CVC}^T +
     \b{CHC}^T)^{-1}}\b C\bar{\bf x},
 \end{equation*}
 and create the test variable
 \begin{equation*}
-  Q = \frac{n - p +1}{p - 1}\lambda_{H_3 |H_1}, 
+  Q = \frac{n - p +1}{p - 1}\Lambda_{H_3 |H_1}, 
 \end{equation*}
 which we compare to 
 \begin{equation*}
@@ -102,7 +102,7 @@ which we compare to
 \end{equation*}
 We get
 \begin{equation*}
-  7.9361 = Q > c = 3.2145.
+  7.94 = Q > c = 3.21.
 \end{equation*}
 Thus $H_3 | H_1$ is rejected, the profiles are not flat.
 %%% Local Variables:
